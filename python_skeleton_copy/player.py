@@ -55,7 +55,7 @@ class Player(Bot):
         suit2 = card2[1]
 
         self.strong_hole = False
-        if rank1 == rank2 or (rank1 in "AKQJT98" and rank2 in "AKQJT98"):
+        if rank1 == rank2 or (rank1 in "AKQJT" and rank2 in "AKQJT"):
             self.strong_hole = True
 
         game_clock = game_state.game_clock
@@ -117,9 +117,10 @@ class Player(Bot):
             if my_hand_val == opp_hand_val:
                 wins_w_auction += 0.5
 
-            strength_w_auction = wins_w_auction/iters
-            strength_wo_auction = wins_wo_auction/iters
-            return (strength_w_auction, strength_wo_auction)
+        strength_w_auction = wins_w_auction/iters
+        strength_wo_auction = wins_wo_auction/iters
+        print(strength_wo_auction)
+        return strength_w_auction, strength_wo_auction
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -170,6 +171,9 @@ class Player(Bot):
         pot = my_contribution + opp_contribution
 
         strength_diff = self.strength_w_auction - self.strength_wo_auction
+        #print(self.strength_w_auction)
+        if BidAction in legal_actions and self.strength_w_auction > 0.6:
+            return BidAction(my_stack)
         if BidAction in legal_actions:
             max_bid = 0.40
             min_bid = 0.15
@@ -177,13 +181,13 @@ class Player(Bot):
             bid = min(max(min_bid, bid), max_bid)
             bid = int(bid*pot)
             bid = min(bid, my_stack)
-            return BidAction(my_stack)
+            return BidAction(bid)
         if RaiseAction in legal_actions:
            min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
            min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
         
-        if not self.strong_hole and FoldAction in legal_actions:
+        if self.strength_wo_auction<0.3 and FoldAction in legal_actions:
             return FoldAction()
         elif RaiseAction in legal_actions and len(my_cards) == 3:
             return RaiseAction(max_raise)
