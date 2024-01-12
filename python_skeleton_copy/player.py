@@ -119,7 +119,7 @@ class Player(Bot):
 
         strength_w_auction = wins_w_auction/iters
         strength_wo_auction = wins_wo_auction/iters
-        print(strength_wo_auction)
+        print(str(strength_w_auction)+", "+str(strength_wo_auction))
         return strength_w_auction, strength_wo_auction
 
     def handle_round_over(self, game_state, terminal_state, active):
@@ -172,31 +172,39 @@ class Player(Bot):
 
         strength_diff = self.strength_w_auction - self.strength_wo_auction
         #print(self.strength_w_auction)
-        if BidAction in legal_actions and self.strength_w_auction > 0.6:
-            return BidAction(my_stack)
+        if BidAction in legal_actions and self.strength_w_auction > 0.75:
+            #all in on bid if hole is strong enough
+            return BidAction(my_stack) 
         if BidAction in legal_actions:
+            #rn this is just doing 1 less than the max bid so the skeleton bot pays as much as possible without us paying
+            #should probably change for actual bots because this will end up winning the auction almost all the time
             max_bid = 0.40
             min_bid = 0.15
             bid = 2*strength_diff
             bid = min(max(min_bid, bid), max_bid)
             bid = int(bid*pot)
             bid = min(bid, my_stack)
-            return BidAction(bid)
+            return BidAction(my_stack - 1)
         if RaiseAction in legal_actions:
            min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
            min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
         
         if self.strength_wo_auction<0.3 and FoldAction in legal_actions:
+            #fold range
             return FoldAction()
         elif RaiseAction in legal_actions and len(my_cards) == 3:
+            #max raise if we got auction
             return RaiseAction(max_raise)
-        elif RaiseAction in legal_actions and self.strong_hole:
-            return RaiseAction(int(min_raise + (max_raise - min_raise)*0.1))
+        elif RaiseAction in legal_actions and self.strength_wo_auction > 0.45:
+            #raise if hole is strong enough, amount proportional to strength
+            raise_amt = 0.5*self.strength_wo_auction*pot
+            raise_amt = max(min(raise_amt, max_raise), min_raise)
+            return RaiseAction(int(raise_amt))
         #elif FoldAction in legal_actions and not self.strong_hole and random.random() < 0.4:
             #return FoldAction()
-        elif RaiseAction in legal_actions and random.random() < 0.3:
-            return RaiseAction(random.randint(min_raise, max_raise))
+        #elif RaiseAction in legal_actions and random.random() < 0.3:
+            #return RaiseAction(random.randint(min_raise, max_raise))
         elif CheckAction in legal_actions:
             return CheckAction()
         return CallAction()
