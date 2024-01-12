@@ -197,10 +197,6 @@ class Player(Bot):
             bid = int(bid*my_stack)
             bid = min(bid, my_stack)
             return BidAction(bid)
-        if RaiseAction in legal_actions:
-           min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
-           min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
-           max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
         
         if FoldAction in legal_actions and self.strength_wo_auction<0.3 and street==0:
             #fold preflop
@@ -223,19 +219,26 @@ class Player(Bot):
                 return FoldAction()
             if hand_type == 'Pair' and pot_odds>0.5:
                 return FoldAction()
+
+        if RaiseAction in legal_actions:
+           min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
+           min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
+           max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
+  
         if RaiseAction in legal_actions and street==0:
             #min raise preflop but don't keep going infinitely
             if self.strength_wo_auction>0.45 and my_contribution < 200:
                 return RaiseAction(min_raise)
         if RaiseAction in legal_actions and street==3 and len(my_cards) == 3 and self.strength_w_auction > 0.65:
             #max raise if we got auction
-            return RaiseAction(int(0.5*max_raise))
+            return RaiseAction(min(min_raise, int(0.5*max_raise)))
         if RaiseAction in legal_actions:
             #max raise if strong hand
             raise_amt = 0.5*self.strength_wo_auction*pot
             raise_amt = max(min(raise_amt, max_raise), min_raise)
             if hand_type != 'High Card' and hand_type != 'Pair':
                 return RaiseAction(max_raise)
+            
         if CheckAction in legal_actions:
             return CheckAction()
         return CallAction()
