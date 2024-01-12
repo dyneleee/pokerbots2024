@@ -105,7 +105,7 @@ class Player(Bot):
             auction = 1
             draw = deck.peek(opp + community+auction)
             opp_hole = draw[:opp]
-            community_cards = draw[opp:]
+            community_cards = draw[opp:opp+community]
             auction_card = draw[opp+community:]
 
             my_hand = my_cards + community_cards + auction_card
@@ -177,6 +177,7 @@ class Player(Bot):
         board = [eval7.Card(card) for card in board_cards]
         strength = eval7.evaluate(my_hand)
         board_strength = eval7.evaluate(board)
+        board_type = eval7.handtype(board_strength)
         hand_type = eval7.handtype(strength)
         pot_odds = continue_cost/(continue_cost + pot)
 
@@ -184,7 +185,7 @@ class Player(Bot):
 
         strength_diff = self.strength_w_auction - self.strength_wo_auction
         #print(self.strength_w_auction)
-        if BidAction in legal_actions and self.strength_w_auction > 0.75:
+        if BidAction in legal_actions and self.strength_w_auction > 0.7:
             #all in on bid if hole is strong enough
             return BidAction(my_stack) 
         if BidAction in legal_actions:
@@ -203,21 +204,21 @@ class Player(Bot):
             return FoldAction()
         if FoldAction in legal_actions and street==0 and opp_contribution > 2:
             #fold preflop to opponent raise
-            if self.strength_wo_auction<0.4:
+            if self.strength_wo_auction<0.35:
                 return FoldAction()
         if FoldAction in legal_actions and street>=3:
             #fold if pot odds too high if we have nothing
-            if hand_type == 'High Card' and pot_odds > 0.75:
+            if hand_type == 'High Card' and pot_odds > 0.4:
                 return FoldAction()
-            if strength == board_strength and pot_odds > 0.75:
+            if hand_type == board_type and pot_odds > 0.4:
                 return FoldAction()
         if FoldAction in legal_actions and street==5:
             #fold on river if we have nothing
-            if hand_type == 'High Card' and pot_odds>0.3:
+            if hand_type == 'High Card' and pot_odds>0.2:
                 return FoldAction()
-            if strength == board_strength and pot_odds>0.3:
+            if hand_type == board_type and pot_odds>0.2:
                 return FoldAction()
-            if hand_type == 'Pair' and pot_odds>0.5:
+            if hand_type == 'Pair' and pot_odds>0.3:
                 return FoldAction()
 
         if RaiseAction in legal_actions:
