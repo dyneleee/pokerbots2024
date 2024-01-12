@@ -25,6 +25,8 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+        self.opp_holes = []
+        self.opp_bids = []
         pass
 
     def handle_new_round(self, game_state, round_state, active):
@@ -45,7 +47,7 @@ class Player(Bot):
         my_cards = round_state.hands[active]  # your cards
         big_blind = bool(active)  # True if you are the big blind
         pass
-
+        print('Round '+str(round_num))
         card1 = my_cards[0]
         card2 = my_cards[1]
 
@@ -140,6 +142,7 @@ class Player(Bot):
         my_cards = previous_state.hands[active]  # your cards
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
         pass
+        print('-------------')
 
     def get_action(self, game_state, round_state, active):
         '''
@@ -169,6 +172,15 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         pot = my_contribution + opp_contribution
+        hand_arr = my_cards + board_cards
+        my_hand = [eval7.Card(card) for card in hand_arr]
+        board = [eval7.Card(card) for card in board_cards]
+        strength = eval7.evaluate(my_hand)
+        board_strength = eval7.evaluate(board)
+        hand_type = eval7.handtype(strength)
+        pot_odds = continue_cost/(continue_cost + pot)
+
+        print(str(hand_arr) + hand_type)
 
         strength_diff = self.strength_w_auction - self.strength_wo_auction
         #print(self.strength_w_auction)
@@ -178,34 +190,53 @@ class Player(Bot):
         if BidAction in legal_actions:
             #rn this is just doing 1 less than the max bid so the skeleton bot pays as much as possible without us paying
             #should probably change for actual bots because this will end up winning the auction almost all the time
-            max_bid = 0.40
+            max_bid = 0.50
             min_bid = 0.15
-            bid = 2*strength_diff
+            bid = strength_diff
             bid = min(max(min_bid, bid), max_bid)
-            bid = int(bid*pot)
+            bid = int(bid*my_stack)
             bid = min(bid, my_stack)
-            return BidAction(my_stack - 1)
+            return BidAction(bid)
         if RaiseAction in legal_actions:
            min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
            min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
         
-        if self.strength_wo_auction<0.3 and FoldAction in legal_actions:
-            #fold range
+        if FoldAction in legal_actions and self.strength_wo_auction<0.3 and street==0:
+            #fold preflop
             return FoldAction()
-        elif RaiseAction in legal_actions and len(my_cards) == 3:
+        if FoldAction in legal_actions and street==0 and opp_contribution > 2:
+            #fold preflop to opponent raise
+            if self.strength_wo_auction<0.4:
+                return FoldAction()
+        if FoldAction in legal_actions and street>=3:
+            #fold if pot odds too high if we have nothing
+            if hand_type == 'High Card' and pot_odds > 0.75:
+                return FoldAction()
+            if strength == board_strength and pot_odds > 0.75:
+                return FoldAction()
+        if FoldAction in legal_actions and street==5:
+            #fold on river if we have nothing
+            if hand_type == 'High Card' and pot_odds>0.3:
+                return FoldAction()
+            if strength == board_strength and pot_odds>0.3:
+                return FoldAction()
+            if hand_type == 'Pair' and pot_odds>0.5:
+                return FoldAction()
+        if RaiseAction in legal_actions and street==0:
+            #min raise preflop but don't keep going infinitely
+            if self.strength_wo_auction>0.45 and my_contribution < 200:
+                return RaiseAction(min_raise)
+        if RaiseAction in legal_actions and street==3 and len(my_cards) == 3 and self.strength_w_auction > 0.65:
             #max raise if we got auction
-            return RaiseAction(max_raise)
-        elif RaiseAction in legal_actions and self.strength_wo_auction > 0.45:
-            #raise if hole is strong enough, amount proportional to strength
+            return RaiseAction(int(0.5*max_raise))
+        if RaiseAction in legal_actions:
+            #max raise if strong hand
             raise_amt = 0.5*self.strength_wo_auction*pot
             raise_amt = max(min(raise_amt, max_raise), min_raise)
-            return RaiseAction(int(raise_amt))
-        #elif FoldAction in legal_actions and not self.strong_hole and random.random() < 0.4:
-            #return FoldAction()
-        #elif RaiseAction in legal_actions and random.random() < 0.3:
-            #return RaiseAction(random.randint(min_raise, max_raise))
-        elif CheckAction in legal_actions:
+            if hand_type != 'High Card' and hand_type != 'Pair':
+                return RaiseAction(max_raise)
+        if CheckAction in legal_actions:
             return CheckAction()
         return CallAction()
 
