@@ -55,8 +55,71 @@ class Player(Bot):
         suit2 = card2[1]
 
         self.strong_hole = False
-        if rank1 == rank2 or (rank1 in "AKQJT" and rank2 in "AKQJT"):
+        if rank1 == rank2 or (rank1 in "AKQJT98" and rank2 in "AKQJT98"):
             self.strong_hole = True
+
+        game_clock = game_state.game_clock
+        #num_rounds = game_state.num_rounds
+
+        monte_carlo_iters = 100
+        strength_w_auction, strength_wo_auction = self.calculate_strength(my_cards, monte_carlo_iters)
+        self.strength_w_auction = strength_w_auction
+        self.strength_wo_auction = strength_wo_auction
+
+        #if num_rounds == NUM_ROUNDS:
+            #print(game_clock)
+
+    def calculate_strength(self, my_cards, iters):
+        deck = eval7.Deck()
+        my_cards = [eval7.Card(card) for card in my_cards]
+        for card in my_cards:
+            deck.cards.remove(card)
+        wins_w_auction = 0
+        wins_wo_auction = 0
+
+        for i in range(iters):
+            deck.shuffle()
+            opp = 3
+            community = 5
+            draw = deck.peek(opp + community)
+            opp_hole = draw[:opp]
+            community_cards = draw[opp:]
+
+            my_hand = my_cards + community_cards
+            opp_hand = opp_hole + community_cards
+
+            my_hand_val = eval7.evaluate(my_hand)
+            opp_hand_val = eval7.evaluate(opp_hand)
+
+            if my_hand_val > opp_hand_val:
+                wins_wo_auction += 1
+            if my_hand_val == opp_hand_val:
+                wins_wo_auction += 0.5
+
+        for i in range(iters):
+            deck.shuffle()
+            opp = 2
+            community = 5
+            auction = 1
+            draw = deck.peek(opp + community+auction)
+            opp_hole = draw[:opp]
+            community_cards = draw[opp:]
+            auction_card = draw[opp+community:]
+
+            my_hand = my_cards + community_cards + auction_card
+            opp_hand = opp_hole + community_cards
+
+            my_hand_val = eval7.evaluate(my_hand)
+            opp_hand_val = eval7.evaluate(opp_hand)
+
+            if my_hand_val > opp_hand_val:
+                wins_w_auction += 1
+            if my_hand_val == opp_hand_val:
+                wins_w_auction += 0.5
+
+            strength_w_auction = wins_w_auction/iters
+            strength_wo_auction = wins_wo_auction/iters
+            return (strength_w_auction, strength_wo_auction)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -104,24 +167,34 @@ class Player(Bot):
         continue_cost = opp_pip - my_pip  # the number of chips needed to stay in the pot
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
+        pot = my_contribution + opp_contribution
 
+        strength_diff = self.strength_w_auction - self.strength_wo_auction
+        if BidAction in legal_actions:
+            max_bid = 0.40
+            min_bid = 0.15
+            bid = 2*strength_diff
+            bid = min(max(min_bid, bid), max_bid)
+            bid = int(bid*pot)
+            bid = min(bid, my_stack)
+            return BidAction(my_stack)
         if RaiseAction in legal_actions:
            min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
            min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
         
-        if RaiseAction in legal_actions and len(my_cards) == 3:
+        if not self.strong_hole and FoldAction in legal_actions:
+            return FoldAction()
+        elif RaiseAction in legal_actions and len(my_cards) == 3:
             return RaiseAction(max_raise)
         elif RaiseAction in legal_actions and self.strong_hole:
             return RaiseAction(int(min_raise + (max_raise - min_raise)*0.1))
+        #elif FoldAction in legal_actions and not self.strong_hole and random.random() < 0.4:
+            #return FoldAction()
         elif RaiseAction in legal_actions and random.random() < 0.3:
             return RaiseAction(random.randint(min_raise, max_raise))
         elif CheckAction in legal_actions:
             return CheckAction()
-        elif BidAction in legal_actions:
-            return BidAction(0.5*my_stack) # random bid between 0 and our stack
-        #elif not self.strong_hole and FoldAction in legal_actions:
-            #return FoldAction()
         return CallAction()
 
 
