@@ -206,11 +206,19 @@ class Player(Bot):
             #fold preflop to opponent raise
             if self.strength_wo_auction<0.35:
                 return FoldAction()
-        if FoldAction in legal_actions and street>=3:
-            #fold if pot odds too high if we have nothing
-            if hand_type == 'High Card' and pot_odds > 0.4:
+        if FoldAction in legal_actions and street==3:
+            #fold on flop if pot odds too high if we have nothing
+            if hand_type == 'High Card' and pot_odds > 0.33:
                 return FoldAction()
-            if hand_type == board_type and pot_odds > 0.4:
+            if hand_type == board_type and pot_odds > 0.33:
+                return FoldAction()
+        if FoldAction in legal_actions and street==4:
+            #fold on turn
+            if hand_type == 'High Card' and pot_odds > 0.25:
+                return FoldAction()
+            if hand_type == board_type and pot_odds > 0.25:
+                return FoldAction()
+            if hand_type == 'Pair' and pot_odds > 0.35:
                 return FoldAction()
         if FoldAction in legal_actions and street==5:
             #fold on river if we have nothing
@@ -218,7 +226,7 @@ class Player(Bot):
                 return FoldAction()
             if hand_type == board_type and pot_odds>0.2:
                 return FoldAction()
-            if hand_type == 'Pair' and pot_odds>0.3:
+            if hand_type == 'Pair' and pot_odds>0.35:
                 return FoldAction()
 
         if RaiseAction in legal_actions:
@@ -231,8 +239,15 @@ class Player(Bot):
             if self.strength_wo_auction>0.45 and my_contribution < 200:
                 return RaiseAction(min_raise)
         if RaiseAction in legal_actions and street==3 and len(my_cards) == 3 and self.strength_w_auction > 0.65:
-            #max raise if we got auction
+            #raise if we got auction
             return RaiseAction(min(min_raise, int(0.5*max_raise)))
+        if RaiseAction in legal_actions and street==3:
+            #raise if we have something on the flop
+            if hand_type != 'High Card' and hand_type != board_type:
+                raise_amt = 0.5*pot
+                raise_amt = min(raise_amt, max_raise)
+                raise_amt = max(raise_amt, min_raise)
+                return RaiseAction(raise_amt)
         if RaiseAction in legal_actions:
             #max raise if strong hand
             raise_amt = 0.5*self.strength_wo_auction*pot
