@@ -61,15 +61,14 @@ class Player(Bot):
             self.strong_hole = True
 
         game_clock = game_state.game_clock
-        #num_rounds = game_state.num_rounds
 
         monte_carlo_iters = 100
         strength_w_auction, strength_wo_auction = self.calculate_strength(my_cards, monte_carlo_iters)
         self.strength_w_auction = strength_w_auction
         self.strength_wo_auction = strength_wo_auction
 
-        #if num_rounds == NUM_ROUNDS:
-            #print(game_clock)
+        if round_num == NUM_ROUNDS:
+            print('game clock: ' + str(game_clock))
 
     def calculate_strength(self, my_cards, iters):
         deck = eval7.Deck()
@@ -203,8 +202,7 @@ class Player(Bot):
             #all in on bid if hole is strong enough
             return BidAction(my_stack) 
         if BidAction in legal_actions:
-            #rn this is just doing 1 less than the max bid so the skeleton bot pays as much as possible without us paying
-            #should probably change for actual bots because this will end up winning the auction almost all the time
+            #bid
             max_bid = 0.50
             min_bid = 0.15
             bid = strength_diff

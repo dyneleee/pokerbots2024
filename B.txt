@@ -1,0 +1,4702 @@
+Round 1
+0.64, 0.18
+['2s', '9d']High Card pot odds: 0.0
+['2s', '9d', '9s', '5s', 'Ah']Pair pot odds: 0.0
+['2s', '9d', '9h', '9s', '5s', 'Ah']Trips pot odds: 0.0
+['2s', '9d', '9h', '9s', '5s', 'Ah', '2c']Full House pot odds: 0.0
+-------------
+Round 2
+0.585, 0.26
+['6s', '3d']High Card pot odds: 0.25
+-------------
+Round 3
+0.695, 0.28
+['3s', 'Ts']High Card pot odds: 0.0
+['3s', 'Ts', '9s', 'Ks', '3h']Pair pot odds: 0.0
+['3s', 'Ts', '6d', '9s', 'Ks', '3h']Pair pot odds: 0.0
+['3s', 'Ts', '6d', '9s', 'Ks', '3h']Pair pot odds: 0.1661807580174927
+['3s', 'Ts', '6d', '9s', 'Ks', '3h']Pair pot odds: 0.09982486865148861
+['3s', 'Ts', '6d', '9s', 'Ks', '3h']Pair pot odds: 0.002902757619738752
+['3s', 'Ts', '6d', '9s', 'Ks', '3h', '4h']Pair pot odds: 0.0
+['3s', 'Ts', '6d', '9s', 'Ks', '3h', '4h', 'Kc']Two Pair pot odds: 0.0
+-------------
+Round 4
+0.62, 0.23
+['2s', '8s']High Card pot odds: 0.25
+-------------
+Round 5
+0.69, 0.285
+['3d', 'Jh']High Card pot odds: 0.0
+['3d', 'Jh', '6c', 'Th', 'Jd']Pair pot odds: 0.0
+['3d', 'Jh', 'Ac', '6c', 'Th', 'Jd']Pair pot odds: 0.0
+['3d', 'Jh', 'Ac', '6c', 'Th', 'Jd', 'As']Two Pair pot odds: 0.0
+-------------
+Round 6
+0.655, 0.335
+['6d', 'Kh']High Card pot odds: 0.25
+['6d', 'Kh', '3h', '7d', '6c']Pair pot odds: 0.0
+['6d', 'Kh', '5h', '3h', '7d', '6c']Pair pot odds: 0.25
+['6d', 'Kh', '5h', '3h', '7d', '6c']Pair pot odds: 0.01625
+['6d', 'Kh', '5h', '3h', '7d', '6c', '8d']Pair pot odds: 0.0
+['6d', 'Kh', '5h', '3h', '7d', '6c', '8d', '3s']Two Pair pot odds: 0.0
+-------------
+Round 7
+0.56, 0.245
+-------------
+Round 8
+0.575, 0.175
+['3h', '6d']High Card pot odds: 0.25
+-------------
+Round 9
+0.645, 0.265
+-------------
+Round 10
+0.675, 0.445
+['3h', '3s']Pair pot odds: 0.25
+['3h', '3s', '2d', 'Qc', '9c']Pair pot odds: 0.0
+['3h', '3s', '2d', 'Qc', '9c']Pair pot odds: 0.0
+['3h', '3s', '2d', 'Qc', '9c', 'Qs']Two Pair pot odds: 0.0
+['3h', '3s', '2d', 'Qc', '9c', 'Qs', 'Ac']Two Pair pot odds: 0.0
+-------------
+Round 11
+0.715, 0.445
+['Ad', '4s']High Card pot odds: 0.0
+['Ad', '4s', 'Tc', '8d', '2c']High Card pot odds: 0.0
+['Ad', '4s', '2s', 'Tc', '8d', '2c']Pair pot odds: 0.0
+['Ad', '4s', '2s', 'Tc', '8d', '2c', 'Ac']Two Pair pot odds: 0.0
+-------------
+Round 12
+0.65, 0.295
+['Js', '9c']High Card pot odds: 0.25
+-------------
+Round 13
+0.76, 0.44
+-------------
+Round 14
+0.66, 0.425
+['9c', 'Qh']High Card pot odds: 0.25
+['9c', 'Qh', '2d', 'Kd', '6c']High Card pot odds: 0.0
+['9c', 'Qh', '2d', 'Kd', '6c']High Card pot odds: 0.24870466321243523
+['9c', 'Qh', '2d', 'Kd', '6c', 'Jc']High Card pot odds: 0.3635077793493635
+-------------
+Round 15
+0.7, 0.49
+-------------
+Round 16
+0.595, 0.215
+['3d', '5s']High Card pot odds: 0.25
+-------------
+Round 17
+0.59, 0.355
+['9s', '7d']High Card pot odds: 0.0
+['9s', '7d', '9c', 'Jh', '6c']Pair pot odds: 0.0
+['9s', '7d', '9c', 'Jh', '6c']Pair pot odds: 0.0
+['9s', '7d', '9c', 'Jh', '6c', '5s']Pair pot odds: 0.0
+['9s', '7d', '9c', 'Jh', '6c', '5s', '4s']Pair pot odds: 0.0
+-------------
+Round 18
+0.675, 0.285
+['Qd', '7h']High Card pot odds: 0.25
+-------------
+Round 19
+0.61, 0.21
+-------------
+Round 20
+0.65, 0.25
+['5h', '7c']High Card pot odds: 0.25
+-------------
+Round 21
+0.68, 0.26
+['8s', 'Td']High Card pot odds: 0.0
+['8s', 'Td', '9c', 'Ts', '3h']Pair pot odds: 0.0
+['8s', 'Td', '6c', '9c', 'Ts', '3h']Pair pot odds: 0.0
+['8s', 'Td', '6c', '9c', 'Ts', '3h', 'Ah']Pair pot odds: 0.0
+['8s', 'Td', '6c', '9c', 'Ts', '3h', 'Ah', '9h']Two Pair pot odds: 0.0
+-------------
+Round 22
+0.545, 0.2
+['3s', '2s']High Card pot odds: 0.25
+-------------
+Round 23
+0.63, 0.285
+-------------
+Round 24
+0.615, 0.3
+['2s', '5s']High Card pot odds: 0.25
+['2s', '5s']High Card pot odds: 0.25
+-------------
+Round 25
+0.73, 0.345
+['6h', 'Jc']High Card pot odds: 0.0
+['6h', 'Jc', 'Th', 'Jd', '7h']Pair pot odds: 0.0
+['6h', 'Jc', 'Tc', 'Th', 'Jd', '7h']Two Pair pot odds: 0.0
+['6h', 'Jc', 'Tc', 'Th', 'Jd', '7h']Two Pair pot odds: 0.1661631419939577
+['6h', 'Jc', 'Tc', 'Th', 'Jd', '7h']Two Pair pot odds: 0.0998185117967332
+['6h', 'Jc', 'Tc', 'Th', 'Jd', '7h']Two Pair pot odds: 0.023088023088023088
+['6h', 'Jc', 'Tc', 'Th', 'Jd', '7h', '4c']Two Pair pot odds: 0.0
+['6h', 'Jc', 'Tc', 'Th', 'Jd', '7h', '4c', '3h']Two Pair pot odds: 0.0
+-------------
+Round 26
+0.63, 0.43
+['Ks', '4d']High Card pot odds: 0.25
+['Ks', '4d', '7h', '5d', '7c']Pair pot odds: 0.0
+['Ks', '4d', '7h', '5d', '7c']Pair pot odds: 0.0
+['Ks', '4d', '7h', '5d', '7c', '4h']Two Pair pot odds: 0.0
+['Ks', '4d', '7h', '5d', '7c', '4h', 'Qs']Two Pair pot odds: 0.0
+-------------
+Round 27
+0.645, 0.415
+-------------
+Round 28
+0.695, 0.27
+['8d', '6s']High Card pot odds: 0.25
+-------------
+Round 29
+0.72, 0.45
+['Qd', 'As']High Card pot odds: 0.0
+['Qd', 'As', 'Kd', '7d', 'Th']High Card pot odds: 0.0
+['Qd', 'As', 'Ah', 'Kd', '7d', 'Th']Pair pot odds: 0.0
+['Qd', 'As', 'Ah', 'Kd', '7d', 'Th', '3c']Pair pot odds: 0.0
+['Qd', 'As', 'Ah', 'Kd', '7d', 'Th', '3c', '9h']Pair pot odds: 0.0
+-------------
+Round 30
+0.705, 0.425
+['2d', 'As']High Card pot odds: 0.25
+['2d', 'As', '5s', '4c', 'Jd']High Card pot odds: 0.0
+['2d', 'As', 'Ts', '5s', '4c', 'Jd']High Card pot odds: 0.0
+['2d', 'As', 'Ts', '5s', '4c', 'Jd', '9c']High Card pot odds: 0.0
+['2d', 'As', 'Ts', '5s', '4c', 'Jd', '9c', '3h']Straight pot odds: 0.0
+-------------
+Round 31
+0.645, 0.365
+-------------
+Round 32
+0.63, 0.3
+['5s', '3s']High Card pot odds: 0.25
+['5s', '3s', '3h', 'Jh', 'Qd']Pair pot odds: 0.0
+['5s', '3s', '3h', 'Jh', 'Qd']Pair pot odds: 0.0
+['5s', '3s', '3h', 'Jh', 'Qd', '7h']Pair pot odds: 0.0
+['5s', '3s', '3h', 'Jh', 'Qd', '7h', '6h']Pair pot odds: 0.0
+-------------
+Round 33
+0.65, 0.215
+['3s', '7s']High Card pot odds: 0.0
+['3s', '7s', '6c', '3c', '2h']Pair pot odds: 0.0
+['3s', '7s', '6c', '3c', '2h']Pair pot odds: 0.0
+['3s', '7s', '6c', '3c', '2h']Pair pot odds: 0.166351606805293
+['3s', '7s', '6c', '3c', '2h', '6d']Two Pair pot odds: 0.0
+['3s', '7s', '6c', '3c', '2h', '6d', 'Ad']Two Pair pot odds: 0.0
+-------------
+Round 34
+0.655, 0.265
+['Jh', '8d']High Card pot odds: 0.25
+-------------
+Round 35
+0.625, 0.33
+['Th', '4d']High Card pot odds: 0.25
+-------------
+Round 36
+0.665, 0.4
+['Kc', '3h']High Card pot odds: 0.25
+['Kc', '3h', '8h', '2s', '2d']Pair pot odds: 0.0
+['Kc', '3h', '8h', '2s', '2d']Pair pot odds: 0.2488479262672811
+['Kc', '3h', '8h', '2s', '2d', 'Qh']Pair pot odds: 0.0
+['Kc', '3h', '8h', '2s', '2d', 'Qh', '5d']Pair pot odds: 0.0
+-------------
+Round 37
+0.585, 0.215
+-------------
+Round 38
+0.57, 0.23
+['2s', '3h']High Card pot odds: 0.25
+-------------
+Round 39
+0.74, 0.505
+-------------
+Round 40
+0.59, 0.29
+['3h', 'Jc']High Card pot odds: 0.25
+-------------
+Round 41
+0.61, 0.185
+-------------
+Round 42
+0.64, 0.28
+['4c', '6d']High Card pot odds: 0.25
+-------------
+Round 43
+0.67, 0.34
+['9c', '8h']High Card pot odds: 0.25
+-------------
+Round 44
+0.785, 0.44
+['As', 'Tc']High Card pot odds: 0.25
+['As', 'Tc']High Card pot odds: 0.25
+['As', 'Tc', '7h', '4s', '7s']Pair pot odds: 0.0
+['As', 'Tc', 'Qs', '7h', '4s', '7s']Pair pot odds: 0.0
+['As', 'Tc', 'Qs', '7h', '4s', '7s', 'Th']Two Pair pot odds: 0.0
+['As', 'Tc', 'Qs', '7h', '4s', '7s', 'Th', '9h']Two Pair pot odds: 0.0
+-------------
+Round 45
+0.8, 0.59
+['9h', '9s']Pair pot odds: 0.0
+['9h', '9s', '2d', 'Kd', '4c']Pair pot odds: 0.0
+['9h', '9s', '3h', '2d', 'Kd', '4c']Pair pot odds: 0.0
+['9h', '9s', '3h', '2d', 'Kd', '4c', '4h']Two Pair pot odds: 0.0
+['9h', '9s', '3h', '2d', 'Kd', '4c', '4h', '8s']Two Pair pot odds: 0.0
+-------------
+Round 46
+0.675, 0.3
+['7s', '9h']High Card pot odds: 0.25
+['7s', '9h', '9d', 'Qh', 'Ks']Pair pot odds: 0.0
+['7s', '9h', '9d', 'Qh', 'Ks']Pair pot odds: 0.0
+['7s', '9h', '9d', 'Qh', 'Ks', 'Ad']Pair pot odds: 0.0
+['7s', '9h', '9d', 'Qh', 'Ks', 'Ad', '6s']Pair pot odds: 0.0
+-------------
+Round 47
+0.6, 0.305
+['4s', 'Kh']High Card pot odds: 0.25
+-------------
+Round 48
+0.605, 0.385
+['5s', 'Kc']High Card pot odds: 0.25
+['5s', 'Kc', '5h', '3s', 'Qc']Pair pot odds: 0.0
+['5s', 'Kc', '5h', '3s', 'Qc']Pair pot odds: 0.0
+['5s', 'Kc', '5h', '3s', 'Qc', 'Js']Pair pot odds: 0.0
+['5s', 'Kc', '5h', '3s', 'Qc', 'Js', '2h']Pair pot odds: 0.0
+-------------
+Round 49
+0.625, 0.39
+-------------
+Round 50
+0.675, 0.355
+['8s', 'Tc']High Card pot odds: 0.25
+['8s', 'Tc', '9h', 'Ts', '2s']Pair pot odds: 0.0
+['8s', 'Tc', '9h', 'Ts', '2s']Pair pot odds: 0.0
+['8s', 'Tc', '9h', 'Ts', '2s', '7d']Pair pot odds: 0.0
+['8s', 'Tc', '9h', 'Ts', '2s', '7d', '9s']Two Pair pot odds: 0.0
+-------------
+Round 51
+0.54, 0.165
+-------------
+Round 52
+0.56, 0.21
+['7s', '2s']High Card pot odds: 0.25
+-------------
+Round 53
+0.605, 0.355
+-------------
+Round 54
+0.645, 0.41
+['Qs', 'Ts']High Card pot odds: 0.25
+['Qs', 'Ts', '4c', '3h', 'Td']Pair pot odds: 0.0
+['Qs', 'Ts', '4c', '3h', 'Td']Pair pot odds: 0.24870466321243523
+['Qs', 'Ts', '4c', '3h', 'Td']Pair pot odds: 0.12467532467532468
+['Qs', 'Ts', '4c', '3h', 'Td']Pair pot odds: 0.0831889081455806
+['Qs', 'Ts', '4c', '3h', 'Td']Pair pot odds: 0.024045261669024046
+['Qs', 'Ts', '4c', '3h', 'Td', 'Kc']Pair pot odds: 0.0
+['Qs', 'Ts', '4c', '3h', 'Td', 'Kc', 'Jh']Pair pot odds: 0.0
+-------------
+Round 55
+0.565, 0.33
+-------------
+Round 56
+0.44, 0.245
+['2d', '3s']High Card pot odds: 0.25
+-------------
+Round 57
+0.785, 0.425
+['8d', 'Kd']High Card pot odds: 0.25
+-------------
+Round 58
+0.715, 0.345
+['6s', 'Kc']High Card pot odds: 0.25
+-------------
+Round 59
+0.755, 0.49
+-------------
+Round 60
+0.705, 0.36
+['Jh', '9d']High Card pot odds: 0.25
+-------------
+Round 61
+0.815, 0.4
+-------------
+Round 62
+0.645, 0.345
+['Qs', '4h']High Card pot odds: 0.25
+-------------
+Round 63
+0.65, 0.3
+['7d', '8d']High Card pot odds: 0.0
+['7d', '8d', '3d', '9s', 'Tc']High Card pot odds: 0.0
+['7d', '8d', '3d', '9s', 'Tc']High Card pot odds: 0.0
+['7d', '8d', '3d', '9s', 'Tc']High Card pot odds: 0.25
+-------------
+Round 64
+0.645, 0.285
+['4d', '5d']High Card pot odds: 0.25
+-------------
+Round 65
+0.62, 0.36
+-------------
+Round 66
+0.63, 0.395
+['As', '7d']High Card pot odds: 0.25
+-------------
+Round 67
+0.66, 0.3
+['7c', '5d']High Card pot odds: 0.0
+['7c', '5d', '4c', '8d', '3h']High Card pot odds: 0.0
+['7c', '5d', '4c', '8d', '3h']High Card pot odds: 0.0
+['7c', '5d', '4c', '8d', '3h']High Card pot odds: 0.25
+-------------
+Round 68
+0.86, 0.645
+['Qc', 'Qd']Pair pot odds: 0.25
+-------------
+Round 69
+0.65, 0.3
+['9c', 'Ks']High Card pot odds: 0.0
+['9c', 'Ks', 'Qh', 'Js', '6c']High Card pot odds: 0.0
+['9c', 'Ks', 'Qh', 'Js', '6c']High Card pot odds: 0.0
+['9c', 'Ks', 'Qh', 'Js', '6c']High Card pot odds: 0.25
+-------------
+Round 70
+0.64, 0.395
+['Qs', '9h']High Card pot odds: 0.25
+-------------
+Round 71
+0.685, 0.295
+['Kh', '6h']High Card pot odds: 0.0
+['Kh', '6h', '3d', '5s', 'Qd']High Card pot odds: 0.0
+['Kh', '6h', '3d', '5s', 'Qd']High Card pot odds: 0.0
+['Kh', '6h', '3d', '5s', 'Qd']High Card pot odds: 0.25
+-------------
+Round 72
+0.53, 0.21
+['7c', '2d']High Card pot odds: 0.25
+-------------
+Round 73
+0.625, 0.22
+['3d', '4h']High Card pot odds: 0.25
+-------------
+Round 74
+0.655, 0.33
+['7h', 'Ts']High Card pot odds: 0.25
+-------------
+Round 75
+0.8, 0.415
+-------------
+Round 76
+0.76, 0.58
+['8d', '8c']Pair pot odds: 0.25
+-------------
+Round 77
+0.655, 0.355
+-------------
+Round 78
+0.65, 0.275
+['3d', '4h']High Card pot odds: 0.25
+-------------
+Round 79
+0.56, 0.28
+['Td', '5c']High Card pot odds: 0.0
+['Td', '5c', 'Jh', 'Kd', '5h']Pair pot odds: 0.0
+['Td', '5c', 'Jh', 'Kd', '5h']Pair pot odds: 0.0
+['Td', '5c', 'Jh', 'Kd', '5h']Pair pot odds: 0.25
+-------------
+Round 80
+0.6, 0.18
+['2s', '8d']High Card pot odds: 0.25
+-------------
+Round 81
+0.72, 0.375
+-------------
+Round 82
+0.695, 0.36
+['9c', 'Js']High Card pot odds: 0.25
+-------------
+Round 83
+0.615, 0.37
+-------------
+Round 84
+0.705, 0.345
+['Ah', '2h']High Card pot odds: 0.25
+-------------
+Round 85
+0.72, 0.315
+-------------
+Round 86
+0.775, 0.445
+['Qs', '9c']High Card pot odds: 0.25
+-------------
+Round 87
+0.69, 0.36
+['4s', '8s']High Card pot odds: 0.0
+['4s', '8s', 'Ks', 'Th', '9h']High Card pot odds: 0.0
+['4s', '8s', 'Ks', 'Th', '9h']High Card pot odds: 0.0
+['4s', '8s', 'Ks', 'Th', '9h']High Card pot odds: 0.25
+-------------
+Round 88
+0.64, 0.25
+['7h', '5d']High Card pot odds: 0.25
+-------------
+Round 89
+0.7, 0.375
+['6d', 'Kc']High Card pot odds: 0.0
+['6d', 'Kc', '3c', '5d', 'Ad']High Card pot odds: 0.0
+['6d', 'Kc', '3c', '5d', 'Ad']High Card pot odds: 0.0
+['6d', 'Kc', '3c', '5d', 'Ad', '7h']High Card pot odds: 0.0
+['6d', 'Kc', '3c', '5d', 'Ad', '7h', 'Qs']High Card pot odds: 0.0
+-------------
+Round 90
+0.54, 0.185
+['3d', '2c']High Card pot odds: 0.25
+-------------
+Round 91
+0.79, 0.345
+-------------
+Round 92
+0.71, 0.315
+['3h', 'Kh']High Card pot odds: 0.25
+-------------
+Round 93
+0.55, 0.265
+-------------
+Round 94
+0.625, 0.3
+['9d', '6h']High Card pot odds: 0.25
+-------------
+Round 95
+0.66, 0.275
+['Js', '5c']High Card pot odds: 0.25
+-------------
+Round 96
+0.555, 0.305
+['7d', '3c']High Card pot odds: 0.25
+-------------
+Round 97
+0.665, 0.485
+['Qd', 'Kh']High Card pot odds: 0.0
+['Qd', 'Kh', '2h', '2s', 'Ah']Pair pot odds: 0.0
+['Qd', 'Kh', '2h', '2s', 'Ah']Pair pot odds: 0.0
+['Qd', 'Kh', '2h', '2s', 'Ah', 'Jh']Pair pot odds: 0.0
+['Qd', 'Kh', '2h', '2s', 'Ah', 'Jh', '2d']Trips pot odds: 0.0
+-------------
+Round 98
+0.77, 0.365
+['Jc', '9h']High Card pot odds: 0.25
+-------------
+Round 99
+0.715, 0.445
+['Qc', 'Kd']High Card pot odds: 0.0
+['Qc', 'Kd', '3s', 'As', '5d']High Card pot odds: 0.0
+['Qc', 'Kd', '3s', 'As', '5d']High Card pot odds: 0.0
+['Qc', 'Kd', '3s', 'As', '5d', '2d']High Card pot odds: 0.0
+['Qc', 'Kd', '3s', 'As', '5d', '2d', 'Ad']Pair pot odds: 0.0
+-------------
+Round 100
+0.71, 0.275
+['Qh', '4c']High Card pot odds: 0.25
+-------------
+Round 101
+0.665, 0.315
+['6h', '8h']High Card pot odds: 0.0
+['6h', '8h', '8d', '8c', 'Qd']Trips pot odds: 0.0
+['6h', '8h', '8d', '8c', 'Qd']Trips pot odds: 0.0
+['6h', '8h', '8d', '8c', 'Qd', '9d']Trips pot odds: 0.0
+['6h', '8h', '8d', '8c', 'Qd', '9d', 'Qc']Full House pot odds: 0.0
+-------------
+Round 102
+0.57, 0.255
+['5c', '8d']High Card pot odds: 0.25
+-------------
+Round 103
+0.62, 0.315
+-------------
+Round 104
+0.665, 0.305
+['4d', 'Qs']High Card pot odds: 0.25
+-------------
+Round 105
+0.555, 0.25
+-------------
+Round 106
+0.61, 0.275
+['8c', '2s']High Card pot odds: 0.25
+-------------
+Round 107
+0.665, 0.38
+-------------
+Round 108
+0.665, 0.265
+['4c', 'Qh']High Card pot odds: 0.25
+-------------
+Round 109
+0.56, 0.25
+-------------
+Round 110
+0.635, 0.27
+['7h', 'Kc']High Card pot odds: 0.25
+-------------
+Round 111
+0.65, 0.37
+-------------
+Round 112
+0.69, 0.455
+['Jh', '9d']High Card pot odds: 0.25
+-------------
+Round 113
+0.595, 0.255
+['4h', '7d']High Card pot odds: 0.25
+-------------
+Round 114
+0.88, 0.69
+['Ks', 'Kc']Pair pot odds: 0.25
+-------------
+Round 115
+0.785, 0.34
+['Ac', '9h']High Card pot odds: 0.0
+['Ac', '9h', 'As', '8d', '5h']Pair pot odds: 0.0
+['Ac', '9h', 'As', '8d', '5h']Pair pot odds: 0.0
+['Ac', '9h', 'As', '8d', '5h', 'Js']Pair pot odds: 0.0
+['Ac', '9h', 'As', '8d', '5h', 'Js', '3d']Pair pot odds: 0.0
+-------------
+Round 116
+0.655, 0.23
+['5d', '8s']High Card pot odds: 0.25
+-------------
+Round 117
+0.685, 0.505
+['As', 'Qd']High Card pot odds: 0.0
+['As', 'Qd', 'Ad', '6c', 'Js']Pair pot odds: 0.0
+['As', 'Qd', 'Ad', '6c', 'Js']Pair pot odds: 0.0
+['As', 'Qd', 'Ad', '6c', 'Js']Pair pot odds: 0.25
+-------------
+Round 118
+0.66, 0.39
+['Jd', '7d']High Card pot odds: 0.25
+-------------
+Round 119
+0.735, 0.3
+-------------
+Round 120
+0.74, 0.385
+['9h', 'Qd']High Card pot odds: 0.25
+-------------
+Round 121
+0.555, 0.285
+['3d', 'Jc']High Card pot odds: 0.0
+['3d', 'Jc', '9s', 'Td', '7d']High Card pot odds: 0.0
+['3d', 'Jc', '9s', 'Td', '7d']High Card pot odds: 0.0
+['3d', 'Jc', '9s', 'Td', '7d']High Card pot odds: 0.25
+-------------
+Round 122
+0.76, 0.35
+['4h', 'Ac']High Card pot odds: 0.25
+-------------
+Round 123
+0.56, 0.275
+['4d', '5c']High Card pot odds: 0.0
+['4d', '5c', 'Jd', '4s', '6c']Pair pot odds: 0.0
+['4d', '5c', 'Jd', '4s', '6c']Pair pot odds: 0.0
+['4d', '5c', 'Jd', '4s', '6c']Pair pot odds: 0.25
+-------------
+Round 124
+0.585, 0.31
+['5h', '2c']High Card pot odds: 0.25
+-------------
+Round 125
+0.66, 0.27
+-------------
+Round 126
+0.75, 0.34
+['As', '3d']High Card pot odds: 0.25
+-------------
+Round 127
+0.655, 0.405
+['8c', 'Js']High Card pot odds: 0.25
+-------------
+Round 128
+0.6, 0.42
+['Kc', '8h']High Card pot odds: 0.25
+-------------
+Round 129
+0.68, 0.24
+-------------
+Round 130
+0.76, 0.365
+['9s', 'Kh']High Card pot odds: 0.25
+-------------
+Round 131
+0.5, 0.215
+-------------
+Round 132
+0.585, 0.22
+['2d', 'Js']High Card pot odds: 0.25
+-------------
+Round 133
+0.735, 0.355
+-------------
+Round 134
+0.645, 0.39
+['9d', 'Jc']High Card pot odds: 0.25
+-------------
+Round 135
+0.625, 0.22
+['5c', '8d']High Card pot odds: 0.0
+['5c', '8d', '5d', '8c', '7c']Two Pair pot odds: 0.0
+['5c', '8d', '5d', '8c', '7c']Two Pair pot odds: 0.0
+['5c', '8d', '5d', '8c', '7c']Two Pair pot odds: 0.25
+-------------
+Round 136
+0.54, 0.23
+['5c', '8h']High Card pot odds: 0.25
+-------------
+Round 137
+0.67, 0.25
+['6s', '8s']High Card pot odds: 0.0
+['6s', '8s', 'Jd', '6c', '3c']Pair pot odds: 0.0
+['6s', '8s', 'Jd', '6c', '3c']Pair pot odds: 0.0
+['6s', '8s', 'Jd', '6c', '3c', '5c']Pair pot odds: 0.0
+['6s', '8s', 'Jd', '6c', '3c', '5c']Pair pot odds: 0.4975
+-------------
+Round 138
+0.76, 0.39
+['Ks', 'Tc']High Card pot odds: 0.25
+-------------
+Round 139
+0.665, 0.23
+-------------
+Round 140
+0.63, 0.415
+['9d', 'Tc']High Card pot odds: 0.25
+-------------
+Round 141
+0.67, 0.325
+-------------
+Round 142
+0.655, 0.42
+['3h', 'Qh']High Card pot odds: 0.25
+-------------
+Round 143
+0.64, 0.28
+['Th', '4s']High Card pot odds: 0.0
+['Th', '4s', 'Kc', 'Js', '6s']High Card pot odds: 0.0
+['Th', '4s', 'Kc', 'Js', '6s']High Card pot odds: 0.0
+['Th', '4s', 'Kc', 'Js', '6s', '4d']Pair pot odds: 0.0
+['Th', '4s', 'Kc', 'Js', '6s', '4d', '5d']Pair pot odds: 0.0
+-------------
+Round 144
+0.57, 0.31
+['3c', '9s']High Card pot odds: 0.25
+-------------
+Round 145
+0.895, 0.615
+['Ts', 'Tc']Pair pot odds: 0.0
+['Ts', 'Tc', 'Jh', 'Ks', '9d']Pair pot odds: 0.0
+['Ts', 'Tc', 'Jh', 'Ks', '9d']Pair pot odds: 0.0
+['Ts', 'Tc', 'Jh', 'Ks', '9d', '3h']Pair pot odds: 0.0
+['Ts', 'Tc', 'Jh', 'Ks', '9d', '3h', '2d']Pair pot odds: 0.0
+-------------
+Round 146
+0.72, 0.385
+['Th', 'Kh']High Card pot odds: 0.25
+-------------
+Round 147
+0.89, 0.625
+['Ac', 'Ad']Pair pot odds: 0.0
+['Ac', 'Ad', 'Tc', 'Js', '9c']Pair pot odds: 0.0
+['Ac', 'Ad', 'Tc', 'Js', '9c']Pair pot odds: 0.0
+['Ac', 'Ad', 'Tc', 'Js', '9c']Pair pot odds: 0.25
+-------------
+Round 148
+0.535, 0.23
+['8d', '4s']High Card pot odds: 0.25
+-------------
+Round 149
+0.65, 0.25
+-------------
+Round 150
+0.57, 0.265
+['4s', '8d']High Card pot odds: 0.25
+-------------
+Round 151
+0.685, 0.44
+-------------
+Round 152
+0.785, 0.355
+['4c', 'Jc']High Card pot odds: 0.25
+-------------
+Round 153
+0.625, 0.275
+['2d', 'Ah']High Card pot odds: 0.25
+-------------
+Round 154
+0.72, 0.315
+['Kh', '4s']High Card pot odds: 0.25
+-------------
+Round 155
+0.645, 0.26
+-------------
+Round 156
+0.665, 0.32
+['9h', '7s']High Card pot odds: 0.25
+-------------
+Round 157
+0.77, 0.475
+-------------
+Round 158
+0.71, 0.35
+['Tc', '8c']High Card pot odds: 0.25
+-------------
+Round 159
+0.64, 0.3
+-------------
+Round 160
+0.605, 0.305
+['9h', '6d']High Card pot odds: 0.25
+-------------
+Round 161
+0.725, 0.395
+['Kh', '5h']High Card pot odds: 0.25
+-------------
+Round 162
+0.655, 0.385
+['7d', 'Qd']High Card pot odds: 0.25
+-------------
+Round 163
+0.78, 0.425
+['7h', 'Ah']High Card pot odds: 0.0
+['7h', 'Ah', 'Ks', 'Ac', 'Qc']Pair pot odds: 0.0
+['7h', 'Ah', 'Ks', 'Ac', 'Qc']Pair pot odds: 0.0
+['7h', 'Ah', 'Ks', 'Ac', 'Qc']Pair pot odds: 0.25
+-------------
+Round 164
+0.62, 0.405
+['Ad', '5d']High Card pot odds: 0.25
+-------------
+Round 165
+0.605, 0.21
+-------------
+Round 166
+0.7, 0.39
+['8d', 'Qd']High Card pot odds: 0.25
+-------------
+Round 167
+0.7, 0.345
+['Kc', '8c']High Card pot odds: 0.0
+['Kc', '8c', 'Ks', '5h', 'Tc']Pair pot odds: 0.0
+['Kc', '8c', 'Ks', '5h', 'Tc']Pair pot odds: 0.0
+['Kc', '8c', 'Ks', '5h', 'Tc']Pair pot odds: 0.25
+-------------
+Round 168
+0.685, 0.265
+['5s', 'Th']High Card pot odds: 0.25
+-------------
+Round 169
+0.565, 0.315
+-------------
+Round 170
+0.605, 0.375
+['Jh', '5h']High Card pot odds: 0.25
+-------------
+Round 171
+0.6, 0.335
+['5d', '6h']High Card pot odds: 0.0
+['5d', '6h', '3c', '5s', '8c']Pair pot odds: 0.0
+['5d', '6h', '3c', '5s', '8c']Pair pot odds: 0.0
+['5d', '6h', '3c', '5s', '8c']Pair pot odds: 0.25
+-------------
+Round 172
+0.71, 0.375
+['8c', 'Qs']High Card pot odds: 0.25
+-------------
+Round 173
+0.685, 0.37
+-------------
+Round 174
+0.755, 0.305
+['7c', '6s']High Card pot odds: 0.25
+-------------
+Round 175
+0.595, 0.26
+['2d', 'Js']High Card pot odds: 0.0
+['2d', 'Js', '3h', 'Qh', '4s']High Card pot odds: 0.0
+['2d', 'Js', '3h', 'Qh', '4s']High Card pot odds: 0.0
+['2d', 'Js', '3h', 'Qh', '4s']High Card pot odds: 0.25
+-------------
+Round 176
+0.615, 0.34
+['2h', 'Qs']High Card pot odds: 0.25
+-------------
+Round 177
+0.755, 0.36
+-------------
+Round 178
+0.61, 0.315
+['6s', '4d']High Card pot odds: 0.25
+-------------
+Round 179
+0.515, 0.165
+-------------
+Round 180
+0.675, 0.29
+['8d', '6s']High Card pot odds: 0.25
+-------------
+Round 181
+0.71, 0.33
+-------------
+Round 182
+0.625, 0.32
+['4h', '5c']High Card pot odds: 0.25
+-------------
+Round 183
+0.715, 0.425
+['Qs', 'Kh']High Card pot odds: 0.0
+['Qs', 'Kh', '6s', 'Ts', '4h']High Card pot odds: 0.0
+['Qs', 'Kh', '6s', 'Ts', '4h']High Card pot odds: 0.0
+['Qs', 'Kh', '6s', 'Ts', '4h']High Card pot odds: 0.25
+-------------
+Round 184
+0.685, 0.325
+['Qh', '4d']High Card pot odds: 0.25
+-------------
+Round 185
+0.88, 0.57
+['Ts', 'Tc']Pair pot odds: 0.0
+['Ts', 'Tc', '2d', 'Ac', 'Th']Trips pot odds: 0.0
+['Ts', 'Tc', '2d', 'Ac', 'Th']Trips pot odds: 0.0
+['Ts', 'Tc', '2d', 'Ac', 'Th']Trips pot odds: 0.25
+-------------
+Round 186
+0.555, 0.285
+['5c', 'Jd']High Card pot odds: 0.25
+-------------
+Round 187
+0.605, 0.225
+-------------
+Round 188
+0.685, 0.255
+['7c', '6s']High Card pot odds: 0.25
+-------------
+Round 189
+0.77, 0.4
+['Ks', '9h']High Card pot odds: 0.0
+['Ks', '9h', '6c', 'Th', '6s']Pair pot odds: 0.0
+['Ks', '9h', '6c', 'Th', '6s']Pair pot odds: 0.0
+['Ks', '9h', '6c', 'Th', '6s', 'Js']Pair pot odds: 0.0
+['Ks', '9h', '6c', 'Th', '6s', 'Js', '8s']Pair pot odds: 0.0
+-------------
+Round 190
+0.655, 0.32
+['6s', 'Jd']High Card pot odds: 0.25
+-------------
+Round 191
+0.73, 0.31
+['Qh', '2c']High Card pot odds: 0.25
+-------------
+Round 192
+0.735, 0.415
+['Qd', 'Th']High Card pot odds: 0.25
+-------------
+Round 193
+0.725, 0.46
+['Jc', 'Ad']High Card pot odds: 0.0
+['Jc', 'Ad', 'Qd', 'Ac', 'Jd']Two Pair pot odds: 0.0
+['Jc', 'Ad', 'Qd', 'Ac', 'Jd']Two Pair pot odds: 0.0
+['Jc', 'Ad', 'Qd', 'Ac', 'Jd', 'Ah']Full House pot odds: 0.0
+['Jc', 'Ad', 'Qd', 'Ac', 'Jd', 'Ah', 'Jh']Full House pot odds: 0.0
+-------------
+Round 194
+0.71, 0.365
+['7h', '9d']High Card pot odds: 0.25
+-------------
+Round 195
+0.565, 0.33
+['3d', '5d']High Card pot odds: 0.0
+['3d', '5d', 'Qc', '8h', 'Ts']High Card pot odds: 0.0
+['3d', '5d', 'Qc', '8h', 'Ts']High Card pot odds: 0.0
+['3d', '5d', 'Qc', '8h', 'Ts', '9c']High Card pot odds: 0.0
+['3d', '5d', 'Qc', '8h', 'Ts', '9c']High Card pot odds: 0.4975
+-------------
+Round 196
+0.71, 0.395
+['Ad', '5h']High Card pot odds: 0.25
+-------------
+Round 197
+0.61, 0.39
+['Tc', '6c']High Card pot odds: 0.0
+['Tc', '6c', '2c', '4h', 'Ts']Pair pot odds: 0.0
+['Tc', '6c', '2c', '4h', 'Ts']Pair pot odds: 0.0
+['Tc', '6c', '2c', '4h', 'Ts', 'Qs']Pair pot odds: 0.0
+['Tc', '6c', '2c', '4h', 'Ts', 'Qs', '8d']Pair pot odds: 0.0
+-------------
+Round 198
+0.555, 0.22
+['7h', '5d']High Card pot odds: 0.25
+-------------
+Round 199
+0.7, 0.36
+['Ks', '2s']High Card pot odds: 0.0
+['Ks', '2s', '4d', 'As', '9s']High Card pot odds: 0.0
+['Ks', '2s', '4d', 'As', '9s']High Card pot odds: 0.0
+['Ks', '2s', '4d', 'As', '9s']High Card pot odds: 0.25
+-------------
+Round 200
+0.545, 0.28
+['9h', '3s']High Card pot odds: 0.25
+-------------
+Round 201
+0.575, 0.26
+-------------
+Round 202
+0.685, 0.39
+['Td', '8d']High Card pot odds: 0.25
+-------------
+Round 203
+0.66, 0.31
+['9c', '5c']High Card pot odds: 0.0
+['9c', '5c', '8c', '2s', 'Kh']High Card pot odds: 0.0
+['9c', '5c', '8c', '2s', 'Kh']High Card pot odds: 0.0
+['9c', '5c', '8c', '2s', 'Kh', '9h']Pair pot odds: 0.0
+['9c', '5c', '8c', '2s', 'Kh', '9h', 'Ts']Pair pot odds: 0.0
+-------------
+Round 204
+0.65, 0.26
+['3h', 'Qc']High Card pot odds: 0.25
+-------------
+Round 205
+0.74, 0.36
+['8h', 'Kc']High Card pot odds: 0.0
+['8h', 'Kc', 'Jd', 'Ad', '3s']High Card pot odds: 0.0
+['8h', 'Kc', 'Jd', 'Ad', '3s']High Card pot odds: 0.0
+['8h', 'Kc', 'Jd', 'Ad', '3s']High Card pot odds: 0.25
+-------------
+Round 206
+0.67, 0.275
+['2s', '9d']High Card pot odds: 0.25
+-------------
+Round 207
+0.795, 0.41
+['Jh', 'Kd']High Card pot odds: 0.0
+['Jh', 'Kd', '3c', 'Tc', 'Ah']High Card pot odds: 0.0
+['Jh', 'Kd', '3c', 'Tc', 'Ah']High Card pot odds: 0.0
+['Jh', 'Kd', '3c', 'Tc', 'Ah', '3d']Pair pot odds: 0.0
+['Jh', 'Kd', '3c', 'Tc', 'Ah', '3d', 'Qd']Straight pot odds: 0.0
+-------------
+Round 208
+0.725, 0.335
+['2s', 'Kh']High Card pot odds: 0.25
+-------------
+Round 209
+0.74, 0.355
+-------------
+Round 210
+0.685, 0.2
+['Jc', '3h']High Card pot odds: 0.25
+-------------
+Round 211
+0.56, 0.15
+['2s', '3d']High Card pot odds: 0.0
+['2s', '3d', 'Jd', '8c', '4h']High Card pot odds: 0.0
+['2s', '3d', 'Jd', '8c', '4h']High Card pot odds: 0.0
+['2s', '3d', 'Jd', '8c', '4h']High Card pot odds: 0.25
+-------------
+Round 212
+0.65, 0.25
+['3c', 'Qs']High Card pot odds: 0.25
+-------------
+Round 213
+0.745, 0.425
+['9d', '8h']High Card pot odds: 0.0
+['9d', '8h', '6d', '9c', '4c']Pair pot odds: 0.0
+['9d', '8h', '6d', '9c', '4c']Pair pot odds: 0.0
+['9d', '8h', '6d', '9c', '4c']Pair pot odds: 0.25
+-------------
+Round 214
+0.665, 0.325
+['Qh', '6d']High Card pot odds: 0.25
+-------------
+Round 215
+0.795, 0.37
+['Ks', 'Jc']High Card pot odds: 0.25
+-------------
+Round 216
+0.57, 0.195
+['2c', '5s']High Card pot odds: 0.25
+-------------
+Round 217
+0.75, 0.495
+['8h', '8s']Pair pot odds: 0.0
+['8h', '8s', '5s', '2h', '7h']Pair pot odds: 0.0
+['8h', '8s', '5s', '2h', '7h']Pair pot odds: 0.0
+['8h', '8s', '5s', '2h', '7h', '3s']Pair pot odds: 0.0
+['8h', '8s', '5s', '2h', '7h', '3s', '5d']Two Pair pot odds: 0.0
+-------------
+Round 218
+0.735, 0.29
+['Ts', '7s']High Card pot odds: 0.25
+-------------
+Round 219
+0.67, 0.475
+['Ac', '3c']High Card pot odds: 0.0
+['Ac', '3c', 'Ah', '4c', '3d']Two Pair pot odds: 0.0
+['Ac', '3c', 'Ah', '4c', '3d']Two Pair pot odds: 0.0
+['Ac', '3c', 'Ah', '4c', '3d']Two Pair pot odds: 0.25
+-------------
+Round 220
+0.745, 0.44
+['8h', '7s']High Card pot odds: 0.25
+-------------
+Round 221
+0.54, 0.21
+-------------
+Round 222
+0.76, 0.39
+['Jh', 'Ts']High Card pot odds: 0.25
+-------------
+Round 223
+0.59, 0.34
+['Kd', '2s']High Card pot odds: 0.0
+['Kd', '2s', '9h', 'Qd', '5d']High Card pot odds: 0.0
+['Kd', '2s', '9h', 'Qd', '5d']High Card pot odds: 0.0
+['Kd', '2s', '9h', 'Qd', '5d', '7s']High Card pot odds: 0.0
+['Kd', '2s', '9h', 'Qd', '5d', '7s', 'Js']High Card pot odds: 0.0
+-------------
+Round 224
+0.59, 0.445
+['Ah', '6s']High Card pot odds: 0.25
+-------------
+Round 225
+0.63, 0.38
+['Js', '5h']High Card pot odds: 0.0
+['Js', '5h', 'Kc', 'Td', 'Tc']Pair pot odds: 0.0
+['Js', '5h', 'Kc', 'Td', 'Tc']Pair pot odds: 0.0
+['Js', '5h', 'Kc', 'Td', 'Tc']Pair pot odds: 0.25
+-------------
+Round 226
+0.635, 0.285
+['As', '2d']High Card pot odds: 0.25
+-------------
+Round 227
+0.725, 0.42
+['6c', '6d']Pair pot odds: 0.0
+['6c', '6d', '5d', '4c', '2d']Pair pot odds: 0.0
+['6c', '6d', '5d', '4c', '2d']Pair pot odds: 0.0
+['6c', '6d', '5d', '4c', '2d']Pair pot odds: 0.25
+-------------
+Round 228
+0.685, 0.46
+['Ah', 'Tc']High Card pot odds: 0.25
+-------------
+Round 229
+0.63, 0.315
+['Js', '7d']High Card pot odds: 0.0
+['Js', '7d', '9c', 'Kc', '8d']High Card pot odds: 0.0
+['Js', '7d', '9c', 'Kc', '8d']High Card pot odds: 0.0
+['Js', '7d', '9c', 'Kc', '8d', '9s']Pair pot odds: 0.0
+['Js', '7d', '9c', 'Kc', '8d', '9s', '6d']Pair pot odds: 0.0
+-------------
+Round 230
+0.695, 0.455
+['7s', 'Ah']High Card pot odds: 0.25
+-------------
+Round 231
+0.69, 0.435
+['8s', 'Ah']High Card pot odds: 0.0
+['8s', 'Ah', '2h', 'Qc', '5c']High Card pot odds: 0.0
+['8s', 'Ah', '2h', 'Qc', '5c']High Card pot odds: 0.0
+['8s', 'Ah', '2h', 'Qc', '5c', 'As']Pair pot odds: 0.0
+['8s', 'Ah', '2h', 'Qc', '5c', 'As', '7h']Pair pot odds: 0.0
+-------------
+Round 232
+0.575, 0.17
+['2h', '6s']High Card pot odds: 0.25
+-------------
+Round 233
+0.625, 0.3
+-------------
+Round 234
+0.805, 0.46
+['Qc', 'As']High Card pot odds: 0.25
+-------------
+Round 235
+0.66, 0.17
+-------------
+Round 236
+0.655, 0.385
+['6c', '9h']High Card pot odds: 0.25
+-------------
+Round 237
+0.615, 0.21
+['3c', '8h']High Card pot odds: 0.25
+-------------
+Round 238
+0.63, 0.265
+['Ks', '2h']High Card pot odds: 0.25
+-------------
+Round 239
+0.73, 0.425
+['6c', 'Qc']High Card pot odds: 0.0
+['6c', 'Qc', '6d', '3h', 'Ts']Pair pot odds: 0.0
+['6c', 'Qc', '6d', '3h', 'Ts']Pair pot odds: 0.0
+['6c', 'Qc', '6d', '3h', 'Ts']Pair pot odds: 0.25
+-------------
+Round 240
+0.595, 0.465
+['4d', '4h']Pair pot odds: 0.25
+-------------
+Round 241
+0.515, 0.235
+['2h', '4h']High Card pot odds: 0.0
+['2h', '4h', '9d', '2d', '2s']Trips pot odds: 0.0
+['2h', '4h', '9d', '2d', '2s']Trips pot odds: 0.0
+['2h', '4h', '9d', '2d', '2s', '3h']Trips pot odds: 0.0
+['2h', '4h', '9d', '2d', '2s', '3h', '6s']Trips pot odds: 0.0
+-------------
+Round 242
+0.92, 0.61
+['Ks', 'Kc']Pair pot odds: 0.25
+-------------
+Round 243
+0.78, 0.57
+['9s', '9c']Pair pot odds: 0.0
+['9s', '9c', '2s', 'As', '3c']Pair pot odds: 0.0
+['9s', '9c', '2s', 'As', '3c']Pair pot odds: 0.0
+['9s', '9c', '2s', 'As', '3c']Pair pot odds: 0.25
+-------------
+Round 244
+0.69, 0.35
+['8d', 'Th']High Card pot odds: 0.25
+-------------
+Round 245
+0.705, 0.345
+-------------
+Round 246
+0.67, 0.24
+['6c', '8d']High Card pot odds: 0.25
+-------------
+Round 247
+0.705, 0.43
+['Kd', '6s']High Card pot odds: 0.0
+['Kd', '6s', 'Kc', 'Ts', '7d']Pair pot odds: 0.0
+['Kd', '6s', 'Kc', 'Ts', '7d']Pair pot odds: 0.0
+['Kd', '6s', 'Kc', 'Ts', '7d']Pair pot odds: 0.25
+-------------
+Round 248
+0.695, 0.315
+['Td', '6s']High Card pot odds: 0.25
+-------------
+Round 249
+0.54, 0.35
+['3h', 'Qs']High Card pot odds: 0.25
+-------------
+Round 250
+0.69, 0.385
+['2d', 'Kd']High Card pot odds: 0.25
+-------------
+Round 251
+0.595, 0.19
+-------------
+Round 252
+0.635, 0.35
+['Kc', '6h']High Card pot odds: 0.25
+-------------
+Round 253
+0.645, 0.25
+['5h', 'Jd']High Card pot odds: 0.0
+['5h', 'Jd', 'Ah', 'Kd', '3c']High Card pot odds: 0.0
+['5h', 'Jd', 'Ah', 'Kd', '3c']High Card pot odds: 0.0
+['5h', 'Jd', 'Ah', 'Kd', '3c']High Card pot odds: 0.25
+-------------
+Round 254
+0.67, 0.33
+['8d', 'Ac']High Card pot odds: 0.25
+-------------
+Round 255
+0.595, 0.255
+-------------
+Round 256
+0.565, 0.255
+['2h', '5s']High Card pot odds: 0.25
+-------------
+Round 257
+0.71, 0.295
+['Kc', '7d']High Card pot odds: 0.0
+['Kc', '7d', 'Jc', '5s', '7s']Pair pot odds: 0.0
+['Kc', '7d', 'Jc', '5s', '7s']Pair pot odds: 0.0
+['Kc', '7d', 'Jc', '5s', '7s', 'Jh']Two Pair pot odds: 0.0
+['Kc', '7d', 'Jc', '5s', '7s', 'Jh', 'Qh']Two Pair pot odds: 0.0
+-------------
+Round 258
+0.605, 0.27
+['2s', '4h']High Card pot odds: 0.25
+-------------
+Round 259
+0.715, 0.425
+-------------
+Round 260
+0.615, 0.355
+['6d', 'Kh']High Card pot odds: 0.25
+-------------
+Round 261
+0.61, 0.255
+['8h', '3s']High Card pot odds: 0.0
+['8h', '3s', 'Qd', 'Qc', '5d']Pair pot odds: 0.0
+['8h', '3s', 'Qd', 'Qc', '5d']Pair pot odds: 0.0
+['8h', '3s', 'Qd', 'Qc', '5d']Pair pot odds: 0.25
+-------------
+Round 262
+0.66, 0.305
+['8c', '6c']High Card pot odds: 0.25
+-------------
+Round 263
+0.685, 0.375
+-------------
+Round 264
+0.685, 0.325
+['Jd', '4s']High Card pot odds: 0.25
+-------------
+Round 265
+0.63, 0.21
+['5d', 'Js']High Card pot odds: 0.0
+['5d', 'Js', '8d', '6h', 'Ks']High Card pot odds: 0.0
+['5d', 'Js', '8d', '6h', 'Ks']High Card pot odds: 0.0
+['5d', 'Js', '8d', '6h', 'Ks', 'Ts']High Card pot odds: 0.0
+['5d', 'Js', '8d', '6h', 'Ks', 'Ts', '8c']Pair pot odds: 0.0
+-------------
+Round 266
+0.585, 0.375
+['3s', 'Qc']High Card pot odds: 0.25
+-------------
+Round 267
+0.74, 0.48
+-------------
+Round 268
+0.715, 0.385
+['Qd', '9c']High Card pot odds: 0.25
+-------------
+Round 269
+0.695, 0.32
+-------------
+Round 270
+0.695, 0.305
+['8h', 'Jc']High Card pot odds: 0.25
+-------------
+Round 271
+0.67, 0.455
+-------------
+Round 272
+0.66, 0.31
+['2s', '2h']Pair pot odds: 0.25
+-------------
+Round 273
+0.755, 0.385
+['5s', '5h']Pair pot odds: 0.0
+['5s', '5h', 'Qc', '7s', '9h']Pair pot odds: 0.0
+['5s', '5h', 'Qc', '7s', '9h']Pair pot odds: 0.0
+['5s', '5h', 'Qc', '7s', '9h', 'Qs']Two Pair pot odds: 0.0
+['5s', '5h', 'Qc', '7s', '9h', 'Qs', '6s']Two Pair pot odds: 0.0
+-------------
+Round 274
+0.83, 0.435
+['Ah', 'Qd']High Card pot odds: 0.25
+-------------
+Round 275
+0.59, 0.19
+-------------
+Round 276
+0.74, 0.49
+['Jh', 'Kc']High Card pot odds: 0.25
+-------------
+Round 277
+0.625, 0.325
+-------------
+Round 278
+0.515, 0.195
+['2h', '9s']High Card pot odds: 0.25
+-------------
+Round 279
+0.665, 0.31
+['5s', '4h']High Card pot odds: 0.25
+-------------
+Round 280
+0.655, 0.19
+['6c', '3d']High Card pot odds: 0.25
+-------------
+Round 281
+0.855, 0.58
+['Qh', 'Qs']Pair pot odds: 0.0
+['Qh', 'Qs', '6d', '9c', '4h']Pair pot odds: 0.0
+['Qh', 'Qs', '6d', '9c', '4h']Pair pot odds: 0.0
+['Qh', 'Qs', '6d', '9c', '4h', '4c']Two Pair pot odds: 0.0
+['Qh', 'Qs', '6d', '9c', '4h', '4c', 'Jc']Two Pair pot odds: 0.0
+-------------
+Round 282
+0.63, 0.21
+['5c', '2d']High Card pot odds: 0.25
+-------------
+Round 283
+0.66, 0.3
+['7d', '9s']High Card pot odds: 0.0
+['7d', '9s', '4s', '2d', 'As']High Card pot odds: 0.0
+['7d', '9s', '4s', '2d', 'As']High Card pot odds: 0.0
+['7d', '9s', '4s', '2d', 'As']High Card pot odds: 0.25
+-------------
+Round 284
+0.7, 0.355
+['9c', 'Js']High Card pot odds: 0.25
+-------------
+Round 285
+0.685, 0.335
+-------------
+Round 286
+0.525, 0.27
+['3c', '5h']High Card pot odds: 0.25
+-------------
+Round 287
+0.565, 0.215
+['9s', '4d']High Card pot odds: 0.0
+['9s', '4d', '3d', '4c', '8s']Pair pot odds: 0.0
+['9s', '4d', '3d', '4c', '8s']Pair pot odds: 0.0
+['9s', '4d', '3d', '4c', '8s', '6s']Pair pot odds: 0.0
+['9s', '4d', '3d', '4c', '8s', '6s', '9c']Two Pair pot odds: 0.0
+-------------
+Round 288
+0.635, 0.23
+['5h', '8s']High Card pot odds: 0.25
+-------------
+Round 289
+0.75, 0.395
+['4h', 'Ks']High Card pot odds: 0.25
+-------------
+Round 290
+0.66, 0.29
+['4d', 'Jc']High Card pot odds: 0.25
+-------------
+Round 291
+0.635, 0.3
+['9h', '6s']High Card pot odds: 0.0
+['9h', '6s', 'Td', 'Jh', '7c']High Card pot odds: 0.0
+['9h', '6s', 'Td', 'Jh', '7c']High Card pot odds: 0.0
+['9h', '6s', 'Td', 'Jh', '7c']High Card pot odds: 0.25
+-------------
+Round 292
+0.7, 0.23
+['6d', 'Td']High Card pot odds: 0.25
+-------------
+Round 293
+0.77, 0.39
+['5s', 'As']High Card pot odds: 0.0
+['5s', 'As', '2h', '7h', '7s']Pair pot odds: 0.0
+['5s', 'As', '2h', '7h', '7s']Pair pot odds: 0.0
+['5s', 'As', '2h', '7h', '7s', '5d']Two Pair pot odds: 0.0
+['5s', 'As', '2h', '7h', '7s', '5d', 'Qc']Two Pair pot odds: 0.0
+-------------
+Round 294
+0.68, 0.31
+['Ts', '5h']High Card pot odds: 0.25
+-------------
+Round 295
+0.665, 0.255
+['2h', 'Jc']High Card pot odds: 0.0
+['2h', 'Jc', 'As', '5d', '3c']High Card pot odds: 0.0
+['2h', 'Jc', 'As', '5d', '3c']High Card pot odds: 0.0
+['2h', 'Jc', 'As', '5d', '3c']High Card pot odds: 0.25
+-------------
+Round 296
+0.67, 0.335
+['6c', '5c']High Card pot odds: 0.25
+-------------
+Round 297
+0.665, 0.325
+['5c', '6h']High Card pot odds: 0.25
+-------------
+Round 298
+0.615, 0.275
+['Qs', '5c']High Card pot odds: 0.25
+-------------
+Round 299
+0.615, 0.345
+['Kc', '7d']High Card pot odds: 0.0
+['Kc', '7d', 'Tc', '9d', '8d']High Card pot odds: 0.0
+['Kc', '7d', 'Tc', '9d', '8d']High Card pot odds: 0.0
+['Kc', '7d', 'Tc', '9d', '8d']High Card pot odds: 0.25
+-------------
+Round 300
+0.675, 0.3
+['Tc', '5s']High Card pot odds: 0.25
+-------------
+Round 301
+0.69, 0.29
+['3d', '6d']High Card pot odds: 0.0
+['3d', '6d', 'Ts', '5c', 'Qc']High Card pot odds: 0.0
+['3d', '6d', 'Ts', '5c', 'Qc']High Card pot odds: 0.0
+['3d', '6d', 'Ts', '5c', 'Qc']High Card pot odds: 0.25
+-------------
+Round 302
+0.78, 0.41
+['9d', 'Kd']High Card pot odds: 0.25
+-------------
+Round 303
+0.54, 0.26
+-------------
+Round 304
+0.665, 0.385
+['Kh', '9c']High Card pot odds: 0.25
+-------------
+Round 305
+0.78, 0.405
+['Qc', 'Js']High Card pot odds: 0.0
+['Qc', 'Js', '5d', 'Qh', '4d']Pair pot odds: 0.0
+['Qc', 'Js', '5d', 'Qh', '4d']Pair pot odds: 0.0
+['Qc', 'Js', '5d', 'Qh', '4d', 'Kh']Pair pot odds: 0.0
+['Qc', 'Js', '5d', 'Qh', '4d', 'Kh', 'Jd']Two Pair pot odds: 0.0
+['Qc', 'Js', '5d', 'Qh', '4d', 'Kh', 'Jd']Two Pair pot odds: 0.4975
+-------------
+Round 306
+0.655, 0.315
+['6h', '4s']High Card pot odds: 0.25
+-------------
+Round 307
+0.635, 0.365
+-------------
+Round 308
+0.675, 0.19
+['3c', '6d']High Card pot odds: 0.25
+-------------
+Round 309
+0.605, 0.21
+-------------
+Round 310
+0.515, 0.24
+['5c', '3s']High Card pot odds: 0.25
+-------------
+Round 311
+0.74, 0.435
+['6d', 'Ad']High Card pot odds: 0.0
+['6d', 'Ad', 'Td', '9c', 'Ac']Pair pot odds: 0.0
+['6d', 'Ad', 'Td', '9c', 'Ac']Pair pot odds: 0.0
+['6d', 'Ad', 'Td', '9c', 'Ac', 'Kh']Pair pot odds: 0.0
+['6d', 'Ad', 'Td', '9c', 'Ac', 'Kh', '6c']Two Pair pot odds: 0.0
+-------------
+Round 312
+0.61, 0.18
+['3s', '6h']High Card pot odds: 0.25
+-------------
+Round 313
+0.6, 0.29
+['9h', '4h']High Card pot odds: 0.0
+['9h', '4h', 'Ts', 'Jh', 'Qc']High Card pot odds: 0.0
+['9h', '4h', 'Ts', 'Jh', 'Qc']High Card pot odds: 0.0
+['9h', '4h', 'Ts', 'Jh', 'Qc']High Card pot odds: 0.25
+-------------
+Round 314
+0.755, 0.2
+['2c', '8c']High Card pot odds: 0.25
+-------------
+Round 315
+0.61, 0.23
+['3s', '4d']High Card pot odds: 0.0
+['3s', '4d', '9h', '4c', '8c']Pair pot odds: 0.0
+['3s', '4d', '9h', '4c', '8c']Pair pot odds: 0.0
+['3s', '4d', '9h', '4c', '8c']Pair pot odds: 0.25
+-------------
+Round 316
+0.71, 0.245
+['7c', '8s']High Card pot odds: 0.25
+-------------
+Round 317
+0.595, 0.36
+['Ad', '3c']High Card pot odds: 0.0
+['Ad', '3c', '5h', '2s', '4d']Straight pot odds: 0.0
+['Ad', '3c', '5h', '2s', '4d']Straight pot odds: 0.0
+['Ad', '3c', '5h', '2s', '4d']Straight pot odds: 0.25
+-------------
+Round 318
+0.65, 0.285
+['3d', 'Qc']High Card pot odds: 0.25
+-------------
+Round 319
+0.735, 0.285
+-------------
+Round 320
+0.77, 0.39
+['7h', 'Kc']High Card pot odds: 0.25
+-------------
+Round 321
+0.825, 0.455
+['6h', '6d']Pair pot odds: 0.0
+['6h', '6d', '8s', '7h', '9c']Pair pot odds: 0.0
+['6h', '6d', '8s', '7h', '9c']Pair pot odds: 0.0
+['6h', '6d', '8s', '7h', '9c', 'Ad']Pair pot odds: 0.0
+['6h', '6d', '8s', '7h', '9c', 'Ad', '3c']Pair pot odds: 0.0
+-------------
+Round 322
+0.705, 0.445
+['Td', 'Qh']High Card pot odds: 0.25
+-------------
+Round 323
+0.76, 0.4
+['Kh', '6h']High Card pot odds: 0.0
+['Kh', '6h', '5d', '3c', '9h']High Card pot odds: 0.0
+['Kh', '6h', '5d', '3c', '9h']High Card pot odds: 0.0
+['Kh', '6h', '5d', '3c', '9h']High Card pot odds: 0.25
+-------------
+Round 324
+0.71, 0.37
+['Jd', '7d']High Card pot odds: 0.25
+-------------
+Round 325
+0.68, 0.325
+['6d', '9d']High Card pot odds: 0.0
+['6d', '9d', 'Kd', 'Ts', 'Jh']High Card pot odds: 0.0
+['6d', '9d', 'Kd', 'Ts', 'Jh']High Card pot odds: 0.0
+['6d', '9d', 'Kd', 'Ts', 'Jh']High Card pot odds: 0.25
+-------------
+Round 326
+0.885, 0.455
+['As', 'Js']High Card pot odds: 0.25
+-------------
+Round 327
+0.65, 0.38
+['3d', 'Ac']High Card pot odds: 0.25
+-------------
+Round 328
+0.645, 0.305
+['Jc', '6d']High Card pot odds: 0.25
+-------------
+Round 329
+0.635, 0.295
+-------------
+Round 330
+0.75, 0.345
+['Ac', '5d']High Card pot odds: 0.25
+-------------
+Round 331
+0.7, 0.3
+-------------
+Round 332
+0.675, 0.29
+['4d', 'Jd']High Card pot odds: 0.25
+-------------
+Round 333
+0.725, 0.41
+['Ah', 'Qd']High Card pot odds: 0.0
+['Ah', 'Qd', '6d', 'Ad', '5c']Pair pot odds: 0.0
+['Ah', 'Qd', '6d', 'Ad', '5c']Pair pot odds: 0.0
+['Ah', 'Qd', '6d', 'Ad', '5c']Pair pot odds: 0.25
+-------------
+Round 334
+0.685, 0.295
+['6d', 'Jc']High Card pot odds: 0.25
+-------------
+Round 335
+0.62, 0.34
+-------------
+Round 336
+0.605, 0.34
+['Ts', '5h']High Card pot odds: 0.25
+-------------
+Round 337
+0.615, 0.33
+['Jd', '5h']High Card pot odds: 0.0
+['Jd', '5h', '9d', 'Kh', '2h']High Card pot odds: 0.0
+['Jd', '5h', '9d', 'Kh', '2h']High Card pot odds: 0.0
+['Jd', '5h', '9d', 'Kh', '2h']High Card pot odds: 0.25
+-------------
+Round 338
+0.69, 0.34
+['9s', 'Tc']High Card pot odds: 0.25
+-------------
+Round 339
+0.73, 0.42
+-------------
+Round 340
+0.625, 0.235
+['6d', '3d']High Card pot odds: 0.25
+-------------
+Round 341
+0.625, 0.35
+-------------
+Round 342
+0.65, 0.305
+['Js', '4s']High Card pot odds: 0.25
+-------------
+Round 343
+0.72, 0.275
+['9d', '7d']High Card pot odds: 0.0
+['9d', '7d', '6c', 'Tc', 'Ah']High Card pot odds: 0.0
+['9d', '7d', '6c', 'Tc', 'Ah']High Card pot odds: 0.0
+['9d', '7d', '6c', 'Tc', 'Ah', 'Js']High Card pot odds: 0.0
+['9d', '7d', '6c', 'Tc', 'Ah', 'Js', '3c']High Card pot odds: 0.0
+-------------
+Round 344
+0.62, 0.34
+['8d', 'Ks']High Card pot odds: 0.25
+-------------
+Round 345
+0.595, 0.215
+-------------
+Round 346
+0.58, 0.225
+['8s', '4c']High Card pot odds: 0.25
+-------------
+Round 347
+0.785, 0.4
+-------------
+Round 348
+0.685, 0.36
+['Js', '9c']High Card pot odds: 0.25
+-------------
+Round 349
+0.655, 0.295
+['Kc', '4d']High Card pot odds: 0.25
+-------------
+Round 350
+0.57, 0.3
+['8d', '9s']High Card pot odds: 0.25
+-------------
+Round 351
+0.74, 0.295
+['6s', 'Jh']High Card pot odds: 0.0
+['6s', 'Jh', '3s', '7h', 'Kc']High Card pot odds: 0.0
+['6s', 'Jh', '3s', '7h', 'Kc']High Card pot odds: 0.0
+['6s', 'Jh', '3s', '7h', 'Kc']High Card pot odds: 0.25
+-------------
+Round 352
+0.61, 0.215
+['6d', '2c']High Card pot odds: 0.25
+-------------
+Round 353
+0.695, 0.46
+['As', '9h']High Card pot odds: 0.0
+['As', '9h', '6d', '2d', '7h']High Card pot odds: 0.0
+['As', '9h', '6d', '2d', '7h']High Card pot odds: 0.0
+['As', '9h', '6d', '2d', '7h']High Card pot odds: 0.25
+-------------
+Round 354
+0.59, 0.28
+['2c', '3c']High Card pot odds: 0.25
+-------------
+Round 355
+0.755, 0.345
+-------------
+Round 356
+0.68, 0.365
+['9h', 'Qh']High Card pot odds: 0.25
+-------------
+Round 357
+0.635, 0.21
+-------------
+Round 358
+0.7, 0.455
+['6h', '6s']Pair pot odds: 0.25
+-------------
+Round 359
+0.625, 0.33
+-------------
+Round 360
+0.655, 0.415
+['4s', 'Ks']High Card pot odds: 0.25
+-------------
+Round 361
+0.705, 0.5
+-------------
+Round 362
+0.71, 0.25
+['Tc', '3h']High Card pot odds: 0.25
+-------------
+Round 363
+0.635, 0.315
+-------------
+Round 364
+0.695, 0.325
+['Ks', '4h']High Card pot odds: 0.25
+-------------
+Round 365
+0.625, 0.335
+['7c', 'Qd']High Card pot odds: 0.0
+['7c', 'Qd', '5s', '3h', '2d']High Card pot odds: 0.0
+['7c', 'Qd', '5s', '3h', '2d']High Card pot odds: 0.0
+['7c', 'Qd', '5s', '3h', '2d']High Card pot odds: 0.25
+-------------
+Round 366
+0.72, 0.375
+['Jh', '9d']High Card pot odds: 0.25
+-------------
+Round 367
+0.74, 0.305
+-------------
+Round 368
+0.725, 0.29
+['Kh', '2s']High Card pot odds: 0.25
+-------------
+Round 369
+0.65, 0.44
+['6h', '5h']High Card pot odds: 0.0
+['6h', '5h', '9s', '4d', '6s']Pair pot odds: 0.0
+['6h', '5h', '9s', '4d', '6s']Pair pot odds: 0.0
+['6h', '5h', '9s', '4d', '6s']Pair pot odds: 0.25
+-------------
+Round 370
+0.655, 0.335
+['9h', '5h']High Card pot odds: 0.25
+-------------
+Round 371
+0.77, 0.395
+['Kc', 'Ad']High Card pot odds: 0.0
+['Kc', 'Ad', 'Jc', '6h', 'Js']Pair pot odds: 0.0
+['Kc', 'Ad', 'Jc', '6h', 'Js']Pair pot odds: 0.0
+['Kc', 'Ad', 'Jc', '6h', 'Js', '3s']Pair pot odds: 0.0
+['Kc', 'Ad', 'Jc', '6h', 'Js', '3s', '6d']Two Pair pot odds: 0.0
+-------------
+Round 372
+0.62, 0.295
+['6s', '8s']High Card pot odds: 0.25
+-------------
+Round 373
+0.69, 0.36
+-------------
+Round 374
+0.495, 0.275
+['7h', '3d']High Card pot odds: 0.25
+-------------
+Round 375
+0.705, 0.375
+-------------
+Round 376
+0.67, 0.295
+['7c', '9c']High Card pot odds: 0.25
+-------------
+Round 377
+0.745, 0.39
+['2d', 'As']High Card pot odds: 0.0
+['2d', 'As', '2c', '9h', '3d']Pair pot odds: 0.0
+['2d', 'As', '2c', '9h', '3d']Pair pot odds: 0.0
+['2d', 'As', '2c', '9h', '3d', '5d']Pair pot odds: 0.0
+['2d', 'As', '2c', '9h', '3d', '5d', '5c']Two Pair pot odds: 0.0
+-------------
+Round 378
+0.685, 0.33
+['6h', '8c']High Card pot odds: 0.25
+-------------
+Round 379
+0.82, 0.71
+['Kh', 'Kc']Pair pot odds: 0.0
+['Kh', 'Kc', 'Tc', '5h', '6d']Pair pot odds: 0.0
+['Kh', 'Kc', 'Tc', '5h', '6d']Pair pot odds: 0.0
+['Kh', 'Kc', 'Tc', '5h', '6d', '6c']Two Pair pot odds: 0.0
+['Kh', 'Kc', 'Tc', '5h', '6d', '6c', 'Js']Two Pair pot odds: 0.0
+-------------
+Round 380
+0.615, 0.38
+['7h', 'Jh']High Card pot odds: 0.25
+-------------
+Round 381
+0.7, 0.35
+['4c', 'Jc']High Card pot odds: 0.0
+['4c', 'Jc', 'Js', 'Td', '8s']Pair pot odds: 0.0
+['4c', 'Jc', 'Js', 'Td', '8s']Pair pot odds: 0.0
+['4c', 'Jc', 'Js', 'Td', '8s']Pair pot odds: 0.25
+-------------
+Round 382
+0.7, 0.255
+['Jh', '7d']High Card pot odds: 0.25
+-------------
+Round 383
+0.545, 0.275
+['4d', 'Jh']High Card pot odds: 0.25
+-------------
+Round 384
+0.56, 0.27
+['2d', '8h']High Card pot odds: 0.25
+-------------
+Round 385
+0.625, 0.325
+['Qs', '6d']High Card pot odds: 0.0
+['Qs', '6d', 'Qc', 'Kh', 'Jc']Pair pot odds: 0.0
+['Qs', '6d', 'Qc', 'Kh', 'Jc']Pair pot odds: 0.0
+['Qs', '6d', 'Qc', 'Kh', 'Jc']Pair pot odds: 0.25
+-------------
+Round 386
+0.6, 0.235
+['5h', '4d']High Card pot odds: 0.25
+-------------
+Round 387
+0.62, 0.28
+-------------
+Round 388
+0.62, 0.24
+['4h', '9s']High Card pot odds: 0.25
+-------------
+Round 389
+0.66, 0.24
+-------------
+Round 390
+0.655, 0.465
+['4c', '4d']Pair pot odds: 0.25
+-------------
+Round 391
+0.67, 0.255
+['8d', '4c']High Card pot odds: 0.25
+-------------
+Round 392
+0.72, 0.375
+['5s', '5c']Pair pot odds: 0.25
+-------------
+Round 393
+0.775, 0.465
+['As', '8c']High Card pot odds: 0.25
+-------------
+Round 394
+0.66, 0.355
+['6h', 'Jh']High Card pot odds: 0.25
+-------------
+Round 395
+0.745, 0.455
+['5h', '5c']Pair pot odds: 0.0
+['5h', '5c', '6h', 'Qd', '6c']Two Pair pot odds: 0.0
+['5h', '5c', '6h', 'Qd', '6c']Two Pair pot odds: 0.0
+['5h', '5c', '6h', 'Qd', '6c', '9d']Two Pair pot odds: 0.0
+['5h', '5c', '6h', 'Qd', '6c', '9d', 'Qs']Two Pair pot odds: 0.0
+-------------
+Round 396
+0.645, 0.28
+['6s', '2h']High Card pot odds: 0.25
+-------------
+Round 397
+0.81, 0.345
+['Qs', 'Kc']High Card pot odds: 0.0
+['Qs', 'Kc', 'Tc', '8h', '7s']High Card pot odds: 0.0
+['Qs', 'Kc', 'Tc', '8h', '7s']High Card pot odds: 0.0
+['Qs', 'Kc', 'Tc', '8h', '7s', '6c']High Card pot odds: 0.0
+['Qs', 'Kc', 'Tc', '8h', '7s', '6c', '3c']High Card pot odds: 0.0
+['Qs', 'Kc', 'Tc', '8h', '7s', '6c', '3c']High Card pot odds: 0.4975
+-------------
+Round 398
+0.735, 0.375
+['Td', '9d']High Card pot odds: 0.25
+-------------
+Round 399
+0.77, 0.435
+-------------
+Round 400
+0.665, 0.35
+['9s', '7c']High Card pot odds: 0.25
+-------------
+Round 401
+0.735, 0.345
+['Ad', '6d']High Card pot odds: 0.0
+['Ad', '6d', '3h', 'Kc', 'Qd']High Card pot odds: 0.0
+['Ad', '6d', '3h', 'Kc', 'Qd']High Card pot odds: 0.0
+['Ad', '6d', '3h', 'Kc', 'Qd', 'Ah']Pair pot odds: 0.0
+['Ad', '6d', '3h', 'Kc', 'Qd', 'Ah', '6c']Two Pair pot odds: 0.0
+-------------
+Round 402
+0.71, 0.355
+['Qd', '7d']High Card pot odds: 0.25
+-------------
+Round 403
+0.905, 0.7
+['Kh', 'Kc']Pair pot odds: 0.0
+['Kh', 'Kc', 'Qc', '2h', '3c']Pair pot odds: 0.0
+['Kh', 'Kc', 'Qc', '2h', '3c']Pair pot odds: 0.0
+['Kh', 'Kc', 'Qc', '2h', '3c', 'Ks']Trips pot odds: 0.0
+['Kh', 'Kc', 'Qc', '2h', '3c', 'Ks', '7s']Trips pot odds: 0.0
+-------------
+Round 404
+0.685, 0.42
+['Qd', '7h']High Card pot odds: 0.25
+-------------
+Round 405
+0.775, 0.405
+-------------
+Round 406
+0.58, 0.375
+['8s', '5c']High Card pot odds: 0.25
+-------------
+Round 407
+0.78, 0.34
+['Ad', 'Ts']High Card pot odds: 0.0
+['Ad', 'Ts', '3d', 'Td', '6h']Pair pot odds: 0.0
+['Ad', 'Ts', '3d', 'Td', '6h']Pair pot odds: 0.0
+['Ad', 'Ts', '3d', 'Td', '6h', '6c']Two Pair pot odds: 0.0
+['Ad', 'Ts', '3d', 'Td', '6h', '6c', 'Kd']Two Pair pot odds: 0.0
+-------------
+Round 408
+0.79, 0.515
+['Ks', 'Ac']High Card pot odds: 0.25
+-------------
+Round 409
+0.71, 0.37
+-------------
+Round 410
+0.69, 0.325
+['7h', '9h']High Card pot odds: 0.25
+-------------
+Round 411
+0.73, 0.34
+['Th', '7d']High Card pot odds: 0.0
+['Th', '7d', 'Kd', 'Tc', '4s']Pair pot odds: 0.0
+['Th', '7d', 'Kd', 'Tc', '4s']Pair pot odds: 0.0
+['Th', '7d', 'Kd', 'Tc', '4s', '2s']Pair pot odds: 0.0
+['Th', '7d', 'Kd', 'Tc', '4s', '2s', 'Js']Pair pot odds: 0.0
+-------------
+Round 412
+0.875, 0.69
+['Jh', 'Js']Pair pot odds: 0.25
+-------------
+Round 413
+0.7, 0.295
+['8c', '7d']High Card pot odds: 0.0
+['8c', '7d', '6h', 'Td', 'Jh']High Card pot odds: 0.0
+['8c', '7d', '6h', 'Td', 'Jh']High Card pot odds: 0.0
+['8c', '7d', '6h', 'Td', 'Jh']High Card pot odds: 0.25
+-------------
+Round 414
+0.595, 0.245
+['3h', '7c']High Card pot odds: 0.25
+-------------
+Round 415
+0.695, 0.235
+-------------
+Round 416
+0.725, 0.43
+['Kc', 'Th']High Card pot odds: 0.25
+-------------
+Round 417
+0.61, 0.36
+['4s', 'Jc']High Card pot odds: 0.25
+-------------
+Round 418
+0.64, 0.425
+['8c', '6d']High Card pot odds: 0.25
+-------------
+Round 419
+0.62, 0.315
+['8h', '6h']High Card pot odds: 0.0
+['8h', '6h', '5d', '5s', 'Jd']Pair pot odds: 0.0
+['8h', '6h', '5d', '5s', 'Jd']Pair pot odds: 0.0
+['8h', '6h', '5d', '5s', 'Jd', '7s']Pair pot odds: 0.0
+['8h', '6h', '5d', '5s', 'Jd', '7s', '3d']Pair pot odds: 0.0
+-------------
+Round 420
+0.745, 0.58
+['9h', '9c']Pair pot odds: 0.25
+-------------
+Round 421
+0.66, 0.265
+['4d', 'Qd']High Card pot odds: 0.0
+['4d', 'Qd', 'Tc', 'Ah', 'Qs']Pair pot odds: 0.0
+['4d', 'Qd', 'Tc', 'Ah', 'Qs']Pair pot odds: 0.0
+['4d', 'Qd', 'Tc', 'Ah', 'Qs']Pair pot odds: 0.25
+-------------
+Round 422
+0.545, 0.265
+['2h', '7c']High Card pot odds: 0.25
+-------------
+Round 423
+0.53, 0.15
+['6d', '2h']High Card pot odds: 0.0
+['6d', '2h', '4d', '2d', '5c']Pair pot odds: 0.0
+['6d', '2h', '4d', '2d', '5c']Pair pot odds: 0.0
+['6d', '2h', '4d', '2d', '5c', 'Qc']Pair pot odds: 0.0
+['6d', '2h', '4d', '2d', '5c', 'Qc', '5d']Two Pair pot odds: 0.0
+-------------
+Round 424
+0.645, 0.33
+['2d', 'Th']High Card pot odds: 0.25
+-------------
+Round 425
+0.515, 0.27
+-------------
+Round 426
+0.79, 0.405
+['6h', 'Kh']High Card pot odds: 0.25
+-------------
+Round 427
+0.75, 0.5
+['Qs', 'Kc']High Card pot odds: 0.0
+['Qs', 'Kc', '6s', 'Qh', 'Qc']Trips pot odds: 0.0
+['Qs', 'Kc', '6s', 'Qh', 'Qc']Trips pot odds: 0.0
+['Qs', 'Kc', '6s', 'Qh', 'Qc', 'Ks']Full House pot odds: 0.0
+['Qs', 'Kc', '6s', 'Qh', 'Qc', 'Ks', 'Ah']Full House pot odds: 0.0
+-------------
+Round 428
+0.615, 0.24
+['Jc', '4s']High Card pot odds: 0.25
+-------------
+Round 429
+0.74, 0.365
+['Ad', '7h']High Card pot odds: 0.0
+['Ad', '7h', '6h', '3h', '6c']Pair pot odds: 0.0
+['Ad', '7h', '6h', '3h', '6c']Pair pot odds: 0.0
+['Ad', '7h', '6h', '3h', '6c']Pair pot odds: 0.25
+-------------
+Round 430
+0.735, 0.325
+['Ac', '8h']High Card pot odds: 0.25
+-------------
+Round 431
+0.685, 0.36
+['4d', 'Kc']High Card pot odds: 0.0
+['4d', 'Kc', '6d', '6c', 'Qh']Pair pot odds: 0.0
+['4d', 'Kc', '6d', '6c', 'Qh']Pair pot odds: 0.0
+['4d', 'Kc', '6d', '6c', 'Qh']Pair pot odds: 0.25
+-------------
+Round 432
+0.645, 0.275
+['7c', '2s']High Card pot odds: 0.25
+-------------
+Round 433
+0.7, 0.295
+-------------
+Round 434
+0.665, 0.435
+['9d', 'Qc']High Card pot odds: 0.25
+-------------
+Round 435
+0.715, 0.335
+-------------
+Round 436
+0.61, 0.31
+['3h', 'Qc']High Card pot odds: 0.25
+-------------
+Round 437
+0.685, 0.33
+['Kd', '8s']High Card pot odds: 0.0
+['Kd', '8s', 'Qc', 'Ad', '9c']High Card pot odds: 0.0
+['Kd', '8s', 'Qc', 'Ad', '9c']High Card pot odds: 0.0
+['Kd', '8s', 'Qc', 'Ad', '9c']High Card pot odds: 0.25
+-------------
+Round 438
+0.685, 0.355
+['Ah', '8d']High Card pot odds: 0.25
+-------------
+Round 439
+0.52, 0.18
+['7h', '2c']High Card pot odds: 0.25
+-------------
+Round 440
+0.665, 0.37
+['Jd', '6c']High Card pot odds: 0.25
+-------------
+Round 441
+0.67, 0.4
+-------------
+Round 442
+0.68, 0.345
+['5c', 'Qc']High Card pot odds: 0.25
+-------------
+Round 443
+0.6, 0.31
+['4d', '5s']High Card pot odds: 0.0
+['4d', '5s', 'Ac', '9c', '2d']High Card pot odds: 0.0
+['4d', '5s', 'Ac', '9c', '2d']High Card pot odds: 0.0
+['4d', '5s', 'Ac', '9c', '2d']High Card pot odds: 0.25
+-------------
+Round 444
+0.76, 0.49
+['8c', '8h']Pair pot odds: 0.25
+-------------
+Round 445
+0.68, 0.285
+-------------
+Round 446
+0.705, 0.3
+['2h', '2d']Pair pot odds: 0.25
+-------------
+Round 447
+0.63, 0.345
+-------------
+Round 448
+0.71, 0.37
+['Js', '8c']High Card pot odds: 0.25
+-------------
+Round 449
+0.62, 0.29
+['9d', '5c']High Card pot odds: 0.0
+['9d', '5c', 'Jd', '2s', '9s']Pair pot odds: 0.0
+['9d', '5c', 'Jd', '2s', '9s']Pair pot odds: 0.0
+['9d', '5c', 'Jd', '2s', '9s', '3h']Pair pot odds: 0.0
+['9d', '5c', 'Jd', '2s', '9s', '3h', '3d']Two Pair pot odds: 0.0
+-------------
+Round 450
+0.755, 0.405
+['Tc', '8h']High Card pot odds: 0.25
+-------------
+Round 451
+0.775, 0.335
+-------------
+Round 452
+0.71, 0.475
+['Ts', 'Ac']High Card pot odds: 0.25
+-------------
+Round 453
+0.675, 0.285
+['8s', '7c']High Card pot odds: 0.0
+['8s', '7c', '5d', '6s', '3d']High Card pot odds: 0.0
+['8s', '7c', '5d', '6s', '3d']High Card pot odds: 0.0
+['8s', '7c', '5d', '6s', '3d']High Card pot odds: 0.25
+-------------
+Round 454
+0.77, 0.465
+['Ac', 'Ts']High Card pot odds: 0.25
+-------------
+Round 455
+0.64, 0.29
+['Kc', '3d']High Card pot odds: 0.0
+['Kc', '3d', '3h', '9d', '6h']Pair pot odds: 0.0
+['Kc', '3d', '3h', '9d', '6h']Pair pot odds: 0.0
+['Kc', '3d', '3h', '9d', '6h']Pair pot odds: 0.25
+-------------
+Round 456
+0.71, 0.245
+['4c', '8d']High Card pot odds: 0.25
+-------------
+Round 457
+0.7, 0.4
+['9c', 'Kh']High Card pot odds: 0.25
+-------------
+Round 458
+0.57, 0.3
+['Th', '5d']High Card pot odds: 0.25
+-------------
+Round 459
+0.735, 0.355
+['5s', 'Ah']High Card pot odds: 0.0
+['5s', 'Ah', '9s', 'Jc', 'Ks']High Card pot odds: 0.0
+['5s', 'Ah', '9s', 'Jc', 'Ks']High Card pot odds: 0.0
+['5s', 'Ah', '9s', 'Jc', 'Ks', 'Jd']Pair pot odds: 0.0
+['5s', 'Ah', '9s', 'Jc', 'Ks', 'Jd', '9c']Two Pair pot odds: 0.0
+-------------
+Round 460
+0.685, 0.255
+['Jd', '3s']High Card pot odds: 0.25
+-------------
+Round 461
+0.625, 0.34
+-------------
+Round 462
+0.72, 0.23
+['7c', 'Qd']High Card pot odds: 0.25
+-------------
+Round 463
+0.59, 0.255
+['3s', '9s']High Card pot odds: 0.0
+['3s', '9s', '8d', '2d', 'Jh']High Card pot odds: 0.0
+['3s', '9s', '8d', '2d', 'Jh']High Card pot odds: 0.0
+['3s', '9s', '8d', '2d', 'Jh']High Card pot odds: 0.25
+-------------
+Round 464
+0.72, 0.46
+['6d', 'Ad']High Card pot odds: 0.25
+-------------
+Round 465
+0.745, 0.515
+-------------
+Round 466
+0.64, 0.245
+['Th', '3d']High Card pot odds: 0.25
+-------------
+Round 467
+0.645, 0.495
+-------------
+Round 468
+0.725, 0.275
+['8d', '5h']High Card pot odds: 0.25
+-------------
+Round 469
+0.65, 0.425
+-------------
+Round 470
+0.75, 0.505
+['Kh', 'Ah']High Card pot odds: 0.25
+-------------
+Round 471
+0.75, 0.4
+['Kh', 'Qd']High Card pot odds: 0.0
+['Kh', 'Qd', '8s', 'As', '3h']High Card pot odds: 0.0
+['Kh', 'Qd', '8s', 'As', '3h']High Card pot odds: 0.0
+['Kh', 'Qd', '8s', 'As', '3h']High Card pot odds: 0.25
+-------------
+Round 472
+0.645, 0.27
+['Kh', '4h']High Card pot odds: 0.25
+-------------
+Round 473
+0.66, 0.315
+-------------
+Round 474
+0.735, 0.515
+['Ah', 'Jd']High Card pot odds: 0.25
+-------------
+Round 475
+0.705, 0.425
+-------------
+Round 476
+0.68, 0.35
+['6s', 'Ts']High Card pot odds: 0.25
+-------------
+Round 477
+0.675, 0.375
+['Kd', 'Jh']High Card pot odds: 0.25
+-------------
+Round 478
+0.715, 0.37
+['As', '8c']High Card pot odds: 0.25
+-------------
+Round 479
+0.66, 0.375
+-------------
+Round 480
+0.72, 0.445
+['3h', 'Kh']High Card pot odds: 0.25
+-------------
+Round 481
+0.67, 0.365
+['9c', '8c']High Card pot odds: 0.0
+['9c', '8c', '8d', 'Jd', '7d']Pair pot odds: 0.0
+['9c', '8c', '8d', 'Jd', '7d']Pair pot odds: 0.0
+['9c', '8c', '8d', 'Jd', '7d']Pair pot odds: 0.25
+-------------
+Round 482
+0.695, 0.485
+['6d', 'Ah']High Card pot odds: 0.25
+-------------
+Round 483
+0.725, 0.345
+-------------
+Round 484
+0.62, 0.245
+['6s', '3d']High Card pot odds: 0.25
+-------------
+Round 485
+0.45, 0.22
+['6d', '2c']High Card pot odds: 0.0
+['6d', '2c', '9s', 'Jd', 'Qc']High Card pot odds: 0.0
+['6d', '2c', '9s', 'Jd', 'Qc']High Card pot odds: 0.0
+['6d', '2c', '9s', 'Jd', 'Qc']High Card pot odds: 0.25
+-------------
+Round 486
+0.56, 0.31
+['Jc', '2h']High Card pot odds: 0.25
+-------------
+Round 487
+0.665, 0.45
+-------------
+Round 488
+0.8, 0.465
+['7d', '7c']Pair pot odds: 0.25
+-------------
+Round 489
+0.64, 0.22
+-------------
+Round 490
+0.765, 0.365
+['Ad', '2d']High Card pot odds: 0.25
+-------------
+Round 491
+0.745, 0.635
+['Tc', 'Td']Pair pot odds: 0.0
+['Tc', 'Td', '8h', 'Jc', '5d']Pair pot odds: 0.0
+['Tc', 'Td', '8h', 'Jc', '5d']Pair pot odds: 0.0
+['Tc', 'Td', '8h', 'Jc', '5d']Pair pot odds: 0.25
+-------------
+Round 492
+0.79, 0.48
+['Ac', 'Qc']High Card pot odds: 0.25
+-------------
+Round 493
+0.675, 0.41
+['2s', 'Ah']High Card pot odds: 0.0
+['2s', 'Ah', 'As', '7s', 'Kd']Pair pot odds: 0.0
+['2s', 'Ah', 'As', '7s', 'Kd']Pair pot odds: 0.0
+['2s', 'Ah', 'As', '7s', 'Kd']Pair pot odds: 0.25
+-------------
+Round 494
+0.555, 0.34
+['5c', '8s']High Card pot odds: 0.25
+-------------
+Round 495
+0.67, 0.345
+['3d', 'Ts']High Card pot odds: 0.0
+['3d', 'Ts', 'Qh', '3h', 'Kh']Pair pot odds: 0.0
+['3d', 'Ts', 'Qh', '3h', 'Kh']Pair pot odds: 0.0
+['3d', 'Ts', 'Qh', '3h', 'Kh']Pair pot odds: 0.25
+-------------
+Round 496
+0.635, 0.345
+['6d', 'Ks']High Card pot odds: 0.25
+-------------
+Round 497
+0.61, 0.28
+['3d', '6c']High Card pot odds: 0.0
+['3d', '6c', 'Qc', '9s', '4d']High Card pot odds: 0.0
+['3d', '6c', 'Qc', '9s', '4d']High Card pot odds: 0.0
+['3d', '6c', 'Qc', '9s', '4d']High Card pot odds: 0.25
+-------------
+Round 498
+0.64, 0.325
+['8s', '9c']High Card pot odds: 0.25
+-------------
+Round 499
+0.645, 0.215
+['3h', '5d']High Card pot odds: 0.25
+-------------
+Round 500
+0.72, 0.325
+['Jc', '7s']High Card pot odds: 0.25
+-------------
+Round 501
+0.71, 0.65
+['Th', 'Ts']Pair pot odds: 0.0
+['Th', 'Ts', 'Qc', 'Jd', '2h']Pair pot odds: 0.0
+['Th', 'Ts', 'Qc', 'Jd', '2h']Pair pot odds: 0.0
+['Th', 'Ts', 'Qc', 'Jd', '2h', '5s']Pair pot odds: 0.0
+['Th', 'Ts', 'Qc', 'Jd', '2h', '5s', '7s']Pair pot odds: 0.0
+-------------
+Round 502
+0.725, 0.42
+['Ad', '7d']High Card pot odds: 0.25
+-------------
+Round 503
+0.515, 0.195
+['8c', '3d']High Card pot odds: 0.0
+['8c', '3d', 'Jc', 'Kd', '7c']High Card pot odds: 0.0
+['8c', '3d', 'Jc', 'Kd', '7c']High Card pot odds: 0.0
+['8c', '3d', 'Jc', 'Kd', '7c']High Card pot odds: 0.25
+-------------
+Round 504
+0.79, 0.415
+['Ah', '8h']High Card pot odds: 0.25
+-------------
+Round 505
+0.63, 0.28
+['7h', '4h']High Card pot odds: 0.0
+['7h', '4h', 'Js', '5c', 'Ad']High Card pot odds: 0.0
+['7h', '4h', 'Js', '5c', 'Ad']High Card pot odds: 0.0
+['7h', '4h', 'Js', '5c', 'Ad', '3d']High Card pot odds: 0.0
+['7h', '4h', 'Js', '5c', 'Ad', '3d', '7s']Pair pot odds: 0.0
+-------------
+Round 506
+0.655, 0.295
+['6c', '8c']High Card pot odds: 0.25
+-------------
+Round 507
+0.7, 0.24
+-------------
+Round 508
+0.8, 0.405
+['As', '9d']High Card pot odds: 0.25
+-------------
+Round 509
+0.625, 0.295
+-------------
+Round 510
+0.68, 0.27
+['Js', '2h']High Card pot odds: 0.25
+-------------
+Round 511
+0.645, 0.33
+-------------
+Round 512
+0.725, 0.42
+['Jc', 'Ah']High Card pot odds: 0.25
+-------------
+Round 513
+0.715, 0.425
+-------------
+Round 514
+0.855, 0.47
+['7h', '7s']Pair pot odds: 0.25
+-------------
+Round 515
+0.6, 0.23
+-------------
+Round 516
+0.865, 0.51
+['Jh', 'Js']Pair pot odds: 0.25
+-------------
+Round 517
+0.79, 0.475
+['7d', '7h']Pair pot odds: 0.0
+['7d', '7h', '2h', '6h', '6c']Two Pair pot odds: 0.0
+['7d', '7h', '2h', '6h', '6c']Two Pair pot odds: 0.0
+['7d', '7h', '2h', '6h', '6c', '5c']Two Pair pot odds: 0.0
+['7d', '7h', '2h', '6h', '6c', '5c', '3d']Two Pair pot odds: 0.0
+-------------
+Round 518
+0.51, 0.305
+['Th', '3c']High Card pot odds: 0.25
+-------------
+Round 519
+0.72, 0.5
+-------------
+Round 520
+0.675, 0.41
+['Qc', 'Jh']High Card pot odds: 0.25
+-------------
+Round 521
+0.595, 0.345
+['6c', 'Qd']High Card pot odds: 0.0
+['6c', 'Qd', 'Kh', '8c', '2c']High Card pot odds: 0.0
+['6c', 'Qd', 'Kh', '8c', '2c']High Card pot odds: 0.0
+['6c', 'Qd', 'Kh', '8c', '2c', '9s']High Card pot odds: 0.0
+['6c', 'Qd', 'Kh', '8c', '2c', '9s', '8s']Pair pot odds: 0.0
+-------------
+Round 522
+0.71, 0.255
+['9s', '5s']High Card pot odds: 0.25
+-------------
+Round 523
+0.75, 0.36
+-------------
+Round 524
+0.7, 0.22
+['2d', '9h']High Card pot odds: 0.25
+-------------
+Round 525
+0.595, 0.275
+['6d', '8c']High Card pot odds: 0.25
+-------------
+Round 526
+0.69, 0.375
+['Ac', '5s']High Card pot odds: 0.25
+-------------
+Round 527
+0.675, 0.37
+['As', '6c']High Card pot odds: 0.25
+-------------
+Round 528
+0.545, 0.24
+['Jh', '2c']High Card pot odds: 0.25
+-------------
+Round 529
+0.615, 0.27
+-------------
+Round 530
+0.75, 0.45
+['2c', 'Ac']High Card pot odds: 0.25
+-------------
+Round 531
+0.7, 0.22
+['8d', '4s']High Card pot odds: 0.0
+['8d', '4s', '6d', '3d', '4c']Pair pot odds: 0.0
+['8d', '4s', '6d', '3d', '4c']Pair pot odds: 0.0
+['8d', '4s', '6d', '3d', '4c']Pair pot odds: 0.25
+-------------
+Round 532
+0.69, 0.23
+['8h', '5d']High Card pot odds: 0.25
+-------------
+Round 533
+0.57, 0.2
+['9d', '2c']High Card pot odds: 0.0
+['9d', '2c', '4s', '6c', '9c']Pair pot odds: 0.0
+['9d', '2c', '4s', '6c', '9c']Pair pot odds: 0.0
+['9d', '2c', '4s', '6c', '9c', 'Ah']Pair pot odds: 0.0
+['9d', '2c', '4s', '6c', '9c', 'Ah', '3c']Pair pot odds: 0.0
+-------------
+Round 534
+0.8, 0.49
+['Qd', 'Jc']High Card pot odds: 0.25
+-------------
+Round 535
+0.62, 0.3
+['Td', '4h']High Card pot odds: 0.0
+['Td', '4h', 'Js', '5d', '5s']Pair pot odds: 0.0
+['Td', '4h', 'Js', '5d', '5s']Pair pot odds: 0.0
+['Td', '4h', 'Js', '5d', '5s', 'Jc']Two Pair pot odds: 0.0
+['Td', '4h', 'Js', '5d', '5s', 'Jc', '3s']Two Pair pot odds: 0.0
+-------------
+Round 536
+0.67, 0.435
+['Ah', '5s']High Card pot odds: 0.25
+-------------
+Round 537
+0.785, 0.545
+['Qs', 'As']High Card pot odds: 0.0
+['Qs', 'As', 'Jd', 'Qh', '2s']Pair pot odds: 0.0
+['Qs', 'As', 'Jd', 'Qh', '2s']Pair pot odds: 0.0
+['Qs', 'As', 'Jd', 'Qh', '2s']Pair pot odds: 0.25
+-------------
+Round 538
+0.725, 0.4
+['Ad', '4d']High Card pot odds: 0.25
+-------------
+Round 539
+0.715, 0.465
+-------------
+Round 540
+0.69, 0.505
+['Kd', 'Jd']High Card pot odds: 0.25
+-------------
+Round 541
+0.765, 0.46
+-------------
+Round 542
+0.47, 0.18
+['7d', '2s']High Card pot odds: 0.25
+-------------
+Round 543
+0.73, 0.45
+['8c', '8h']Pair pot odds: 0.0
+['8c', '8h', 'Qh', '4s', '8s']Trips pot odds: 0.0
+['8c', '8h', 'Qh', '4s', '8s']Trips pot odds: 0.0
+['8c', '8h', 'Qh', '4s', '8s', 'Td']Trips pot odds: 0.0
+['8c', '8h', 'Qh', '4s', '8s', 'Td', '6h']Trips pot odds: 0.0
+-------------
+Round 544
+0.53, 0.19
+['2h', '5s']High Card pot odds: 0.25
+-------------
+Round 545
+0.82, 0.695
+-------------
+Round 546
+0.76, 0.405
+['3h', 'Kh']High Card pot odds: 0.25
+-------------
+Round 547
+0.62, 0.31
+['3h', 'Jc']High Card pot odds: 0.0
+['3h', 'Jc', '9d', '3d', '7c']Pair pot odds: 0.0
+['3h', 'Jc', '9d', '3d', '7c']Pair pot odds: 0.0
+['3h', 'Jc', '9d', '3d', '7c', '4h']Pair pot odds: 0.0
+['3h', 'Jc', '9d', '3d', '7c', '4h']Pair pot odds: 0.4975
+-------------
+Round 548
+0.675, 0.295
+['6s', '9h']High Card pot odds: 0.25
+-------------
+Round 549
+0.75, 0.345
+-------------
+Round 550
+0.735, 0.315
+['8d', 'Js']High Card pot odds: 0.25
+-------------
+Round 551
+0.58, 0.275
+['Ts', '3c']High Card pot odds: 0.0
+['Ts', '3c', '5c', '4h', '2c']High Card pot odds: 0.0
+['Ts', '3c', '5c', '4h', '2c']High Card pot odds: 0.0
+['Ts', '3c', '5c', '4h', '2c']High Card pot odds: 0.25
+-------------
+Round 552
+0.575, 0.24
+['3s', '4c']High Card pot odds: 0.25
+-------------
+Round 553
+0.685, 0.325
+-------------
+Round 554
+0.745, 0.375
+['Ts', 'Kc']High Card pot odds: 0.25
+-------------
+Round 555
+0.59, 0.14
+['2h', '4c']High Card pot odds: 0.0
+['2h', '4c', '3s', '7d', '2c']Pair pot odds: 0.0
+['2h', '4c', '3s', '7d', '2c']Pair pot odds: 0.0
+['2h', '4c', '3s', '7d', '2c', 'Jc']Pair pot odds: 0.0
+['2h', '4c', '3s', '7d', '2c', 'Jc', '5d']Pair pot odds: 0.0
+-------------
+Round 556
+0.645, 0.27
+['8c', '6h']High Card pot odds: 0.25
+-------------
+Round 557
+0.635, 0.345
+['7h', 'Qc']High Card pot odds: 0.0
+['7h', 'Qc', '3h', '8c', '9d']High Card pot odds: 0.0
+['7h', 'Qc', '3h', '8c', '9d']High Card pot odds: 0.0
+['7h', 'Qc', '3h', '8c', '9d', '6h']High Card pot odds: 0.0
+['7h', 'Qc', '3h', '8c', '9d', '6h', '5c']Straight pot odds: 0.0
+-------------
+Round 558
+0.71, 0.34
+['Js', '8s']High Card pot odds: 0.25
+-------------
+Round 559
+0.805, 0.315
+['Ks', '7c']High Card pot odds: 0.0
+['Ks', '7c', 'Ah', 'Js', 'Kc']Pair pot odds: 0.0
+['Ks', '7c', 'Ah', 'Js', 'Kc']Pair pot odds: 0.0
+['Ks', '7c', 'Ah', 'Js', 'Kc']Pair pot odds: 0.25
+-------------
+Round 560
+0.655, 0.305
+['Jc', '2h']High Card pot odds: 0.25
+-------------
+Round 561
+0.6, 0.33
+-------------
+Round 562
+0.69, 0.325
+['3c', 'Ah']High Card pot odds: 0.25
+-------------
+Round 563
+0.64, 0.31
+-------------
+Round 564
+0.555, 0.23
+['Tc', '6h']High Card pot odds: 0.25
+-------------
+Round 565
+0.675, 0.36
+['3h', '9s']High Card pot odds: 0.0
+['3h', '9s', '3c', '4c', '5s']Pair pot odds: 0.0
+['3h', '9s', '3c', '4c', '5s']Pair pot odds: 0.0
+['3h', '9s', '3c', '4c', '5s', '3s']Trips pot odds: 0.0
+['3h', '9s', '3c', '4c', '5s', '3s', '2c']Trips pot odds: 0.0
+-------------
+Round 566
+0.665, 0.345
+['As', '4s']High Card pot odds: 0.25
+-------------
+Round 567
+0.755, 0.645
+-------------
+Round 568
+0.585, 0.26
+['3c', '8s']High Card pot odds: 0.25
+-------------
+Round 569
+0.675, 0.3
+-------------
+Round 570
+0.765, 0.45
+['Jd', 'Kh']High Card pot odds: 0.25
+-------------
+Round 571
+0.64, 0.235
+['2s', '7s']High Card pot odds: 0.25
+-------------
+Round 572
+0.68, 0.39
+['3d', 'Ks']High Card pot odds: 0.25
+-------------
+Round 573
+0.675, 0.255
+-------------
+Round 574
+0.55, 0.23
+['2d', '3d']High Card pot odds: 0.25
+-------------
+Round 575
+0.725, 0.28
+['5d', 'Ks']High Card pot odds: 0.25
+-------------
+Round 576
+0.63, 0.34
+['8d', '4d']High Card pot odds: 0.25
+-------------
+Round 577
+0.655, 0.35
+-------------
+Round 578
+0.65, 0.345
+['5h', 'Qh']High Card pot odds: 0.25
+-------------
+Round 579
+0.74, 0.38
+['Qd', 'Js']High Card pot odds: 0.0
+['Qd', 'Js', 'Ad', '4d', 'Ts']High Card pot odds: 0.0
+['Qd', 'Js', 'Ad', '4d', 'Ts']High Card pot odds: 0.0
+['Qd', 'Js', 'Ad', '4d', 'Ts', 'Td']Pair pot odds: 0.0
+['Qd', 'Js', 'Ad', '4d', 'Ts', 'Td', '2c']Pair pot odds: 0.0
+-------------
+Round 580
+0.66, 0.245
+['7d', '3d']High Card pot odds: 0.25
+-------------
+Round 581
+0.58, 0.21
+['3h', 'Th']High Card pot odds: 0.0
+['3h', 'Th', 'Jh', '6s', '5d']High Card pot odds: 0.0
+['3h', 'Th', 'Jh', '6s', '5d']High Card pot odds: 0.0
+['3h', 'Th', 'Jh', '6s', '5d', 'Jd']Pair pot odds: 0.0
+['3h', 'Th', 'Jh', '6s', '5d', 'Jd', 'Qs']Pair pot odds: 0.0
+-------------
+Round 582
+0.625, 0.39
+['9h', '8d']High Card pot odds: 0.25
+-------------
+Round 583
+0.625, 0.315
+['3s', 'Tc']High Card pot odds: 0.0
+['3s', 'Tc', '6h', '2s', '9h']High Card pot odds: 0.0
+['3s', 'Tc', '6h', '2s', '9h']High Card pot odds: 0.0
+['3s', 'Tc', '6h', '2s', '9h', '7c']High Card pot odds: 0.0
+['3s', 'Tc', '6h', '2s', '9h', '7c', 'Kc']High Card pot odds: 0.0
+-------------
+Round 584
+0.665, 0.255
+['6d', 'Tc']High Card pot odds: 0.25
+-------------
+Round 585
+0.63, 0.215
+['8h', '3s']High Card pot odds: 0.0
+['8h', '3s', '2h', 'Qs', '6s']High Card pot odds: 0.0
+['8h', '3s', '2h', 'Qs', '6s']High Card pot odds: 0.0
+['8h', '3s', '2h', 'Qs', '6s']High Card pot odds: 0.25
+-------------
+Round 586
+0.705, 0.315
+['7h', '6h']High Card pot odds: 0.25
+-------------
+Round 587
+0.765, 0.34
+['Jc', 'Qs']High Card pot odds: 0.0
+['Jc', 'Qs', 'Kc', 'Ah', 'Js']Pair pot odds: 0.0
+['Jc', 'Qs', 'Kc', 'Ah', 'Js']Pair pot odds: 0.0
+['Jc', 'Qs', 'Kc', 'Ah', 'Js', '8d']Pair pot odds: 0.0
+['Jc', 'Qs', 'Kc', 'Ah', 'Js', '8d', '2d']Pair pot odds: 0.0
+-------------
+Round 588
+0.69, 0.37
+['Th', '5h']High Card pot odds: 0.25
+-------------
+Round 589
+0.825, 0.59
+['9s', '9d']Pair pot odds: 0.25
+-------------
+Round 590
+0.73, 0.325
+['Th', '6s']High Card pot odds: 0.25
+-------------
+Round 591
+0.625, 0.305
+-------------
+Round 592
+0.56, 0.16
+['2h', '3c']High Card pot odds: 0.25
+-------------
+Round 593
+0.735, 0.485
+-------------
+Round 594
+0.725, 0.365
+['9s', 'Qd']High Card pot odds: 0.25
+-------------
+Round 595
+0.7, 0.315
+['7c', '9c']High Card pot odds: 0.0
+['7c', '9c', '6h', '4c', 'Tc']High Card pot odds: 0.0
+['7c', '9c', '6h', '4c', 'Tc']High Card pot odds: 0.0
+['7c', '9c', '6h', '4c', 'Tc']High Card pot odds: 0.25
+-------------
+Round 596
+0.71, 0.29
+['Ts', '5c']High Card pot odds: 0.25
+-------------
+Round 597
+0.75, 0.315
+-------------
+Round 598
+0.735, 0.365
+['Ad', '5c']High Card pot odds: 0.25
+-------------
+Round 599
+0.64, 0.39
+['Jh', 'Qd']High Card pot odds: 0.0
+['Jh', 'Qd', 'Th', '7d', '5d']High Card pot odds: 0.0
+['Jh', 'Qd', 'Th', '7d', '5d']High Card pot odds: 0.0
+['Jh', 'Qd', 'Th', '7d', '5d']High Card pot odds: 0.25
+-------------
+Round 600
+0.505, 0.24
+['2s', '6h']High Card pot odds: 0.25
+-------------
+Round 601
+0.745, 0.39
+-------------
+Round 602
+0.675, 0.49
+['5d', '5c']Pair pot odds: 0.25
+-------------
+Round 603
+0.655, 0.255
+-------------
+Round 604
+0.8, 0.43
+['Jd', 'Kc']High Card pot odds: 0.25
+-------------
+Round 605
+0.62, 0.425
+['Ad', '8d']High Card pot odds: 0.0
+['Ad', '8d', '9h', 'Kc', 'Kh']Pair pot odds: 0.0
+['Ad', '8d', '9h', 'Kc', 'Kh']Pair pot odds: 0.0
+['Ad', '8d', '9h', 'Kc', 'Kh', 'Qd']Pair pot odds: 0.0
+['Ad', '8d', '9h', 'Kc', 'Kh', 'Qd', '2h']Pair pot odds: 0.0
+-------------
+Round 606
+0.655, 0.255
+['3d', 'Tc']High Card pot odds: 0.25
+-------------
+Round 607
+0.895, 0.64
+['Kh', 'Kd']Pair pot odds: 0.0
+['Kh', 'Kd', '6c', 'Ac', '8c']Pair pot odds: 0.0
+['Kh', 'Kd', '6c', 'Ac', '8c']Pair pot odds: 0.0
+['Kh', 'Kd', '6c', 'Ac', '8c', 'As']Two Pair pot odds: 0.0
+['Kh', 'Kd', '6c', 'Ac', '8c', 'As', '6s']Two Pair pot odds: 0.0
+-------------
+Round 608
+0.63, 0.22
+['5s', '2c']High Card pot odds: 0.25
+-------------
+Round 609
+0.715, 0.275
+-------------
+Round 610
+0.78, 0.485
+['Ad', 'Tc']High Card pot odds: 0.25
+-------------
+Round 611
+0.525, 0.19
+['4h', '2d']High Card pot odds: 0.0
+['4h', '2d', '8h', 'Jd', 'Jh']Pair pot odds: 0.0
+['4h', '2d', '8h', 'Jd', 'Jh']Pair pot odds: 0.0
+['4h', '2d', '8h', 'Jd', 'Jh', '5s']Pair pot odds: 0.0
+['4h', '2d', '8h', 'Jd', 'Jh', '5s', 'Qh']Pair pot odds: 0.0
+-------------
+Round 612
+0.755, 0.44
+['Qc', 'Ks']High Card pot odds: 0.25
+-------------
+Round 613
+0.785, 0.565
+-------------
+Round 614
+0.75, 0.425
+['9s', 'Ad']High Card pot odds: 0.25
+-------------
+Round 615
+0.69, 0.42
+['Ts', 'As']High Card pot odds: 0.25
+-------------
+Round 616
+0.585, 0.28
+['4s', '9h']High Card pot odds: 0.25
+-------------
+Round 617
+0.615, 0.165
+-------------
+Round 618
+0.62, 0.22
+['4h', '3d']High Card pot odds: 0.25
+-------------
+Round 619
+0.645, 0.31
+['6c', '7c']High Card pot odds: 0.25
+-------------
+Round 620
+0.595, 0.37
+['5h', 'Kd']High Card pot odds: 0.25
+-------------
+Round 621
+0.625, 0.335
+['Qc', '4c']High Card pot odds: 0.0
+['Qc', '4c', 'Jd', '8d', 'Kd']High Card pot odds: 0.0
+['Qc', '4c', 'Jd', '8d', 'Kd']High Card pot odds: 0.0
+['Qc', '4c', 'Jd', '8d', 'Kd', '9d']High Card pot odds: 0.0
+['Qc', '4c', 'Jd', '8d', 'Kd', '9d']High Card pot odds: 0.4975
+-------------
+Round 622
+0.63, 0.225
+['Td', '6c']High Card pot odds: 0.25
+-------------
+Round 623
+0.78, 0.4
+-------------
+Round 624
+0.645, 0.53
+['7h', '7d']Pair pot odds: 0.25
+-------------
+Round 625
+0.585, 0.2
+['8s', '4h']High Card pot odds: 0.0
+['8s', '4h', '3h', '8h', 'Jh']Pair pot odds: 0.0
+['8s', '4h', '3h', '8h', 'Jh']Pair pot odds: 0.0
+['8s', '4h', '3h', '8h', 'Jh']Pair pot odds: 0.25
+-------------
+Round 626
+0.695, 0.35
+['9h', 'Kc']High Card pot odds: 0.25
+-------------
+Round 627
+0.675, 0.495
+-------------
+Round 628
+0.67, 0.3
+['8h', 'Qs']High Card pot odds: 0.25
+-------------
+Round 629
+0.675, 0.41
+-------------
+Round 630
+0.75, 0.4
+['7h', 'Kd']High Card pot odds: 0.25
+-------------
+Round 631
+0.61, 0.27
+-------------
+Round 632
+0.635, 0.33
+['Qh', '4c']High Card pot odds: 0.25
+-------------
+Round 633
+0.61, 0.34
+-------------
+Round 634
+0.765, 0.405
+['8d', 'Ad']High Card pot odds: 0.25
+-------------
+Round 635
+0.61, 0.265
+['Th', '5s']High Card pot odds: 0.0
+['Th', '5s', '3c', '3s', '3h']Trips pot odds: 0.0
+['Th', '5s', '3c', '3s', '3h']Trips pot odds: 0.0
+['Th', '5s', '3c', '3s', '3h', '8c']Trips pot odds: 0.0
+['Th', '5s', '3c', '3s', '3h', '8c', '9d']Trips pot odds: 0.0
+-------------
+Round 636
+0.67, 0.25
+['Jc', '2d']High Card pot odds: 0.25
+-------------
+Round 637
+0.78, 0.42
+['Qs', 'Ad']High Card pot odds: 0.0
+['Qs', 'Ad', '9s', '3c', '4d']High Card pot odds: 0.0
+['Qs', 'Ad', '9s', '3c', '4d']High Card pot odds: 0.0
+['Qs', 'Ad', '9s', '3c', '4d']High Card pot odds: 0.25
+-------------
+Round 638
+0.755, 0.565
+['7d', '7h']Pair pot odds: 0.25
+-------------
+Round 639
+0.665, 0.23
+['4c', '6c']High Card pot odds: 0.25
+-------------
+Round 640
+0.8, 0.395
+['5h', '5c']Pair pot odds: 0.25
+-------------
+Round 641
+0.69, 0.25
+['7d', '5c']High Card pot odds: 0.0
+['7d', '5c', 'Ad', 'Kh', '3d']High Card pot odds: 0.0
+['7d', '5c', 'Ad', 'Kh', '3d']High Card pot odds: 0.0
+['7d', '5c', 'Ad', 'Kh', '3d']High Card pot odds: 0.25
+-------------
+Round 642
+0.56, 0.23
+['2c', '6d']High Card pot odds: 0.25
+-------------
+Round 643
+0.68, 0.48
+['Ah', 'Qs']High Card pot odds: 0.0
+['Ah', 'Qs', '8h', '3h', 'Tc']High Card pot odds: 0.0
+['Ah', 'Qs', '8h', '3h', 'Tc']High Card pot odds: 0.0
+['Ah', 'Qs', '8h', '3h', 'Tc', '5s']High Card pot odds: 0.0
+['Ah', 'Qs', '8h', '3h', 'Tc', '5s', '6d']High Card pot odds: 0.0
+-------------
+Round 644
+0.775, 0.34
+['Ah', 'Jd']High Card pot odds: 0.25
+-------------
+Round 645
+0.555, 0.245
+-------------
+Round 646
+0.66, 0.395
+['7c', '9h']High Card pot odds: 0.25
+-------------
+Round 647
+0.765, 0.42
+-------------
+Round 648
+0.585, 0.355
+['3h', 'Jd']High Card pot odds: 0.25
+-------------
+Round 649
+0.62, 0.255
+-------------
+Round 650
+0.69, 0.44
+['As', '7h']High Card pot odds: 0.25
+-------------
+Round 651
+0.62, 0.31
+-------------
+Round 652
+0.615, 0.24
+['2c', '3d']High Card pot odds: 0.25
+-------------
+Round 653
+0.69, 0.4
+-------------
+Round 654
+0.675, 0.235
+['8d', '5s']High Card pot odds: 0.25
+-------------
+Round 655
+0.605, 0.295
+-------------
+Round 656
+0.56, 0.235
+['5s', '7d']High Card pot odds: 0.25
+-------------
+Round 657
+0.595, 0.33
+['9s', '7c']High Card pot odds: 0.0
+['9s', '7c', '9h', '8d', 'Kc']Pair pot odds: 0.0
+['9s', '7c', '9h', '8d', 'Kc']Pair pot odds: 0.0
+['9s', '7c', '9h', '8d', 'Kc', 'As']Pair pot odds: 0.0
+['9s', '7c', '9h', '8d', 'Kc', 'As', 'Qs']Pair pot odds: 0.0
+-------------
+Round 658
+0.61, 0.28
+['6d', '2s']High Card pot odds: 0.25
+-------------
+Round 659
+0.78, 0.385
+-------------
+Round 660
+0.63, 0.29
+['8h', '6d']High Card pot odds: 0.25
+-------------
+Round 661
+0.54, 0.245
+['9s', '3s']High Card pot odds: 0.0
+['9s', '3s', '9c', '8s', 'Jc']Pair pot odds: 0.0
+['9s', '3s', '9c', '8s', 'Jc']Pair pot odds: 0.0
+['9s', '3s', '9c', '8s', 'Jc', '6h']Pair pot odds: 0.0
+['9s', '3s', '9c', '8s', 'Jc', '6h', 'Tc']Pair pot odds: 0.0
+['9s', '3s', '9c', '8s', 'Jc', '6h', 'Tc']Pair pot odds: 0.4975
+-------------
+Round 662
+0.79, 0.66
+['Kd', 'Ks']Pair pot odds: 0.25
+-------------
+Round 663
+0.655, 0.44
+-------------
+Round 664
+0.655, 0.33
+['Ad', '3h']High Card pot odds: 0.25
+-------------
+Round 665
+0.665, 0.32
+-------------
+Round 666
+0.67, 0.31
+['9s', 'Kc']High Card pot odds: 0.25
+-------------
+Round 667
+0.715, 0.375
+-------------
+Round 668
+0.645, 0.36
+['Kh', '3d']High Card pot odds: 0.25
+-------------
+Round 669
+0.745, 0.34
+['Ks', '7c']High Card pot odds: 0.0
+['Ks', '7c', 'Kh', '8c', 'Td']Pair pot odds: 0.0
+['Ks', '7c', 'Kh', '8c', 'Td']Pair pot odds: 0.0
+['Ks', '7c', 'Kh', '8c', 'Td']Pair pot odds: 0.25
+-------------
+Round 670
+0.565, 0.255
+['4h', '3d']High Card pot odds: 0.25
+-------------
+Round 671
+0.615, 0.325
+['2c', 'Ad']High Card pot odds: 0.0
+['2c', 'Ad', '3s', '2d', '5d']Pair pot odds: 0.0
+['2c', 'Ad', '3s', '2d', '5d']Pair pot odds: 0.0
+['2c', 'Ad', '3s', '2d', '5d']Pair pot odds: 0.25
+-------------
+Round 672
+0.635, 0.445
+['9d', 'Kd']High Card pot odds: 0.25
+-------------
+Round 673
+0.55, 0.215
+['4s', '2s']High Card pot odds: 0.0
+['4s', '2s', 'Qd', 'Jd', 'Qc']Pair pot odds: 0.0
+['4s', '2s', 'Qd', 'Jd', 'Qc']Pair pot odds: 0.0
+['4s', '2s', 'Qd', 'Jd', 'Qc']Pair pot odds: 0.25
+-------------
+Round 674
+0.635, 0.33
+['Jc', '6s']High Card pot odds: 0.25
+-------------
+Round 675
+0.715, 0.37
+-------------
+Round 676
+0.67, 0.375
+['Jc', '8c']High Card pot odds: 0.25
+-------------
+Round 677
+0.62, 0.295
+['Td', '5c']High Card pot odds: 0.0
+['Td', '5c', '6d', '6h', 'Qd']Pair pot odds: 0.0
+['Td', '5c', '6d', '6h', 'Qd']Pair pot odds: 0.0
+['Td', '5c', '6d', '6h', 'Qd', 'Qc']Two Pair pot odds: 0.0
+['Td', '5c', '6d', '6h', 'Qd', 'Qc', '9d']Two Pair pot odds: 0.0
+-------------
+Round 678
+0.655, 0.38
+['9d', 'Kd']High Card pot odds: 0.25
+-------------
+Round 679
+0.635, 0.33
+['5d', '6d']High Card pot odds: 0.0
+['5d', '6d', 'Td', '3h', 'Jd']High Card pot odds: 0.0
+['5d', '6d', 'Td', '3h', 'Jd']High Card pot odds: 0.0
+['5d', '6d', 'Td', '3h', 'Jd']High Card pot odds: 0.25
+-------------
+Round 680
+0.6, 0.215
+['3c', '6s']High Card pot odds: 0.25
+-------------
+Round 681
+0.625, 0.33
+['Th', '4h']High Card pot odds: 0.0
+['Th', '4h', 'Qd', '2h', '3d']High Card pot odds: 0.0
+['Th', '4h', 'Qd', '2h', '3d']High Card pot odds: 0.0
+['Th', '4h', 'Qd', '2h', '3d', 'As']High Card pot odds: 0.0
+['Th', '4h', 'Qd', '2h', '3d', 'As', 'Kh']High Card pot odds: 0.0
+-------------
+Round 682
+0.77, 0.505
+['Ks', 'Ad']High Card pot odds: 0.25
+-------------
+Round 683
+0.665, 0.3
+['3h', '7h']High Card pot odds: 0.0
+['3h', '7h', '2d', 'Ad', 'Kd']High Card pot odds: 0.0
+['3h', '7h', '2d', 'Ad', 'Kd']High Card pot odds: 0.0
+['3h', '7h', '2d', 'Ad', 'Kd']High Card pot odds: 0.25
+-------------
+Round 684
+0.555, 0.24
+['3h', '2c']High Card pot odds: 0.25
+-------------
+Round 685
+0.78, 0.445
+['9h', 'Qd']High Card pot odds: 0.25
+-------------
+Round 686
+0.68, 0.295
+['9d', '6c']High Card pot odds: 0.25
+-------------
+Round 687
+0.74, 0.505
+['8d', '8c']Pair pot odds: 0.0
+['8d', '8c', 'Tc', '5h', '8s']Trips pot odds: 0.0
+['8d', '8c', 'Tc', '5h', '8s']Trips pot odds: 0.0
+['8d', '8c', 'Tc', '5h', '8s', '6h']Trips pot odds: 0.0
+['8d', '8c', 'Tc', '5h', '8s', '6h', '7c']Trips pot odds: 0.0
+['8d', '8c', 'Tc', '5h', '8s', '6h', '7c']Trips pot odds: 0.4975
+-------------
+Round 688
+0.6, 0.31
+['7c', 'Kh']High Card pot odds: 0.25
+-------------
+Round 689
+0.71, 0.375
+['4h', 'Ks']High Card pot odds: 0.0
+['4h', 'Ks', '5c', 'Qc', '5s']Pair pot odds: 0.0
+['4h', 'Ks', '5c', 'Qc', '5s']Pair pot odds: 0.0
+['4h', 'Ks', '5c', 'Qc', '5s']Pair pot odds: 0.25
+-------------
+Round 690
+0.655, 0.31
+['Ks', '2h']High Card pot odds: 0.25
+-------------
+Round 691
+0.61, 0.3
+['8h', '4c']High Card pot odds: 0.0
+['8h', '4c', '4s', 'Qc', '6h']Pair pot odds: 0.0
+['8h', '4c', '4s', 'Qc', '6h']Pair pot odds: 0.0
+['8h', '4c', '4s', 'Qc', '6h']Pair pot odds: 0.25
+-------------
+Round 692
+0.695, 0.3
+['Tc', '7d']High Card pot odds: 0.25
+-------------
+Round 693
+0.585, 0.18
+-------------
+Round 694
+0.695, 0.305
+['Qs', '3h']High Card pot odds: 0.25
+-------------
+Round 695
+0.75, 0.37
+['Kh', 'Th']High Card pot odds: 0.0
+['Kh', 'Th', 'Jd', 'As', 'Jc']Pair pot odds: 0.0
+['Kh', 'Th', 'Jd', 'As', 'Jc']Pair pot odds: 0.0
+['Kh', 'Th', 'Jd', 'As', 'Jc']Pair pot odds: 0.25
+-------------
+Round 696
+0.55, 0.26
+['Js', '2h']High Card pot odds: 0.25
+-------------
+Round 697
+0.61, 0.275
+-------------
+Round 698
+0.72, 0.345
+['4s', '4c']Pair pot odds: 0.25
+-------------
+Round 699
+0.73, 0.42
+-------------
+Round 700
+0.67, 0.31
+['7c', 'Qh']High Card pot odds: 0.25
+-------------
+Round 701
+0.61, 0.255
+-------------
+Round 702
+0.735, 0.295
+['Kh', '6c']High Card pot odds: 0.25
+-------------
+Round 703
+0.695, 0.27
+-------------
+Round 704
+0.785, 0.58
+['Qh', 'Ah']High Card pot odds: 0.25
+-------------
+Round 705
+0.615, 0.385
+['6s', 'Jd']High Card pot odds: 0.0
+['6s', 'Jd', '8d', 'Jc', 'Kd']Pair pot odds: 0.0
+['6s', 'Jd', '8d', 'Jc', 'Kd']Pair pot odds: 0.0
+['6s', 'Jd', '8d', 'Jc', 'Kd', '5s']Pair pot odds: 0.0
+['6s', 'Jd', '8d', 'Jc', 'Kd', '5s', '5d']Two Pair pot odds: 0.0
+-------------
+Round 706
+0.52, 0.28
+['8s', '3c']High Card pot odds: 0.25
+-------------
+Round 707
+0.665, 0.34
+['Jc', '4c']High Card pot odds: 0.0
+['Jc', '4c', '3d', '6s', '2d']High Card pot odds: 0.0
+['Jc', '4c', '3d', '6s', '2d']High Card pot odds: 0.0
+['Jc', '4c', '3d', '6s', '2d', '4s']Pair pot odds: 0.0
+['Jc', '4c', '3d', '6s', '2d', '4s', '3h']Two Pair pot odds: 0.0
+-------------
+Round 708
+0.69, 0.23
+['8c', '6h']High Card pot odds: 0.25
+-------------
+Round 709
+0.665, 0.33
+-------------
+Round 710
+0.63, 0.29
+['6c', '7s']High Card pot odds: 0.25
+-------------
+Round 711
+0.675, 0.36
+-------------
+Round 712
+0.655, 0.325
+['5d', 'Jh']High Card pot odds: 0.25
+-------------
+Round 713
+0.67, 0.51
+-------------
+Round 714
+0.56, 0.255
+['5d', '9s']High Card pot odds: 0.25
+-------------
+Round 715
+0.595, 0.32
+['9c', '6c']High Card pot odds: 0.0
+['9c', '6c', 'Kd', '2d', '2s']Pair pot odds: 0.0
+['9c', '6c', 'Kd', '2d', '2s']Pair pot odds: 0.0
+['9c', '6c', 'Kd', '2d', '2s', '3h']Pair pot odds: 0.0
+['9c', '6c', 'Kd', '2d', '2s', '3h', '7d']Pair pot odds: 0.0
+-------------
+Round 716
+0.75, 0.53
+['Th', '9h']High Card pot odds: 0.25
+-------------
+Round 717
+0.67, 0.225
+-------------
+Round 718
+0.715, 0.285
+['7h', '5h']High Card pot odds: 0.25
+-------------
+Round 719
+0.66, 0.33
+['Tc', '7d']High Card pot odds: 0.0
+['Tc', '7d', '9c', '7c', '7h']Trips pot odds: 0.0
+['Tc', '7d', '9c', '7c', '7h']Trips pot odds: 0.0
+['Tc', '7d', '9c', '7c', '7h']Trips pot odds: 0.25
+-------------
+Round 720
+0.625, 0.29
+['Qh', '3c']High Card pot odds: 0.25
+-------------
+Round 721
+0.585, 0.28
+['8c', '4s']High Card pot odds: 0.0
+['8c', '4s', 'Qs', '5c', '7c']High Card pot odds: 0.0
+['8c', '4s', 'Qs', '5c', '7c']High Card pot odds: 0.0
+['8c', '4s', 'Qs', '5c', '7c']High Card pot odds: 0.25
+-------------
+Round 722
+0.815, 0.43
+['6h', 'Ah']High Card pot odds: 0.25
+-------------
+Round 723
+0.73, 0.335
+-------------
+Round 724
+0.76, 0.455
+['7c', '7h']Pair pot odds: 0.25
+-------------
+Round 725
+0.695, 0.345
+-------------
+Round 726
+0.67, 0.18
+['3h', '9s']High Card pot odds: 0.25
+-------------
+Round 727
+0.615, 0.225
+['2c', '5c']High Card pot odds: 0.0
+['2c', '5c', '3s', '3d', 'Qc']Pair pot odds: 0.0
+['2c', '5c', '3s', '3d', 'Qc']Pair pot odds: 0.0
+['2c', '5c', '3s', '3d', 'Qc']Pair pot odds: 0.25
+-------------
+Round 728
+0.66, 0.32
+['Qc', '9h']High Card pot odds: 0.25
+-------------
+Round 729
+0.59, 0.175
+['3d', '6s']High Card pot odds: 0.0
+['3d', '6s', '2d', '9h', '8c']High Card pot odds: 0.0
+['3d', '6s', '2d', '9h', '8c']High Card pot odds: 0.0
+['3d', '6s', '2d', '9h', '8c', 'Ad']High Card pot odds: 0.0
+['3d', '6s', '2d', '9h', '8c', 'Ad', 'Ac']Pair pot odds: 0.0
+-------------
+Round 730
+0.515, 0.295
+['6c', '5h']High Card pot odds: 0.25
+-------------
+Round 731
+0.675, 0.36
+['Ah', '3d']High Card pot odds: 0.0
+['Ah', '3d', 'Jh', 'Ad', '5s']Pair pot odds: 0.0
+['Ah', '3d', 'Jh', 'Ad', '5s']Pair pot odds: 0.0
+['Ah', '3d', 'Jh', 'Ad', '5s']Pair pot odds: 0.25
+-------------
+Round 732
+0.655, 0.38
+['Ad', '2h']High Card pot odds: 0.25
+-------------
+Round 733
+0.55, 0.23
+-------------
+Round 734
+0.67, 0.39
+['Kh', '9d']High Card pot odds: 0.25
+-------------
+Round 735
+0.725, 0.365
+-------------
+Round 736
+0.88, 0.645
+['As', 'Ah']Pair pot odds: 0.25
+-------------
+Round 737
+0.66, 0.345
+-------------
+Round 738
+0.76, 0.325
+['Ac', '8s']High Card pot odds: 0.25
+-------------
+Round 739
+0.73, 0.45
+-------------
+Round 740
+0.66, 0.21
+['8s', '6d']High Card pot odds: 0.25
+-------------
+Round 741
+0.66, 0.405
+['Jh', '6h']High Card pot odds: 0.25
+-------------
+Round 742
+0.7, 0.25
+['5h', 'Js']High Card pot odds: 0.25
+-------------
+Round 743
+0.73, 0.24
+['Qc', '5d']High Card pot odds: 0.0
+['Qc', '5d', 'Js', '4s', '6d']High Card pot odds: 0.0
+['Qc', '5d', 'Js', '4s', '6d']High Card pot odds: 0.0
+['Qc', '5d', 'Js', '4s', '6d', 'Ac']High Card pot odds: 0.0
+['Qc', '5d', 'Js', '4s', '6d', 'Ac', 'Jh']Pair pot odds: 0.0
+-------------
+Round 744
+0.575, 0.245
+['2d', 'Ts']High Card pot odds: 0.25
+-------------
+Round 745
+0.645, 0.2
+['4c', '9h']High Card pot odds: 0.0
+['4c', '9h', '7d', 'Kh', '2d']High Card pot odds: 0.0
+['4c', '9h', '7d', 'Kh', '2d']High Card pot odds: 0.0
+['4c', '9h', '7d', 'Kh', '2d']High Card pot odds: 0.25
+-------------
+Round 746
+0.7, 0.285
+['6d', 'Ts']High Card pot odds: 0.25
+-------------
+Round 747
+0.675, 0.44
+['Ac', '6c']High Card pot odds: 0.0
+['Ac', '6c', '2d', 'Qd', 'Qc']Pair pot odds: 0.0
+['Ac', '6c', '2d', 'Qd', 'Qc']Pair pot odds: 0.0
+['Ac', '6c', '2d', 'Qd', 'Qc', '3h']Pair pot odds: 0.0
+['Ac', '6c', '2d', 'Qd', 'Qc', '3h', '7s']Pair pot odds: 0.0
+-------------
+Round 748
+0.72, 0.445
+['Kh', 'Ad']High Card pot odds: 0.25
+-------------
+Round 749
+0.85, 0.395
+-------------
+Round 750
+0.655, 0.295
+['6h', 'Ts']High Card pot odds: 0.25
+-------------
+Round 751
+0.725, 0.28
+-------------
+Round 752
+0.705, 0.325
+['Qh', 'Ts']High Card pot odds: 0.25
+-------------
+Round 753
+0.605, 0.29
+['3h', '6s']High Card pot odds: 0.0
+['3h', '6s', 'Th', '9d', '8h']High Card pot odds: 0.0
+['3h', '6s', 'Th', '9d', '8h']High Card pot odds: 0.0
+['3h', '6s', 'Th', '9d', '8h', '3d']Pair pot odds: 0.0
+['3h', '6s', 'Th', '9d', '8h', '3d', '7d']Straight pot odds: 0.0
+-------------
+Round 754
+0.66, 0.305
+['6c', '3s']High Card pot odds: 0.25
+-------------
+Round 755
+0.7, 0.285
+['7s', 'Tc']High Card pot odds: 0.0
+['7s', 'Tc', '9c', '4s', 'Qd']High Card pot odds: 0.0
+['7s', 'Tc', '9c', '4s', 'Qd']High Card pot odds: 0.0
+['7s', 'Tc', '9c', '4s', 'Qd', 'Ks']High Card pot odds: 0.0
+['7s', 'Tc', '9c', '4s', 'Qd', 'Ks', 'Qh']Pair pot odds: 0.0
+-------------
+Round 756
+0.605, 0.225
+['7c', '9d']High Card pot odds: 0.25
+-------------
+Round 757
+0.655, 0.42
+-------------
+Round 758
+0.77, 0.48
+['Kd', 'Ac']High Card pot odds: 0.25
+-------------
+Round 759
+0.545, 0.225
+['3c', '4d']High Card pot odds: 0.0
+['3c', '4d', '5d', '7s', '2d']High Card pot odds: 0.0
+['3c', '4d', '5d', '7s', '2d']High Card pot odds: 0.0
+['3c', '4d', '5d', '7s', '2d']High Card pot odds: 0.25
+-------------
+Round 760
+0.58, 0.275
+['4h', 'Jd']High Card pot odds: 0.25
+-------------
+Round 761
+0.64, 0.285
+['7d', 'Td']High Card pot odds: 0.0
+['7d', 'Td', '7s', 'Js', '5h']Pair pot odds: 0.0
+['7d', 'Td', '7s', 'Js', '5h']Pair pot odds: 0.0
+['7d', 'Td', '7s', 'Js', '5h']Pair pot odds: 0.25
+-------------
+Round 762
+0.66, 0.27
+['8h', '7d']High Card pot odds: 0.25
+-------------
+Round 763
+0.725, 0.345
+['Th', 'Jh']High Card pot odds: 0.0
+['Th', 'Jh', 'Qd', '9h', '5d']High Card pot odds: 0.0
+['Th', 'Jh', 'Qd', '9h', '5d']High Card pot odds: 0.0
+['Th', 'Jh', 'Qd', '9h', '5d']High Card pot odds: 0.25
+-------------
+Round 764
+0.7, 0.225
+['3c', 'Qc']High Card pot odds: 0.25
+-------------
+Round 765
+0.705, 0.165
+['8h', '3s']High Card pot odds: 0.0
+['8h', '3s', 'As', 'Ts', 'Ah']Pair pot odds: 0.0
+['8h', '3s', 'As', 'Ts', 'Ah']Pair pot odds: 0.0
+['8h', '3s', 'As', 'Ts', 'Ah']Pair pot odds: 0.25
+-------------
+Round 766
+0.655, 0.185
+['3s', '5c']High Card pot odds: 0.25
+-------------
+Round 767
+0.69, 0.415
+['7d', 'Td']High Card pot odds: 0.0
+['7d', 'Td', 'Js', 'Tc', '9d']Pair pot odds: 0.0
+['7d', 'Td', 'Js', 'Tc', '9d']Pair pot odds: 0.0
+['7d', 'Td', 'Js', 'Tc', '9d', '9s']Two Pair pot odds: 0.0
+['7d', 'Td', 'Js', 'Tc', '9d', '9s', '6d']Two Pair pot odds: 0.0
+-------------
+Round 768
+0.57, 0.22
+['5s', '7c']High Card pot odds: 0.25
+-------------
+Round 769
+0.755, 0.53
+-------------
+Round 770
+0.595, 0.23
+['2c', '8h']High Card pot odds: 0.25
+-------------
+Round 771
+0.74, 0.325
+['7h', 'As']High Card pot odds: 0.0
+['7h', 'As', 'Kd', '2c', 'Ah']Pair pot odds: 0.0
+['7h', 'As', 'Kd', '2c', 'Ah']Pair pot odds: 0.0
+['7h', 'As', 'Kd', '2c', 'Ah']Pair pot odds: 0.25
+-------------
+Round 772
+0.68, 0.41
+['5c', 'Kc']High Card pot odds: 0.25
+-------------
+Round 773
+0.645, 0.335
+['As', '2s']High Card pot odds: 0.0
+['As', '2s', 'Qh', '2c', '7h']Pair pot odds: 0.0
+['As', '2s', 'Qh', '2c', '7h']Pair pot odds: 0.0
+['As', '2s', 'Qh', '2c', '7h']Pair pot odds: 0.25
+-------------
+Round 774
+0.645, 0.235
+['8d', '4h']High Card pot odds: 0.25
+-------------
+Round 775
+0.77, 0.305
+['5s', 'Ks']High Card pot odds: 0.0
+['5s', 'Ks', '7s', '8d', '4d']High Card pot odds: 0.0
+['5s', 'Ks', '7s', '8d', '4d']High Card pot odds: 0.0
+['5s', 'Ks', '7s', '8d', '4d']High Card pot odds: 0.25
+-------------
+Round 776
+0.675, 0.35
+['Qs', '7d']High Card pot odds: 0.25
+-------------
+Round 777
+0.775, 0.345
+['Jh', '9c']High Card pot odds: 0.0
+['Jh', '9c', '4h', '5c', '6d']High Card pot odds: 0.0
+['Jh', '9c', '4h', '5c', '6d']High Card pot odds: 0.0
+['Jh', '9c', '4h', '5c', '6d']High Card pot odds: 0.25
+-------------
+Round 778
+0.705, 0.315
+['6d', '4d']High Card pot odds: 0.25
+-------------
+Round 779
+0.75, 0.495
+['Qs', 'Kh']High Card pot odds: 0.0
+['Qs', 'Kh', '9d', '9c', 'Js']Pair pot odds: 0.0
+['Qs', 'Kh', '9d', '9c', 'Js']Pair pot odds: 0.0
+['Qs', 'Kh', '9d', '9c', 'Js', '3c']Pair pot odds: 0.0
+['Qs', 'Kh', '9d', '9c', 'Js', '3c', '2s']Pair pot odds: 0.0
+-------------
+Round 780
+0.66, 0.34
+['8h', '3h']High Card pot odds: 0.25
+-------------
+Round 781
+0.605, 0.265
+['8s', '9c']High Card pot odds: 0.0
+['8s', '9c', 'Kc', '6c', '9h']Pair pot odds: 0.0
+['8s', '9c', 'Kc', '6c', '9h']Pair pot odds: 0.0
+['8s', '9c', 'Kc', '6c', '9h']Pair pot odds: 0.25
+-------------
+Round 782
+0.51, 0.135
+['3d', '2h']High Card pot odds: 0.25
+-------------
+Round 783
+0.68, 0.32
+-------------
+Round 784
+0.595, 0.39
+['Td', '4c']High Card pot odds: 0.25
+-------------
+Round 785
+0.555, 0.27
+['3c', '8h']High Card pot odds: 0.0
+['3c', '8h', '8s', 'Jd', '3h']Two Pair pot odds: 0.0
+['3c', '8h', '8s', 'Jd', '3h']Two Pair pot odds: 0.0
+['3c', '8h', '8s', 'Jd', '3h']Two Pair pot odds: 0.25
+-------------
+Round 786
+0.6, 0.355
+['2s', '2d']Pair pot odds: 0.25
+-------------
+Round 787
+0.66, 0.365
+['Ad', '2s']High Card pot odds: 0.0
+['Ad', '2s', 'Qd', '8h', '3s']High Card pot odds: 0.0
+['Ad', '2s', 'Qd', '8h', '3s']High Card pot odds: 0.0
+['Ad', '2s', 'Qd', '8h', '3s']High Card pot odds: 0.25
+-------------
+Round 788
+0.64, 0.26
+['4s', '7d']High Card pot odds: 0.25
+-------------
+Round 789
+0.695, 0.425
+-------------
+Round 790
+0.68, 0.415
+['6c', 'Tc']High Card pot odds: 0.25
+-------------
+Round 791
+0.605, 0.315
+-------------
+Round 792
+0.71, 0.44
+['Jc', 'Qh']High Card pot odds: 0.25
+-------------
+Round 793
+0.685, 0.345
+['6d', 'Jc']High Card pot odds: 0.0
+['6d', 'Jc', '5h', '4c', '6h']Pair pot odds: 0.0
+['6d', 'Jc', '5h', '4c', '6h']Pair pot odds: 0.0
+['6d', 'Jc', '5h', '4c', '6h']Pair pot odds: 0.25
+-------------
+Round 794
+0.765, 0.285
+['7c', 'Td']High Card pot odds: 0.25
+-------------
+Round 795
+0.79, 0.435
+-------------
+Round 796
+0.71, 0.455
+['Ac', '5c']High Card pot odds: 0.25
+-------------
+Round 797
+0.675, 0.325
+-------------
+Round 798
+0.57, 0.265
+['5h', 'Th']High Card pot odds: 0.25
+-------------
+Round 799
+0.715, 0.39
+-------------
+Round 800
+0.705, 0.275
+['Jc', '7d']High Card pot odds: 0.25
+-------------
+Round 801
+0.62, 0.175
+['5s', '3c']High Card pot odds: 0.0
+['5s', '3c', 'Td', '7d', 'Kc']High Card pot odds: 0.0
+['5s', '3c', 'Td', '7d', 'Kc']High Card pot odds: 0.0
+['5s', '3c', 'Td', '7d', 'Kc', 'Qc']High Card pot odds: 0.0
+['5s', '3c', 'Td', '7d', 'Kc', 'Qc', '6h']High Card pot odds: 0.0
+-------------
+Round 802
+0.69, 0.32
+['8d', 'Th']High Card pot odds: 0.25
+-------------
+Round 803
+0.695, 0.305
+['4d', 'Kc']High Card pot odds: 0.0
+['4d', 'Kc', '6h', '8c', 'Ac']High Card pot odds: 0.0
+['4d', 'Kc', '6h', '8c', 'Ac']High Card pot odds: 0.0
+['4d', 'Kc', '6h', '8c', 'Ac']High Card pot odds: 0.25
+-------------
+Round 804
+0.63, 0.21
+['6s', '5h']High Card pot odds: 0.25
+-------------
+Round 805
+0.64, 0.35
+['Js', '7d']High Card pot odds: 0.0
+['Js', '7d', '8h', '7c', '6s']Pair pot odds: 0.0
+['Js', '7d', '8h', '7c', '6s']Pair pot odds: 0.0
+['Js', '7d', '8h', '7c', '6s']Pair pot odds: 0.25
+-------------
+Round 806
+0.62, 0.23
+['4c', '5d']High Card pot odds: 0.25
+-------------
+Round 807
+0.7, 0.325
+-------------
+Round 808
+0.56, 0.24
+['5c', 'Th']High Card pot odds: 0.25
+-------------
+Round 809
+0.745, 0.4
+['Qd', '6d']High Card pot odds: 0.0
+['Qd', '6d', '9d', 'Tc', '7s']High Card pot odds: 0.0
+['Qd', '6d', '9d', 'Tc', '7s']High Card pot odds: 0.0
+['Qd', '6d', '9d', 'Tc', '7s', 'Kc']High Card pot odds: 0.0
+['Qd', '6d', '9d', 'Tc', '7s', 'Kc']High Card pot odds: 0.4975
+-------------
+Round 810
+0.685, 0.475
+['Js', 'Ks']High Card pot odds: 0.25
+-------------
+Round 811
+0.535, 0.255
+-------------
+Round 812
+0.72, 0.33
+['Tc', '3d']High Card pot odds: 0.25
+-------------
+Round 813
+0.545, 0.235
+-------------
+Round 814
+0.675, 0.305
+['Kh', '4d']High Card pot odds: 0.25
+-------------
+Round 815
+0.675, 0.34
+['5c', 'Kd']High Card pot odds: 0.0
+['5c', 'Kd', 'Jc', '9h', '4c']High Card pot odds: 0.0
+['5c', 'Kd', 'Jc', '9h', '4c']High Card pot odds: 0.0
+['5c', 'Kd', 'Jc', '9h', '4c']High Card pot odds: 0.25
+-------------
+Round 816
+0.72, 0.39
+['Ac', '9c']High Card pot odds: 0.25
+-------------
+Round 817
+0.65, 0.31
+['3s', '4d']High Card pot odds: 0.0
+['3s', '4d', '6s', 'Td', 'Ad']High Card pot odds: 0.0
+['3s', '4d', '6s', 'Td', 'Ad']High Card pot odds: 0.0
+['3s', '4d', '6s', 'Td', 'Ad']High Card pot odds: 0.25
+-------------
+Round 818
+0.62, 0.41
+['Qs', '7c']High Card pot odds: 0.25
+-------------
+Round 819
+0.575, 0.26
+['2s', '5s']High Card pot odds: 0.0
+['2s', '5s', 'Th', '7d', 'Qh']High Card pot odds: 0.0
+['2s', '5s', 'Th', '7d', 'Qh']High Card pot odds: 0.0
+['2s', '5s', 'Th', '7d', 'Qh', '2d']Pair pot odds: 0.0
+['2s', '5s', 'Th', '7d', 'Qh', '2d', '6s']Pair pot odds: 0.0
+-------------
+Round 820
+0.72, 0.345
+['3s', 'Jd']High Card pot odds: 0.25
+-------------
+Round 821
+0.56, 0.255
+['5h', '8d']High Card pot odds: 0.0
+['5h', '8d', 'As', 'Kc', '4d']High Card pot odds: 0.0
+['5h', '8d', 'As', 'Kc', '4d']High Card pot odds: 0.0
+['5h', '8d', 'As', 'Kc', '4d']High Card pot odds: 0.25
+-------------
+Round 822
+0.555, 0.26
+['Qh', '4s']High Card pot odds: 0.25
+-------------
+Round 823
+0.76, 0.4
+-------------
+Round 824
+0.63, 0.26
+['7c', '5s']High Card pot odds: 0.25
+-------------
+Round 825
+0.725, 0.27
+['5d', 'Qs']High Card pot odds: 0.0
+['5d', 'Qs', '7h', '7s', '9c']Pair pot odds: 0.0
+['5d', 'Qs', '7h', '7s', '9c']Pair pot odds: 0.0
+['5d', 'Qs', '7h', '7s', '9c', '3s']Pair pot odds: 0.0
+['5d', 'Qs', '7h', '7s', '9c', '3s', '4h']Pair pot odds: 0.0
+-------------
+Round 826
+0.76, 0.375
+['Qc', '6c']High Card pot odds: 0.25
+-------------
+Round 827
+0.66, 0.455
+-------------
+Round 828
+0.605, 0.26
+['4h', 'Jd']High Card pot odds: 0.25
+-------------
+Round 829
+0.705, 0.36
+['Jd', 'Qs']High Card pot odds: 0.25
+-------------
+Round 830
+0.81, 0.425
+['Jd', 'Qd']High Card pot odds: 0.25
+-------------
+Round 831
+0.615, 0.25
+['2s', 'Qs']High Card pot odds: 0.0
+['2s', 'Qs', '8c', 'Qh', 'Qc']Trips pot odds: 0.0
+['2s', 'Qs', '8c', 'Qh', 'Qc']Trips pot odds: 0.0
+['2s', 'Qs', '8c', 'Qh', 'Qc']Trips pot odds: 0.25
+-------------
+Round 832
+0.54, 0.12
+['4d', '2c']High Card pot odds: 0.25
+-------------
+Round 833
+0.75, 0.345
+-------------
+Round 834
+0.64, 0.335
+['8s', 'Jd']High Card pot odds: 0.25
+-------------
+Round 835
+0.745, 0.38
+['Kc', '3c']High Card pot odds: 0.0
+['Kc', '3c', '2s', '9s', 'Ks']Pair pot odds: 0.0
+['Kc', '3c', '2s', '9s', 'Ks']Pair pot odds: 0.0
+['Kc', '3c', '2s', '9s', 'Ks', 'Ts']Pair pot odds: 0.0
+['Kc', '3c', '2s', '9s', 'Ks', 'Ts', 'Ac']Pair pot odds: 0.0
+-------------
+Round 836
+0.67, 0.345
+['5d', 'Td']High Card pot odds: 0.25
+-------------
+Round 837
+0.635, 0.22
+-------------
+Round 838
+0.635, 0.365
+['4d', '4c']Pair pot odds: 0.25
+-------------
+Round 839
+0.74, 0.41
+['Qh', 'Ad']High Card pot odds: 0.0
+['Qh', 'Ad', '3s', '7h', '6c']High Card pot odds: 0.0
+['Qh', 'Ad', '3s', '7h', '6c']High Card pot odds: 0.0
+['Qh', 'Ad', '3s', '7h', '6c', 'Qs']Pair pot odds: 0.0
+['Qh', 'Ad', '3s', '7h', '6c', 'Qs', '5c']Pair pot odds: 0.0
+-------------
+Round 840
+0.66, 0.445
+['5s', 'Ah']High Card pot odds: 0.25
+-------------
+Round 841
+0.755, 0.465
+['Th', 'Kc']High Card pot odds: 0.0
+['Th', 'Kc', '6c', '7c', '8h']High Card pot odds: 0.0
+['Th', 'Kc', '6c', '7c', '8h']High Card pot odds: 0.0
+['Th', 'Kc', '6c', '7c', '8h']High Card pot odds: 0.25
+-------------
+Round 842
+0.675, 0.38
+['Ks', '4s']High Card pot odds: 0.25
+-------------
+Round 843
+0.685, 0.33
+['5h', 'Qh']High Card pot odds: 0.0
+['5h', 'Qh', 'Kd', '9h', 'Js']High Card pot odds: 0.0
+['5h', 'Qh', 'Kd', '9h', 'Js']High Card pot odds: 0.0
+['5h', 'Qh', 'Kd', '9h', 'Js', 'Qc']Pair pot odds: 0.0
+['5h', 'Qh', 'Kd', '9h', 'Js', 'Qc']Pair pot odds: 0.4975
+-------------
+Round 844
+0.75, 0.395
+['6d', 'Ac']High Card pot odds: 0.25
+-------------
+Round 845
+0.61, 0.285
+['3s', '9d']High Card pot odds: 0.0
+['3s', '9d', '6c', '4h', 'Tc']High Card pot odds: 0.0
+['3s', '9d', '6c', '4h', 'Tc']High Card pot odds: 0.0
+['3s', '9d', '6c', '4h', 'Tc']High Card pot odds: 0.25
+-------------
+Round 846
+0.71, 0.335
+['9s', 'Jc']High Card pot odds: 0.25
+-------------
+Round 847
+0.58, 0.32
+['Jh', '5c']High Card pot odds: 0.25
+-------------
+Round 848
+0.545, 0.28
+['9h', '2c']High Card pot odds: 0.25
+-------------
+Round 849
+0.72, 0.29
+-------------
+Round 850
+0.51, 0.155
+['7s', '2c']High Card pot odds: 0.25
+-------------
+Round 851
+0.635, 0.27
+['5c', '3d']High Card pot odds: 0.0
+['5c', '3d', '7c', 'Kd', '2d']High Card pot odds: 0.0
+['5c', '3d', '7c', 'Kd', '2d']High Card pot odds: 0.0
+['5c', '3d', '7c', 'Kd', '2d', '2s']Pair pot odds: 0.0
+['5c', '3d', '7c', 'Kd', '2d', '2s', '5h']Two Pair pot odds: 0.0
+-------------
+Round 852
+0.68, 0.345
+['2d', '2c']Pair pot odds: 0.25
+-------------
+Round 853
+0.73, 0.35
+['4d', 'Ac']High Card pot odds: 0.0
+['4d', 'Ac', 'Kd', '6s', '3s']High Card pot odds: 0.0
+['4d', 'Ac', 'Kd', '6s', '3s']High Card pot odds: 0.0
+['4d', 'Ac', 'Kd', '6s', '3s', 'Kc']Pair pot odds: 0.0
+['4d', 'Ac', 'Kd', '6s', '3s', 'Kc', '2c']Pair pot odds: 0.0
+-------------
+Round 854
+0.64, 0.27
+['7c', '5s']High Card pot odds: 0.25
+-------------
+Round 855
+0.73, 0.335
+['Js', 'Qs']High Card pot odds: 0.0
+['Js', 'Qs', 'Ts', '7c', '6d']High Card pot odds: 0.0
+['Js', 'Qs', 'Ts', '7c', '6d']High Card pot odds: 0.0
+['Js', 'Qs', 'Ts', '7c', '6d', 'Qd']Pair pot odds: 0.0
+['Js', 'Qs', 'Ts', '7c', '6d', 'Qd', 'Tc']Two Pair pot odds: 0.0
+-------------
+Round 856
+0.7, 0.4
+['Jd', 'Ah']High Card pot odds: 0.25
+-------------
+Round 857
+0.65, 0.33
+['Ks', '4c']High Card pot odds: 0.25
+-------------
+Round 858
+0.72, 0.36
+['Js', '8h']High Card pot odds: 0.25
+-------------
+Round 859
+0.555, 0.225
+['4h', '9s']High Card pot odds: 0.25
+-------------
+Round 860
+0.74, 0.37
+['Jd', 'Tc']High Card pot odds: 0.25
+-------------
+Round 861
+0.76, 0.415
+['Qc', 'Kh']High Card pot odds: 0.0
+['Qc', 'Kh', '6h', '4h', '8d']High Card pot odds: 0.0
+['Qc', 'Kh', '6h', '4h', '8d']High Card pot odds: 0.0
+['Qc', 'Kh', '6h', '4h', '8d', '8c']Pair pot odds: 0.0
+['Qc', 'Kh', '6h', '4h', '8d', '8c', '7d']Pair pot odds: 0.0
+-------------
+Round 862
+0.73, 0.355
+['8c', 'Qs']High Card pot odds: 0.25
+-------------
+Round 863
+0.55, 0.295
+['8d', '5h']High Card pot odds: 0.25
+-------------
+Round 864
+0.66, 0.335
+['8h', 'Kd']High Card pot odds: 0.25
+-------------
+Round 865
+0.735, 0.415
+['Kd', 'Jc']High Card pot odds: 0.25
+-------------
+Round 866
+0.78, 0.39
+['Ah', 'Qc']High Card pot odds: 0.25
+-------------
+Round 867
+0.825, 0.53
+-------------
+Round 868
+0.765, 0.51
+['7c', '7s']Pair pot odds: 0.25
+-------------
+Round 869
+0.48, 0.175
+['4d', '2c']High Card pot odds: 0.0
+['4d', '2c', '6c', 'Qs', 'As']High Card pot odds: 0.0
+['4d', '2c', '6c', 'Qs', 'As']High Card pot odds: 0.0
+['4d', '2c', '6c', 'Qs', 'As']High Card pot odds: 0.25
+-------------
+Round 870
+0.77, 0.52
+['8s', '8c']Pair pot odds: 0.25
+-------------
+Round 871
+0.695, 0.34
+-------------
+Round 872
+0.66, 0.35
+['Jh', 'Td']High Card pot odds: 0.25
+-------------
+Round 873
+0.67, 0.385
+['7s', 'Qh']High Card pot odds: 0.0
+['7s', 'Qh', 'Td', '6s', '8d']High Card pot odds: 0.0
+['7s', 'Qh', 'Td', '6s', '8d']High Card pot odds: 0.0
+['7s', 'Qh', 'Td', '6s', '8d']High Card pot odds: 0.25
+-------------
+Round 874
+0.705, 0.265
+['6s', '5c']High Card pot odds: 0.25
+-------------
+Round 875
+0.73, 0.395
+-------------
+Round 876
+0.6, 0.21
+['6h', '3d']High Card pot odds: 0.25
+-------------
+Round 877
+0.605, 0.26
+['6h', '2h']High Card pot odds: 0.0
+['6h', '2h', '3s', '9s', 'Js']High Card pot odds: 0.0
+['6h', '2h', '3s', '9s', 'Js']High Card pot odds: 0.0
+['6h', '2h', '3s', '9s', 'Js', '8h']High Card pot odds: 0.0
+['6h', '2h', '3s', '9s', 'Js', '8h']High Card pot odds: 0.4975
+-------------
+Round 878
+0.72, 0.3
+['Qd', 'Th']High Card pot odds: 0.25
+-------------
+Round 879
+0.59, 0.255
+['Tc', '2s']High Card pot odds: 0.0
+['Tc', '2s', '4d', '4c', '3c']Pair pot odds: 0.0
+['Tc', '2s', '4d', '4c', '3c']Pair pot odds: 0.0
+['Tc', '2s', '4d', '4c', '3c', '7c']Pair pot odds: 0.0
+['Tc', '2s', '4d', '4c', '3c', '7c', '9d']Pair pot odds: 0.0
+-------------
+Round 880
+0.65, 0.24
+['6d', '4d']High Card pot odds: 0.25
+-------------
+Round 881
+0.765, 0.47
+['Tc', 'Kd']High Card pot odds: 0.0
+['Tc', 'Kd', 'Td', '8c', 'Jd']Pair pot odds: 0.0
+['Tc', 'Kd', 'Td', '8c', 'Jd']Pair pot odds: 0.0
+['Tc', 'Kd', 'Td', '8c', 'Jd']Pair pot odds: 0.25
+-------------
+Round 882
+0.695, 0.31
+['Qc', '3c']High Card pot odds: 0.25
+-------------
+Round 883
+0.715, 0.335
+['As', '4c']High Card pot odds: 0.25
+-------------
+Round 884
+0.64, 0.28
+['8c', '7s']High Card pot odds: 0.25
+-------------
+Round 885
+0.635, 0.415
+['Qs', '7d']High Card pot odds: 0.0
+['Qs', '7d', '4h', '9s', '2d']High Card pot odds: 0.0
+['Qs', '7d', '4h', '9s', '2d']High Card pot odds: 0.0
+['Qs', '7d', '4h', '9s', '2d']High Card pot odds: 0.25
+-------------
+Round 886
+0.615, 0.265
+['4d', '6s']High Card pot odds: 0.25
+-------------
+Round 887
+0.66, 0.23
+-------------
+Round 888
+0.655, 0.36
+['Ks', '4h']High Card pot odds: 0.25
+-------------
+Round 889
+0.655, 0.155
+['6c', '2d']High Card pot odds: 0.0
+['6c', '2d', '3s', '7s', '6h']Pair pot odds: 0.0
+['6c', '2d', '3s', '7s', '6h']Pair pot odds: 0.0
+['6c', '2d', '3s', '7s', '6h']Pair pot odds: 0.25
+-------------
+Round 890
+0.735, 0.41
+['Qd', 'Tc']High Card pot odds: 0.25
+-------------
+Round 891
+0.73, 0.495
+-------------
+Round 892
+0.695, 0.425
+['Qd', '5h']High Card pot odds: 0.25
+-------------
+Round 893
+0.675, 0.23
+['Qh', '2h']High Card pot odds: 0.25
+-------------
+Round 894
+0.6, 0.235
+['9h', '4s']High Card pot odds: 0.25
+-------------
+Round 895
+0.695, 0.34
+['7c', 'Qc']High Card pot odds: 0.25
+-------------
+Round 896
+0.79, 0.495
+['9c', '9s']Pair pot odds: 0.25
+-------------
+Round 897
+0.705, 0.23
+['Qh', '3s']High Card pot odds: 0.0
+['Qh', '3s', '9h', 'Ts', 'Jc']High Card pot odds: 0.0
+['Qh', '3s', '9h', 'Ts', 'Jc']High Card pot odds: 0.0
+['Qh', '3s', '9h', 'Ts', 'Jc', '8c']Straight pot odds: 0.0
+['Qh', '3s', '9h', 'Ts', 'Jc', '8c', 'Ks']Straight pot odds: 0.0
+-------------
+Round 898
+0.675, 0.44
+['Ah', 'Qc']High Card pot odds: 0.25
+-------------
+Round 899
+0.685, 0.27
+['Qd', '6c']High Card pot odds: 0.0
+['Qd', '6c', 'Kd', '2s', 'Jd']High Card pot odds: 0.0
+['Qd', '6c', 'Kd', '2s', 'Jd']High Card pot odds: 0.0
+['Qd', '6c', 'Kd', '2s', 'Jd']High Card pot odds: 0.25
+-------------
+Round 900
+0.705, 0.29
+['5d', 'Th']High Card pot odds: 0.25
+-------------
+Round 901
+0.685, 0.385
+['9h', 'Ks']High Card pot odds: 0.0
+['9h', 'Ks', '6h', '4d', 'Td']High Card pot odds: 0.0
+['9h', 'Ks', '6h', '4d', 'Td']High Card pot odds: 0.0
+['9h', 'Ks', '6h', '4d', 'Td']High Card pot odds: 0.25
+-------------
+Round 902
+0.785, 0.445
+['Ah', 'Qc']High Card pot odds: 0.25
+-------------
+Round 903
+0.67, 0.35
+-------------
+Round 904
+0.66, 0.385
+['3c', '3h']Pair pot odds: 0.25
+-------------
+Round 905
+0.74, 0.4
+['Qd', 'Js']High Card pot odds: 0.0
+['Qd', 'Js', '2h', '5c', 'Kh']High Card pot odds: 0.0
+['Qd', 'Js', '2h', '5c', 'Kh']High Card pot odds: 0.0
+['Qd', 'Js', '2h', '5c', 'Kh']High Card pot odds: 0.25
+-------------
+Round 906
+0.595, 0.28
+['6d', 'Th']High Card pot odds: 0.25
+-------------
+Round 907
+0.71, 0.38
+['7h', 'Qc']High Card pot odds: 0.0
+['7h', 'Qc', 'Ah', 'Kc', '6c']High Card pot odds: 0.0
+['7h', 'Qc', 'Ah', 'Kc', '6c']High Card pot odds: 0.0
+['7h', 'Qc', 'Ah', 'Kc', '6c', '2s']High Card pot odds: 0.0
+['7h', 'Qc', 'Ah', 'Kc', '6c', '2s', '2c']Pair pot odds: 0.0
+-------------
+Round 908
+0.745, 0.465
+['5c', 'Ac']High Card pot odds: 0.25
+-------------
+Round 909
+0.615, 0.325
+['Kd', '2h']High Card pot odds: 0.0
+['Kd', '2h', 'Jd', '7s', '6c']High Card pot odds: 0.0
+['Kd', '2h', 'Jd', '7s', '6c']High Card pot odds: 0.0
+['Kd', '2h', 'Jd', '7s', '6c']High Card pot odds: 0.25
+-------------
+Round 910
+0.76, 0.375
+['4c', 'Qc']High Card pot odds: 0.25
+-------------
+Round 911
+0.77, 0.455
+-------------
+Round 912
+0.705, 0.305
+['7d', 'Jh']High Card pot odds: 0.25
+-------------
+Round 913
+0.635, 0.23
+-------------
+Round 914
+0.715, 0.42
+['Qc', 'Jd']High Card pot odds: 0.25
+-------------
+Round 915
+0.65, 0.28
+['9h', '5h']High Card pot odds: 0.0
+['9h', '5h', 'Ac', 'Tc', '6d']High Card pot odds: 0.0
+['9h', '5h', 'Ac', 'Tc', '6d']High Card pot odds: 0.0
+['9h', '5h', 'Ac', 'Tc', '6d']High Card pot odds: 0.25
+-------------
+Round 916
+0.72, 0.365
+['9d', 'Qc']High Card pot odds: 0.25
+-------------
+Round 917
+0.705, 0.32
+['9s', 'Qh']High Card pot odds: 0.25
+-------------
+Round 918
+0.615, 0.205
+['5s', '4h']High Card pot odds: 0.25
+-------------
+Round 919
+0.66, 0.22
+['3c', '5h']High Card pot odds: 0.0
+['3c', '5h', '4s', '2d', 'Ah']Straight pot odds: 0.0
+['3c', '5h', '4s', '2d', 'Ah']Straight pot odds: 0.0
+['3c', '5h', '4s', '2d', 'Ah', '8d']Straight pot odds: 0.0
+['3c', '5h', '4s', '2d', 'Ah', '8d', '6d']Straight pot odds: 0.0
+-------------
+Round 920
+0.675, 0.45
+['5s', '5h']Pair pot odds: 0.25
+-------------
+Round 921
+0.73, 0.38
+['Kd', 'Jh']High Card pot odds: 0.25
+-------------
+Round 922
+0.91, 0.67
+['Ad', 'Ah']Pair pot odds: 0.25
+-------------
+Round 923
+0.595, 0.33
+-------------
+Round 924
+0.685, 0.44
+['2h', 'Ac']High Card pot odds: 0.25
+-------------
+Round 925
+0.62, 0.235
+['5h', '3d']High Card pot odds: 0.0
+['5h', '3d', '2h', '4h', '7d']High Card pot odds: 0.0
+['5h', '3d', '2h', '4h', '7d']High Card pot odds: 0.0
+['5h', '3d', '2h', '4h', '7d']High Card pot odds: 0.25
+-------------
+Round 926
+0.735, 0.23
+['3s', '2c']High Card pot odds: 0.25
+-------------
+Round 927
+0.545, 0.19
+-------------
+Round 928
+0.645, 0.335
+['9s', '4s']High Card pot odds: 0.25
+-------------
+Round 929
+0.625, 0.26
+['4d', '7d']High Card pot odds: 0.0
+['4d', '7d', 'Ac', '7c', 'Kd']Pair pot odds: 0.0
+['4d', '7d', 'Ac', '7c', 'Kd']Pair pot odds: 0.0
+['4d', '7d', 'Ac', '7c', 'Kd', 'Jd']Pair pot odds: 0.0
+['4d', '7d', 'Ac', '7c', 'Kd', 'Jd', '8d']Flush pot odds: 0.0
+-------------
+Round 930
+0.615, 0.38
+['8s', '9h']High Card pot odds: 0.25
+-------------
+Round 931
+0.55, 0.21
+-------------
+Round 932
+0.6, 0.22
+['3c', '7h']High Card pot odds: 0.25
+-------------
+Round 933
+0.48, 0.24
+-------------
+Round 934
+0.635, 0.245
+['Jh', '3c']High Card pot odds: 0.25
+-------------
+Round 935
+0.605, 0.23
+['2d', '7h']High Card pot odds: 0.0
+['2d', '7h', '8d', '7d', 'Ts']Pair pot odds: 0.0
+['2d', '7h', '8d', '7d', 'Ts']Pair pot odds: 0.0
+['2d', '7h', '8d', '7d', 'Ts']Pair pot odds: 0.25
+-------------
+Round 936
+0.525, 0.265
+['4h', '2s']High Card pot odds: 0.25
+-------------
+Round 937
+0.615, 0.245
+-------------
+Round 938
+0.605, 0.4
+['8h', 'Qc']High Card pot odds: 0.25
+-------------
+Round 939
+0.575, 0.3
+['7h', '5d']High Card pot odds: 0.0
+['7h', '5d', '2c', '8d', '9d']High Card pot odds: 0.0
+['7h', '5d', '2c', '8d', '9d']High Card pot odds: 0.0
+['7h', '5d', '2c', '8d', '9d', 'Kd']High Card pot odds: 0.0
+['7h', '5d', '2c', '8d', '9d', 'Kd', 'Js']High Card pot odds: 0.0
+-------------
+Round 940
+0.59, 0.265
+['3c', '6s']High Card pot odds: 0.25
+-------------
+Round 941
+0.845, 0.62
+['Ts', 'Th']Pair pot odds: 0.0
+['Ts', 'Th', '2h', '5s', '5d']Two Pair pot odds: 0.0
+['Ts', 'Th', '2h', '5s', '5d']Two Pair pot odds: 0.0
+['Ts', 'Th', '2h', '5s', '5d']Two Pair pot odds: 0.25
+-------------
+Round 942
+0.72, 0.215
+['Tc', '5d']High Card pot odds: 0.25
+-------------
+Round 943
+0.66, 0.375
+-------------
+Round 944
+0.635, 0.28
+['7d', '9s']High Card pot odds: 0.25
+-------------
+Round 945
+0.67, 0.335
+-------------
+Round 946
+0.63, 0.28
+['5c', '6s']High Card pot odds: 0.25
+-------------
+Round 947
+0.725, 0.435
+['9c', 'Ah']High Card pot odds: 0.0
+['9c', 'Ah', '6c', '6d', '2d']Pair pot odds: 0.0
+['9c', 'Ah', '6c', '6d', '2d']Pair pot odds: 0.0
+['9c', 'Ah', '6c', '6d', '2d']Pair pot odds: 0.25
+-------------
+Round 948
+0.725, 0.265
+['9d', '6c']High Card pot odds: 0.25
+-------------
+Round 949
+0.685, 0.32
+['Jh', '8d']High Card pot odds: 0.0
+['Jh', '8d', 'Jc', 'Qd', 'Ts']Pair pot odds: 0.0
+['Jh', '8d', 'Jc', 'Qd', 'Ts']Pair pot odds: 0.0
+['Jh', '8d', 'Jc', 'Qd', 'Ts', 'As']Pair pot odds: 0.0
+['Jh', '8d', 'Jc', 'Qd', 'Ts', 'As', 'Ad']Two Pair pot odds: 0.0
+-------------
+Round 950
+0.78, 0.44
+['Ks', 'Js']High Card pot odds: 0.25
+-------------
+Round 951
+0.645, 0.31
+['Js', '4s']High Card pot odds: 0.25
+-------------
+Round 952
+0.73, 0.39
+['Ad', 'Qc']High Card pot odds: 0.25
+-------------
+Round 953
+0.62, 0.3
+['6d', '7h']High Card pot odds: 0.0
+['6d', '7h', '9h', 'Jd', '8h']High Card pot odds: 0.0
+['6d', '7h', '9h', 'Jd', '8h']High Card pot odds: 0.0
+['6d', '7h', '9h', 'Jd', '8h']High Card pot odds: 0.25
+-------------
+Round 954
+0.61, 0.26
+['4s', '6d']High Card pot odds: 0.25
+-------------
+Round 955
+0.65, 0.25
+['3h', 'Ks']High Card pot odds: 0.0
+['3h', 'Ks', '8s', '4c', 'Th']High Card pot odds: 0.0
+['3h', 'Ks', '8s', '4c', 'Th']High Card pot odds: 0.0
+['3h', 'Ks', '8s', '4c', 'Th']High Card pot odds: 0.25
+-------------
+Round 956
+0.61, 0.25
+['8c', 'Kh']High Card pot odds: 0.25
+-------------
+Round 957
+0.695, 0.325
+['6c', 'Jc']High Card pot odds: 0.0
+['6c', 'Jc', 'Qc', '9h', '8h']High Card pot odds: 0.0
+['6c', 'Jc', 'Qc', '9h', '8h']High Card pot odds: 0.0
+['6c', 'Jc', 'Qc', '9h', '8h']High Card pot odds: 0.25
+-------------
+Round 958
+0.775, 0.345
+['Qs', 'Jd']High Card pot odds: 0.25
+-------------
+Round 959
+0.585, 0.245
+-------------
+Round 960
+0.69, 0.24
+['5h', 'Tc']High Card pot odds: 0.25
+-------------
+Round 961
+0.695, 0.31
+-------------
+Round 962
+0.74, 0.285
+['7d', '8d']High Card pot odds: 0.25
+-------------
+Round 963
+0.715, 0.42
+['9d', 'Qs']High Card pot odds: 0.0
+['9d', 'Qs', 'Ac', '5d', '5s']Pair pot odds: 0.0
+['9d', 'Qs', 'Ac', '5d', '5s']Pair pot odds: 0.0
+['9d', 'Qs', 'Ac', '5d', '5s', '5h']Trips pot odds: 0.0
+['9d', 'Qs', 'Ac', '5d', '5s', '5h', 'Ah']Full House pot odds: 0.0
+-------------
+Round 964
+0.59, 0.345
+['5h', 'Jc']High Card pot odds: 0.25
+-------------
+Round 965
+0.79, 0.55
+['Ts', 'Th']Pair pot odds: 0.0
+['Ts', 'Th', '4s', '5c', '8h']Pair pot odds: 0.0
+['Ts', 'Th', '4s', '5c', '8h']Pair pot odds: 0.0
+['Ts', 'Th', '4s', '5c', '8h', '7d']Pair pot odds: 0.0
+['Ts', 'Th', '4s', '5c', '8h', '7d', '9h']Pair pot odds: 0.0
+-------------
+Round 966
+0.65, 0.2
+['9s', '5c']High Card pot odds: 0.25
+-------------
+Round 967
+0.705, 0.265
+['Td', '5d']High Card pot odds: 0.0
+['Td', '5d', '8d', 'Js', 'Ac']High Card pot odds: 0.0
+['Td', '5d', '8d', 'Js', 'Ac']High Card pot odds: 0.0
+['Td', '5d', '8d', 'Js', 'Ac']High Card pot odds: 0.25
+-------------
+Round 968
+0.585, 0.27
+['6s', '4d']High Card pot odds: 0.25
+-------------
+Round 969
+0.68, 0.455
+-------------
+Round 970
+0.78, 0.375
+['8s', 'Ts']High Card pot odds: 0.25
+-------------
+Round 971
+0.68, 0.395
+['4s', '4d']Pair pot odds: 0.0
+['4s', '4d', 'Th', '6s', '9c']Pair pot odds: 0.0
+['4s', '4d', 'Th', '6s', '9c']Pair pot odds: 0.0
+['4s', '4d', 'Th', '6s', '9c']Pair pot odds: 0.25
+-------------
+Round 972
+0.615, 0.29
+['Jd', '6s']High Card pot odds: 0.25
+-------------
+Round 973
+0.745, 0.31
+['7d', '6h']High Card pot odds: 0.0
+['7d', '6h', '6c', '2c', '3d']Pair pot odds: 0.0
+['7d', '6h', '6c', '2c', '3d']Pair pot odds: 0.0
+['7d', '6h', '6c', '2c', '3d', 'Ad']Pair pot odds: 0.0
+['7d', '6h', '6c', '2c', '3d', 'Ad', '6d']Trips pot odds: 0.0
+-------------
+Round 974
+0.615, 0.28
+['8h', '6d']High Card pot odds: 0.25
+-------------
+Round 975
+0.53, 0.22
+['5s', '4h']High Card pot odds: 0.0
+['5s', '4h', 'Td', 'Qh', '8c']High Card pot odds: 0.0
+['5s', '4h', 'Td', 'Qh', '8c']High Card pot odds: 0.0
+['5s', '4h', 'Td', 'Qh', '8c', 'Jc']High Card pot odds: 0.0
+['5s', '4h', 'Td', 'Qh', '8c', 'Jc', 'Ah']High Card pot odds: 0.0
+-------------
+Round 976
+0.78, 0.405
+['Qs', 'Ah']High Card pot odds: 0.25
+-------------
+Round 977
+0.605, 0.22
+['3d', 'Qh']High Card pot odds: 0.0
+['3d', 'Qh', '3s', '7c', '4c']Pair pot odds: 0.0
+['3d', 'Qh', '3s', '7c', '4c']Pair pot odds: 0.0
+['3d', 'Qh', '3s', '7c', '4c', 'Tc']Pair pot odds: 0.0
+['3d', 'Qh', '3s', '7c', '4c', 'Tc', 'Th']Two Pair pot odds: 0.0
+-------------
+Round 978
+0.67, 0.34
+['Qh', '3s']High Card pot odds: 0.25
+-------------
+Round 979
+0.635, 0.345
+-------------
+Round 980
+0.67, 0.28
+['Qs', '3d']High Card pot odds: 0.25
+-------------
+Round 981
+0.515, 0.175
+['5c', '2d']High Card pot odds: 0.0
+['5c', '2d', 'Qh', 'Ks', '6d']High Card pot odds: 0.0
+['5c', '2d', 'Qh', 'Ks', '6d']High Card pot odds: 0.0
+['5c', '2d', 'Qh', 'Ks', '6d']High Card pot odds: 0.25
+-------------
+Round 982
+0.61, 0.275
+['4d', '6c']High Card pot odds: 0.25
+-------------
+Round 983
+0.745, 0.4
+-------------
+Round 984
+0.77, 0.29
+['9d', 'Th']High Card pot odds: 0.25
+-------------
+Round 985
+0.6, 0.275
+['4c', '9s']High Card pot odds: 0.0
+['4c', '9s', '4s', '2c', 'Qd']Pair pot odds: 0.0
+['4c', '9s', '4s', '2c', 'Qd']Pair pot odds: 0.0
+['4c', '9s', '4s', '2c', 'Qd']Pair pot odds: 0.25
+-------------
+Round 986
+0.63, 0.275
+['3h', 'Th']High Card pot odds: 0.25
+-------------
+Round 987
+0.6, 0.365
+-------------
+Round 988
+0.655, 0.33
+['Qs', '5c']High Card pot odds: 0.25
+-------------
+Round 989
+0.705, 0.34
+['4d', 'Qd']High Card pot odds: 0.0
+['4d', 'Qd', 'Ac', '5d', '8d']High Card pot odds: 0.0
+['4d', 'Qd', 'Ac', '5d', '8d']High Card pot odds: 0.0
+['4d', 'Qd', 'Ac', '5d', '8d', '8h']Pair pot odds: 0.0
+['4d', 'Qd', 'Ac', '5d', '8d', '8h', '8s']Trips pot odds: 0.0
+-------------
+Round 990
+0.61, 0.235
+['5d', 'Jc']High Card pot odds: 0.25
+-------------
+Round 991
+0.77, 0.425
+-------------
+Round 992
+0.75, 0.485
+['8c', 'Ac']High Card pot odds: 0.25
+-------------
+Round 993
+0.665, 0.36
+['7s', 'Ad']High Card pot odds: 0.0
+['7s', 'Ad', '2d', 'Ts', '8d']High Card pot odds: 0.0
+['7s', 'Ad', '2d', 'Ts', '8d']High Card pot odds: 0.0
+['7s', 'Ad', '2d', 'Ts', '8d']High Card pot odds: 0.25
+-------------
+Round 994
+0.75, 0.53
+['Qd', 'Ad']High Card pot odds: 0.25
+-------------
+Round 995
+0.655, 0.35
+['7h', '5d']High Card pot odds: 0.0
+['7h', '5d', 'Qh', '9d', '5h']Pair pot odds: 0.0
+['7h', '5d', 'Qh', '9d', '5h']Pair pot odds: 0.0
+['7h', '5d', 'Qh', '9d', '5h']Pair pot odds: 0.25
+-------------
+Round 996
+0.595, 0.295
+['9s', '3s']High Card pot odds: 0.25
+-------------
+Round 997
+0.61, 0.17
+['3s', '7c']High Card pot odds: 0.25
+-------------
+Round 998
+0.56, 0.215
+['7c', '3s']High Card pot odds: 0.25
+-------------
+Round 999
+0.73, 0.465
+-------------
+Round 1000
+0.65, 0.195
+game clock: 24.517
+['3s', '9c']High Card pot odds: 0.25
+-------------
