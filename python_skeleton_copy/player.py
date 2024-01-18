@@ -8,6 +8,8 @@ from skeleton.bot import Bot
 from skeleton.runner import parse_args, run_bot
 import random
 import eval7
+import time
+import pickle
 
 
 class Player(Bot):
@@ -27,7 +29,21 @@ class Player(Bot):
         '''
         self.opp_holes = []
         self.opp_bids = []
-        pass
+
+        prev_time = time.time()
+        with open("hand_strengths", "rb") as file:
+            self.starting_strengths = pickle.load(file)
+        print("pickle load:", time.time() - prev_time)
+        
+        rank_to_numeric = dict()
+
+        for i in range(2,10):
+            rank_to_numeric[str(i)] = i
+
+        for num, rank in enumerate("TJQKA"): #[(0,T), (1,J), (2,Q) ...]
+            rank_to_numeric[rank] = num + 10
+
+        self.rank_to_numeric = rank_to_numeric
 
     def handle_new_round(self, game_state, round_state, active):
         '''
@@ -70,6 +86,35 @@ class Player(Bot):
         if round_num == NUM_ROUNDS:
             print('game clock: ' + str(game_clock))
 
+    def hand_to_strength(self, my_cards):
+        card_1 = my_cards[0]
+        card_2 = my_cards[1]
+        #print(card_1)
+
+        #rank_1, suit_1 = card_1
+        rank_1 = str(card_1)[0]
+        suit_1 = str(card_1)[1]
+        #rank_2, suit_2 = card_2
+        rank_2 = str(card_2)[0]
+        suit_2 = str(card_2)[1]
+
+        #print(rank_1)
+        #print(suit_1)
+
+        num_1 = self.rank_to_numeric[str(rank_1)]
+        num_2 = self.rank_to_numeric[str(rank_2)]
+
+        suited = 'o'
+        if suit_1 == suit_2:
+            suited = "s"
+
+        if num_1 >= num_2:
+            key = rank_1 + rank_2 + suited
+        else:
+            key = rank_2 + rank_1 + suited
+
+        return self.starting_strengths[key]
+
     def calculate_strength(self, my_cards, iters):
         deck = eval7.Deck()
         my_cards = [eval7.Card(card) for card in my_cards]
@@ -78,7 +123,7 @@ class Player(Bot):
         wins_w_auction = 0
         wins_wo_auction = 0
 
-        for i in range(iters):
+        '''for i in range(iters):
             deck.shuffle()
             opp = 3
             community = 5
@@ -119,7 +164,9 @@ class Player(Bot):
                 wins_w_auction += 0.5
 
         strength_w_auction = wins_w_auction/iters
-        strength_wo_auction = wins_wo_auction/iters
+        strength_wo_auction = wins_wo_auction/iters'''
+        strength_w_auction = self.hand_to_strength(my_cards)[0]
+        strength_wo_auction = self.hand_to_strength(my_cards)[1]
         print(str(strength_w_auction)+", "+str(strength_wo_auction))
         return strength_w_auction, strength_wo_auction
 
