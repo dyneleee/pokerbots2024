@@ -221,6 +221,35 @@ class Player(Bot):
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
         pass
         print('-------------')
+    
+    def flush_draw_exists(self, my_cards, board): 
+        my_suits = [str(card)[1] for card in my_cards]
+        board_suits = [str(card)[1] for card in board]
+        total_suits = my_suits + board_suits
+        exists = False
+        backdoor = False
+        my_count = 0
+        if total_suits.count('s') >= 3:
+            exists = True
+            if total_suits.count('s') == 3:
+                backdoor = True
+            my_count = my_suits.count('s')
+        if total_suits.count('h') >= 3:
+            exists = True
+            if total_suits.count('h') == 3:
+                backdoor = True
+            my_count = my_suits.count('h')
+        if total_suits.count('c') >= 3:
+            exists = True
+            if total_suits.count('c') == 3:
+                backdoor = True
+            my_count = my_suits.count('c')
+        if total_suits.count('d') >= 3:
+            exists = True
+            if total_suits.count('d') == 3:
+                backdoor = True
+            my_count = my_suits.count('d')
+        return (exists, backdoor, my_count)
 
     def get_action(self, game_state, round_state, active):
         '''
