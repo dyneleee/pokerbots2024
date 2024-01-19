@@ -169,6 +169,38 @@ class Player(Bot):
         strength_wo_auction = self.hand_to_strength(my_cards)[1]
         print(str(strength_w_auction)+", "+str(strength_wo_auction))
         return strength_w_auction, strength_wo_auction
+    
+    def hand_rank(self, my_cards, board_cards):
+        my_val = eval7.evaluate(my_cards+board_cards)
+        #print(my_cards+board_cards)
+        possible_vals = []
+        cards = []
+        for rank in 'AKQJT98765432':
+            cards.append(rank+'s')
+            cards.append(rank+'c')
+            cards.append(rank+'h')
+            cards.append(rank+'d')
+        for i in range(len(cards)):
+            for j in range(i+1, len(cards)):
+                possible_hand = [eval7.Card(cards[i]), eval7.Card(cards[j])]
+                val = int(eval7.evaluate(possible_hand + board_cards))
+                possible_vals.append(val)
+                #print(str(possible_hand)+' '+str(val))
+        '''for i in range(len(cards)):
+            for j in range(i+1, len(cards)):
+                for k in range(j+1, len(cards)):
+                    possible_hand = [eval7.Card(cards[i]), eval7.Card(cards[j]), eval7.Card(cards[k])]
+                    possible_vals.append(eval7.evaluate(possible_hand + board_cards))'''
+        possible_vals.sort()
+        #print(possible_vals)
+        if my_val in possible_vals:
+            rank = possible_vals.index(my_val)/len(possible_vals)
+        else:
+            for i in range(len(possible_vals)):
+                if possible_vals[i] >= my_val:
+                    rank = i/len(possible_vals)
+                    break
+        return rank
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -229,8 +261,16 @@ class Player(Bot):
         hand_type = eval7.handtype(strength)
         pot_odds = continue_cost/(continue_cost + pot)
         guaranteed_win = False
+        pair = False
+        pair_rank = 0 # 1 = top pair
 
         print(str(hand_arr) + hand_type+' pot odds: '+str(pot_odds))
+
+        rank = self.hand_rank([eval7.Card(card) for card in my_cards], board)
+        print('rank: '+str(rank))
+
+        if hand_type == 'Pair' and hand_type != board_type:
+            pair == True
 
         if 1.5*(1000-round_num+1) + 1 < my_bankroll:
             guaranteed_win = True
