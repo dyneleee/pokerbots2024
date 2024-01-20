@@ -344,8 +344,8 @@ class Player(Bot):
         if street > 0:
             print('rank: '+str(rank))
 
-        #if 1.5*(1000-round_num+1) + 1 < my_bankroll:
-            #guaranteed_win = True
+        if 1.5*(1000-round_num+1) + 1 < my_bankroll:
+            guaranteed_win = True
         if guaranteed_win:
             #keep check/folding if we have enough already to win
             if FoldAction in legal_actions:
@@ -381,6 +381,7 @@ class Player(Bot):
                         break
                 print('using opponent bids; diff_ind: ' + str(diff_ind))
                 bid_amt = self.opp_bids[int(diff_ind * len(self.opp_bids))]
+                bid_amt = int(2.5 * bid_amt)
                 return BidAction(min(bid_amt, my_stack))
 
             max_bid = 0.50
@@ -427,7 +428,7 @@ class Player(Bot):
                     #opponent bet
                     if action == 1 or action == 2:
                         return CallAction()
-                    return RaiseAction(0.5*(min_raise + max_raise))
+                    return RaiseAction(int(0.9*min_raise + 0.1*max_raise))
                 if CheckAction in legal_actions:
                     #opponent limped
                     return RaiseAction(20)
@@ -436,7 +437,7 @@ class Player(Bot):
             if FoldAction in legal_actions and action == 1:
                 return FoldAction()
             if RaiseAction in legal_actions and action >= 3:
-                return RaiseAction(int(0.8*min_raise + 0.2*max_raise))
+                return RaiseAction(int(0.9*min_raise + 0.1*max_raise))
         
         flush_draws = self.flush_draws(my_cards, board)
         straight_draws = self.straight_draws(my_cards, board)
@@ -489,7 +490,7 @@ class Player(Bot):
                 return CallAction()
 
         #<0.5 fold, >0.9 call pot-2*pot, 1/2pot to pot 0.72, 1/3 to 1/2 0.66
-        if float(rank) < 0.5:
+        if float(rank) <= 0.53:
             if pot_odds < 0.1:
                 if CallAction in legal_actions:
                     return CallAction()
