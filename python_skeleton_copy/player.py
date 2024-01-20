@@ -341,8 +341,24 @@ class Player(Bot):
                 return BidAction(0)
             if CheckAction in legal_actions:
                 return CheckAction()
+        
+        strength_diff = self.strength_w_auction - self.strength_wo_auction
+        #print(self.strength_w_auction)
+        if BidAction in legal_actions and self.strength_w_auction > 0.7:
+            #all in on bid if hole is strong enough
+            return BidAction(my_stack) 
+        if BidAction in legal_actions:
+            #bid
+            max_bid = 0.50
+            min_bid = 0.15
+            bid = strength_diff
+            bid = min(max(min_bid, bid), max_bid)
+            bid = int(bid*my_stack)
+            bid = min(bid, my_stack)
+            return BidAction(bid)
             
         if street == 0:
+            print('preflop')
             #preflop
             strength = self.hand_to_strength(my_cards)
             avg_strength = 0.5*(strength[0] + strength[1])
@@ -390,29 +406,93 @@ class Player(Bot):
             if RaiseAction in legal_actions and action >= 3:
                 return RaiseAction(0.8*min_raise + 0.2*max_raise)
         
+        flush_draws = self.flush_draws(my_cards, board)
+        straight_draws = self.straight_draws(my_cards, board)
         if street < 5:
-            flush_draws = self.flush_draws(my_cards, board)
-            straight_draws = self.straight_draws(my_cards, board)
             if len(flush_draws) > 0:
                 print('flush draws: ' + str(flush_draws))
             if len(straight_draws) > 0:
                 print('cards needed for straight: ' + str(straight_draws))
-                
 
-        strength_diff = self.strength_w_auction - self.strength_wo_auction
-        #print(self.strength_w_auction)
-        if BidAction in legal_actions and self.strength_w_auction > 0.7:
-            #all in on bid if hole is strong enough
-            return BidAction(my_stack) 
-        if BidAction in legal_actions:
-            #bid
-            max_bid = 0.50
-            min_bid = 0.15
-            bid = strength_diff
-            bid = min(max(min_bid, bid), max_bid)
-            bid = int(bid*my_stack)
-            bid = min(bid, my_stack)
-            return BidAction(bid)
+        if RaiseAction in legal_actions:
+            if opp_pip == 0:
+                if rank > 0.95:
+                    return RaiseAction(max_raise)
+                if rank > 0.77:
+                    raise_amt = pot
+                    raise_amt = min(max(min_raise, raise_amt), max_raise)
+                if rank > 0.71:
+                    raise_amt = 0.5*pot
+                    raise_amt = min(max(min_raise, raise_amt), max_raise)
+                if rank > 0.58:
+                    raise_amt = 0.33*pot
+                    raise_amt = min(max(min_raise, raise_amt), max_raise)
+            if opp_pip > 0:
+                if rank > 0.97:
+                    return RaiseAction(max_raise)
+
+        #draws 
+        prob_improve = 0
+        for draw in flush_draws:
+            if draw[1] == 3 and street == 3:
+                prob_improve += 0.04
+            if draw[1] == 4 and street == 3:
+                prob_improve += 0.35
+            if draw[1] == 4 and street == 4:
+                prob_improve += 0.195
+        if len(straight_draws) == 1 and street == 3:
+            prob_improve += 0.165
+        if len(straight_draws) >= 2 and street == 3:
+            prob_improve += 0.315
+        if len(straight_draws) == 1 and street == 4:
+            prob_improve += 0.085
+        if len(straight_draws) >= 2 and street == 4:
+            prob_improve += 0.173
+
+        if CallAction in legal_actions:
+            if prob_improve > pot_odds:
+                return CallAction()
+
+        #<0.5 fold, >0.9 call pot-2*pot, 1/2pot to pot 0.72, 1/3 to 1/2 0.66
+        if float(rank) < 0.5:
+            if pot_odds < 0.1:
+                if CallAction in legal_actions:
+                    return CallAction()
+            if FoldAction in legal_actions:
+                return FoldAction()
+            return CheckAction()
+        elif rank > 0.9:
+            if pot_odds < 0.4:
+                if CallAction in legal_actions:
+                    return CallAction()
+            else:
+                if FoldAction in legal_actions:
+                    return FoldAction()
+                return CheckAction()
+        elif rank > 0.72:
+            if pot_odds < 0.33:
+                if CallAction in legal_actions:
+                    return CallAction()
+            else:
+                if FoldAction in legal_actions:
+                    return FoldAction()
+                return CheckAction()
+        elif rank > 0.66:
+            if pot_odds < 0.25:
+                if CallAction in legal_actions:
+                    return CallAction()
+            else:
+                if FoldAction in legal_actions:
+                    return FoldAction()
+                return CheckAction()
+        elif rank > 0.53:
+            if pot_odds < 0.2:
+                if CallAction in legal_actions:
+                    return CallAction()
+            else:
+                if FoldAction in legal_actions:
+                    return FoldAction()
+                return CheckAction()
         
         if FoldAction in legal_actions and self.strength_wo_auction<0.3 and street==0:
             #fold preflop
