@@ -73,8 +73,8 @@ if __name__ == "__main__":
    # [0,1,2] [a,b,c] ---> [(0,a), (1,b), (2,c)]
     paired_holes = list(zip(ranks,ranks))
 
-    suited_off_rank_str = [hole_card[0] + hole_card[1] + 'o' for hole_card in offrank_holes] #AKo, AKs, KAs
-    off_suit_off_rank_str = [hole_card[0] + hole_card[1] + 's' for hole_card in offrank_holes]
+    suited_off_rank_str = [hole_card[0] + hole_card[1] + 's' for hole_card in offrank_holes] #AKo, AKs, KAs
+    off_suit_off_rank_str = [hole_card[0] + hole_card[1] + 'o' for hole_card in offrank_holes]
     paired_cards_str = [hole_card[0] +  hole_card[1] + 'o' for hole_card in paired_holes]
 
     suited_off_rank = [[hole_card[0] + 'c', hole_card[1] + 'c'] for hole_card in offrank_holes]
@@ -94,8 +94,10 @@ if __name__ == "__main__":
 
         #print("strength:", strength)
         hand_to_strength[cards] = strength
+        avg_strength = 0.5*(strength[0] + strength[1])
+        print(str(cards) + ' ' + str(avg_strength))
     
     with open("hand_strengths", "wb") as file:
         pickle.dump(hand_to_strength, file)
 
-    print(hand_to_strength)
+    #print(hand_to_strength)

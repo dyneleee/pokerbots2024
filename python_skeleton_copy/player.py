@@ -167,7 +167,7 @@ class Player(Bot):
         strength_wo_auction = wins_wo_auction/iters'''
         strength_w_auction = self.hand_to_strength(my_cards)[0]
         strength_wo_auction = self.hand_to_strength(my_cards)[1]
-        print(str(strength_w_auction)+", "+str(strength_wo_auction))
+        #print(str(strength_w_auction)+", "+str(strength_wo_auction))
         return strength_w_auction, strength_wo_auction
     
     def hand_rank(self, my_cards, board_cards):
@@ -222,34 +222,63 @@ class Player(Bot):
         pass
         print('-------------')
     
-    def flush_draw_exists(self, my_cards, board): 
+    def flush_draws(self, my_cards, board): 
+        draws = []
         my_suits = [str(card)[1] for card in my_cards]
         board_suits = [str(card)[1] for card in board]
         total_suits = my_suits + board_suits
-        exists = False
-        backdoor = False
-        my_count = 0
-        if total_suits.count('s') >= 3:
-            exists = True
+        
+        if total_suits.count('s') >= 3 and board_suits.count('s') != total_suits.count('s'):
             if total_suits.count('s') == 3:
-                backdoor = True
-            my_count = my_suits.count('s')
-        if total_suits.count('h') >= 3:
-            exists = True
-            if total_suits.count('h') == 3:
-                backdoor = True
-            my_count = my_suits.count('h')
-        if total_suits.count('c') >= 3:
-            exists = True
+                draws.append(('s', 3))
+            if total_suits.count('s') == 4:
+                draws.append(('s', 4))
+        if total_suits.count('c') >= 3 and board_suits.count('c') != total_suits.count('c'):
             if total_suits.count('c') == 3:
-                backdoor = True
-            my_count = my_suits.count('c')
-        if total_suits.count('d') >= 3:
-            exists = True
+                draws.append(('c', 3))
+            if total_suits.count('c') == 4:
+                draws.append(('c', 4))
+        if total_suits.count('h') >= 3 and board_suits.count('h') != total_suits.count('h'):
+            if total_suits.count('h') == 3:
+                draws.append(('h', 3))
+            if total_suits.count('h') == 4:
+                draws.append(('h', 4))
+        if total_suits.count('d') >= 3 and board_suits.count('d') != total_suits.count('d'):
             if total_suits.count('d') == 3:
-                backdoor = True
-            my_count = my_suits.count('d')
-        return (exists, backdoor, my_count)
+                draws.append(('d', 3))
+            if total_suits.count('d') == 4:
+                draws.append(('d', 4))
+        
+        return (draws)
+    
+    def straight_draws(self, my_cards, board):
+        #return possible missing cards
+        draws = []
+        my_ranks = [str(card)[0] for card in my_cards]
+        board_ranks = [str(card)[0] for card in board]
+        total_ranks = my_ranks + board_ranks
+        my_set = set(my_ranks)
+        board_set = set(board_ranks)
+        total_set = set(total_ranks)
+
+        ranks = '23456789TJQKA'
+        for rank in ranks:
+            possible_hand = []
+            possible_hand.append(rank + 's')
+            for my_rank in my_set:
+                possible_hand.append(my_rank + 'c')
+            for board_rank in board_set:
+                possible_hand.append(board_rank + 'h')
+            hand = [eval7.Card(card) for card in possible_hand]
+            strength = eval7.evaluate(hand)
+            hand_type = eval7.handtype(strength)
+            if hand_type == 'Straight':
+                draws.append(rank)
+
+        return draws
+
+
+        return draws
 
     def get_action(self, game_state, round_state, active):
         '''
@@ -290,16 +319,17 @@ class Player(Bot):
         hand_type = eval7.handtype(strength)
         pot_odds = continue_cost/(continue_cost + pot)
         guaranteed_win = False
-        pair = False
-        pair_rank = 0 # 1 = top pair
+        #my_cards = [eval7.Card(card) for card in my_cards]
+        print(str(hand_arr) + hand_type)
 
-        print(str(hand_arr) + hand_type+' pot odds: '+str(pot_odds))
+        if RaiseAction in legal_actions:
+           min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
+           min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
+           max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
 
         rank = self.hand_rank([eval7.Card(card) for card in my_cards], board)
-        print('rank: '+str(rank))
-
-        if hand_type == 'Pair' and hand_type != board_type:
-            pair == True
+        if street > 0:
+            print('rank: '+str(rank))
 
         if 1.5*(1000-round_num+1) + 1 < my_bankroll:
             guaranteed_win = True
@@ -311,6 +341,63 @@ class Player(Bot):
                 return BidAction(0)
             if CheckAction in legal_actions:
                 return CheckAction()
+            
+        if street == 0:
+            #preflop
+            strength = self.hand_to_strength(my_cards)
+            avg_strength = 0.5*(strength[0] + strength[1])
+            print('strength: '+ str(strength) + ', average: '+ str(avg_strength))
+            action = 0 #fold=0, open=1, call 3bet = 2, 3bet=3, 4bet=4
+            if avg_strength > 0.47:
+                action = 1
+            if avg_strength > 0.53:
+                action = 2
+            if avg_strength > 0.6:
+                action = 3
+            if avg_strength > 0.73:
+                action = 4
+
+            if action == 0:
+                print('fold')
+            if action == 1:
+                print('open, fold to 3bet')
+            if action == 2:
+                print('call 3bet')
+            if action == 3:
+                print('3bet')
+            if action == 4:
+                print('4bet')
+
+            if action == 0:
+                if FoldAction in legal_actions:
+                    return FoldAction()
+                return CheckAction()
+            if my_contribution == 1:
+                return RaiseAction(10)
+            if my_contribution == 2:
+                if CallAction in legal_actions:
+                    #opponent bet
+                    if action == 1 or action == 2:
+                        return CallAction()
+                    return RaiseAction(0.5*(min_raise + max_raise))
+                if CheckAction in legal_actions:
+                    #opponent limped
+                    return RaiseAction(20)
+            if CallAction in legal_actions and action == 2:
+                return CallAction()
+            if FoldAction in legal_actions and action == 1:
+                return FoldAction()
+            if RaiseAction in legal_actions and action >= 3:
+                return RaiseAction(0.8*min_raise + 0.2*max_raise)
+        
+        if street < 5:
+            flush_draws = self.flush_draws(my_cards, board)
+            straight_draws = self.straight_draws(my_cards, board)
+            if len(flush_draws) > 0:
+                print('flush draws: ' + str(flush_draws))
+            if len(straight_draws) > 0:
+                print('cards needed for straight: ' + str(straight_draws))
+                
 
         strength_diff = self.strength_w_auction - self.strength_wo_auction
         #print(self.strength_w_auction)
@@ -358,11 +445,6 @@ class Player(Bot):
                 return FoldAction()
             if hand_type == 'Two Pair' and board_type == 'Pair' and pot_odds > 0.3:
                 return FoldAction()
-
-        if RaiseAction in legal_actions:
-           min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
-           min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
-           max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
   
         if RaiseAction in legal_actions and street==0:
             #min raise preflop but don't keep going infinitely
