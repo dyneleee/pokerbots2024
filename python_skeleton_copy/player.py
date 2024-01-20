@@ -193,14 +193,15 @@ class Player(Bot):
                     possible_vals.append(eval7.evaluate(possible_hand + board_cards))'''
         possible_vals.sort()
         #print(possible_vals)
+        my_rank = 0
         if my_val in possible_vals:
-            rank = possible_vals.index(my_val)/len(possible_vals)
+            my_rank = possible_vals.index(my_val)/len(possible_vals)
         else:
             for i in range(len(possible_vals)):
                 if possible_vals[i] >= my_val:
-                    rank = i/len(possible_vals)
+                    my_rank = i/len(possible_vals)
                     break
-        return rank
+        return my_rank
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -313,13 +314,16 @@ class Player(Bot):
         hand_arr = my_cards + board_cards
         my_hand = [eval7.Card(card) for card in hand_arr]
         board = [eval7.Card(card) for card in board_cards]
-        strength = eval7.evaluate(my_hand)
+        curr_strength = eval7.evaluate(my_hand)
         board_strength = eval7.evaluate(board)
         board_type = eval7.handtype(board_strength)
-        hand_type = eval7.handtype(strength)
+        hand_type = eval7.handtype(curr_strength)
         pot_odds = continue_cost/(continue_cost + pot)
+        strength = self.hand_to_strength(my_cards)
+        avg_strength = 0.5*(strength[0] + strength[1])
         guaranteed_win = False
         #my_cards = [eval7.Card(card) for card in my_cards]
+        print('street: '+str(street))
         print(str(hand_arr) + hand_type)
 
         if RaiseAction in legal_actions:
@@ -344,7 +348,7 @@ class Player(Bot):
         
         strength_diff = self.strength_w_auction - self.strength_wo_auction
         #print(self.strength_w_auction)
-        if BidAction in legal_actions and self.strength_w_auction > 0.7:
+        if BidAction in legal_actions and self.strength_w_auction > 0.8:
             #all in on bid if hole is strong enough
             return BidAction(my_stack) 
         if BidAction in legal_actions:
@@ -357,11 +361,8 @@ class Player(Bot):
             bid = min(bid, my_stack)
             return BidAction(bid)
             
-        if street == 0:
+        if street == 0 or len(board_cards) == 0:
             print('preflop')
-            #preflop
-            strength = self.hand_to_strength(my_cards)
-            avg_strength = 0.5*(strength[0] + strength[1])
             print('strength: '+ str(strength) + ', average: '+ str(avg_strength))
             action = 0 #fold=0, open=1, call 3bet = 2, 3bet=3, 4bet=4
             if avg_strength > 0.47:
@@ -418,13 +419,13 @@ class Player(Bot):
             if opp_pip == 0:
                 if rank > 0.95:
                     return RaiseAction(max_raise)
-                if rank > 0.77:
+                if rank > 0.80:
                     raise_amt = pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
-                if rank > 0.71:
+                if rank > 0.75:
                     raise_amt = 0.5*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
-                if rank > 0.58:
+                if rank > 0.70:
                     raise_amt = 0.33*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
             if opp_pip > 0:
@@ -494,7 +495,7 @@ class Player(Bot):
                     return FoldAction()
                 return CheckAction()
         
-        if FoldAction in legal_actions and self.strength_wo_auction<0.3 and street==0:
+        '''if FoldAction in legal_actions and self.strength_wo_auction<0.3 and street==0:
             #fold preflop
             return FoldAction()
         if FoldAction in legal_actions and street==0 and opp_contribution > 2:
@@ -545,7 +546,7 @@ class Player(Bot):
             raise_amt = 0.5*self.strength_wo_auction*pot
             raise_amt = max(min(raise_amt, max_raise), min_raise)
             if hand_type != 'High Card' and hand_type != 'Pair' and board_type == 'High Card':
-                return RaiseAction(max_raise)
+                return RaiseAction(max_raise)'''
             
         if CheckAction in legal_actions:
             return CheckAction()
