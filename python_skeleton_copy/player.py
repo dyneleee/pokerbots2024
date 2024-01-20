@@ -29,6 +29,7 @@ class Player(Bot):
         '''
         self.opp_holes = []
         self.opp_bids = []
+        self.preflop_fold = False
 
         prev_time = time.time()
         with open("hand_strengths", "rb") as file:
@@ -195,11 +196,11 @@ class Player(Bot):
         #print(possible_vals)
         my_rank = 0
         if my_val in possible_vals:
-            my_rank = possible_vals.index(my_val)/len(possible_vals)
+            my_rank = (possible_vals.index(my_val)+1)/len(possible_vals)
         else:
             for i in range(len(possible_vals)):
                 if possible_vals[i] >= my_val:
-                    my_rank = i/len(possible_vals)
+                    my_rank = (i+1)/len(possible_vals)
                     break
         return my_rank
 
@@ -220,7 +221,13 @@ class Player(Bot):
         street = previous_state.street  # 0, 3, 4, or 5 representing when this round ended
         my_cards = previous_state.hands[active]  # your cards
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
-        pass
+        opp_bid = previous_state.bids[1-active]
+
+        if opp_bid != None:
+            self.opp_bids.append(opp_bid)
+        #print('opponent bids: ' + str(self.opp_bids))
+        self.opp_bids.sort()
+        
         print('-------------')
     
     def flush_draws(self, my_cards, board): 
@@ -322,6 +329,8 @@ class Player(Bot):
         strength = self.hand_to_strength(my_cards)
         avg_strength = 0.5*(strength[0] + strength[1])
         guaranteed_win = False
+        strength_diffs = [0.2885000000000001, 0.26949999999999996, 0.26200000000000007, 0.3, 0.34650000000000003, 0.302, 0.33649999999999997, 0.336, 0.303, 0.28700000000000003, 0.29949999999999993, 0.327, 0.30849999999999994, 0.319, 0.2915, 0.2965, 0.3335, 0.30999999999999994, 0.31749999999999995, 0.32399999999999995, 0.32849999999999996, 0.33249999999999996, 0.2975, 0.31700000000000006, 0.3065, 0.32999999999999996, 0.355, 0.3555, 0.348, 0.347, 0.328, 0.31250000000000006, 0.30649999999999994, 0.32400000000000007, 0.2965, 0.3465, 0.32599999999999996, 0.32299999999999995, 0.33399999999999996, 0.37500000000000006, 0.355, 0.336, 0.32099999999999995, 0.3375, 0.3395, 0.3665, 0.3365, 0.3375, 0.32200000000000006, 0.31050000000000005, 0.342, 0.3345000000000001, 0.37399999999999994, 0.362, 0.36600000000000005, 0.33649999999999997, 0.3535, 0.35350000000000004, 0.34900000000000003, 0.3385, 0.35649999999999993, 0.366, 0.36699999999999994, 0.33499999999999996, 0.334, 0.344, 0.34800000000000003, 0.37150000000000005, 0.37200000000000005, 0.35999999999999993, 0.37349999999999994, 0.32599999999999996, 0.382, 0.35500000000000004, 0.36749999999999994, 0.3815, 0.355, 0.32999999999999996, 0.2915, 0.30399999999999994, 0.3065, 0.3235, 0.309, 0.33899999999999997, 0.32549999999999996, 0.30749999999999994, 0.30599999999999994, 0.31499999999999995, 0.30650000000000005, 0.2835, 0.3245, 0.31450000000000006, 0.34400000000000003, 0.2730000000000001, 0.331, 0.33099999999999996, 0.3320000000000001, 0.2985, 0.3305, 0.343, 0.30599999999999994, 0.31649999999999995, 0.34, 0.31050000000000005, 0.31300000000000006, 0.3265, 0.3645, 0.3375, 0.3605, 0.36450000000000005, 0.29700000000000004, 0.27899999999999997, 0.31550000000000006, 0.3065, 0.30700000000000005, 0.3425, 0.38250000000000006, 0.32950000000000007, 0.3415, 0.386, 0.32899999999999996, 0.33549999999999996, 0.36600000000000005, 0.3515, 0.3605, 0.382, 0.3915, 0.34, 0.31449999999999995, 0.329, 0.30050000000000004, 0.3935, 0.3825, 0.34850000000000003, 0.36000000000000004, 0.3549999999999999, 0.3165, 0.3475, 0.36449999999999994, 0.37449999999999994, 0.359, 0.3615, 0.34349999999999997, 0.413, 0.33449999999999996, 0.351, 0.36649999999999994, 0.358, 0.339, 0.4005000000000001, 0.395, 0.362, 0.393, 0.355, 0.3305, 0.37699999999999995, 0.17999999999999994, 0.20500000000000007, 0.24150000000000005, 0.23049999999999993, 0.23149999999999993, 0.249, 0.22949999999999993, 0.263, 0.266, 0.29200000000000004, 0.328, 0.32599999999999996, 0.3225]
+        strength_diffs.sort()
         #my_cards = [eval7.Card(card) for card in my_cards]
         print('street: '+str(street))
         print(str(hand_arr) + hand_type)
@@ -335,8 +344,8 @@ class Player(Bot):
         if street > 0:
             print('rank: '+str(rank))
 
-        if 1.5*(1000-round_num+1) + 1 < my_bankroll:
-            guaranteed_win = True
+        #if 1.5*(1000-round_num+1) + 1 < my_bankroll:
+            #guaranteed_win = True
         if guaranteed_win:
             #keep check/folding if we have enough already to win
             if FoldAction in legal_actions:
@@ -348,14 +357,35 @@ class Player(Bot):
         
         strength_diff = self.strength_w_auction - self.strength_wo_auction
         #print(self.strength_w_auction)
-        if BidAction in legal_actions and self.strength_w_auction > 0.8:
+        if BidAction in legal_actions and self.strength_w_auction > 0.9:
             #all in on bid if hole is strong enough
             return BidAction(my_stack) 
         if BidAction in legal_actions:
             #bid
+            if len(self.opp_bids) > 50:
+                opp_min_bid = self.opp_bids[0]
+                for bid in self.opp_bids:
+                    if bid > 0:
+                        opp_min_bid = bid
+                        break
+                opp_max_bid = self.opp_bids[len(self.opp_bids)-1]
+                if self.preflop_fold == True and rank < 0.47:
+                    return BidAction(min(opp_min_bid, my_stack))
+                diff_ind = 0
+                for i in range(0, len(strength_diffs)):
+                    if i == len(strength_diffs) - 1:
+                        diff_ind = 0.99
+                        break
+                    if strength_diffs[i] >= strength_diff:
+                        diff_ind = (i+1)/len(strength_diffs)
+                        break
+                print('using opponent bids; diff_ind: ' + str(diff_ind))
+                bid_amt = self.opp_bids[int(diff_ind * len(self.opp_bids))]
+                return BidAction(min(bid_amt, my_stack))
+
             max_bid = 0.50
             min_bid = 0.15
-            bid = strength_diff
+            bid = strength_diff/3
             bid = min(max(min_bid, bid), max_bid)
             bid = int(bid*my_stack)
             bid = min(bid, my_stack)
@@ -386,6 +416,7 @@ class Player(Bot):
                 print('4bet')
 
             if action == 0:
+                self.preflop_fold = True
                 if FoldAction in legal_actions:
                     return FoldAction()
                 return CheckAction()
@@ -405,7 +436,7 @@ class Player(Bot):
             if FoldAction in legal_actions and action == 1:
                 return FoldAction()
             if RaiseAction in legal_actions and action >= 3:
-                return RaiseAction(0.8*min_raise + 0.2*max_raise)
+                return RaiseAction(int(0.8*min_raise + 0.2*max_raise))
         
         flush_draws = self.flush_draws(my_cards, board)
         straight_draws = self.straight_draws(my_cards, board)
@@ -422,12 +453,15 @@ class Player(Bot):
                 if rank > 0.80:
                     raise_amt = pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
+                    return RaiseAction(int(raise_amt))
                 if rank > 0.75:
                     raise_amt = 0.5*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
+                    return RaiseAction(int(raise_amt))
                 if rank > 0.70:
                     raise_amt = 0.33*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
+                    return RaiseAction(int(raise_amt))
             if opp_pip > 0:
                 if rank > 0.97:
                     return RaiseAction(max_raise)
