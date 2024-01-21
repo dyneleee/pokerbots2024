@@ -29,7 +29,7 @@ class Player(Bot):
         '''
         self.opp_holes = []
         self.opp_bids = []
-        self.preflop_fold = False
+        self.guaranteed_win = False
 
         prev_time = time.time()
         with open("hand_strengths", "rb") as file:
@@ -63,7 +63,7 @@ class Player(Bot):
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         my_cards = round_state.hands[active]  # your cards
         big_blind = bool(active)  # True if you are the big blind
-        pass
+        self.num_bets = [1, 0, 0, 0, 0, 0] # number of bets that have already been made in each street, including big blind (indices 1 and 2 don't matter)
         print('Round '+str(round_num))
         card1 = my_cards[0]
         card2 = my_cards[1]
@@ -194,7 +194,7 @@ class Player(Bot):
                     possible_vals.append(eval7.evaluate(possible_hand + board_cards))'''
         possible_vals.sort()
         #print(possible_vals)
-        my_rank = 0
+        my_rank = 1
         if my_val in possible_vals:
             my_rank = (possible_vals.index(my_val)+1)/len(possible_vals)
         else:
@@ -328,12 +328,29 @@ class Player(Bot):
         pot_odds = continue_cost/(continue_cost + pot)
         strength = self.hand_to_strength(my_cards)
         avg_strength = 0.5*(strength[0] + strength[1])
-        guaranteed_win = False
         strength_diffs = [0.2885000000000001, 0.26949999999999996, 0.26200000000000007, 0.3, 0.34650000000000003, 0.302, 0.33649999999999997, 0.336, 0.303, 0.28700000000000003, 0.29949999999999993, 0.327, 0.30849999999999994, 0.319, 0.2915, 0.2965, 0.3335, 0.30999999999999994, 0.31749999999999995, 0.32399999999999995, 0.32849999999999996, 0.33249999999999996, 0.2975, 0.31700000000000006, 0.3065, 0.32999999999999996, 0.355, 0.3555, 0.348, 0.347, 0.328, 0.31250000000000006, 0.30649999999999994, 0.32400000000000007, 0.2965, 0.3465, 0.32599999999999996, 0.32299999999999995, 0.33399999999999996, 0.37500000000000006, 0.355, 0.336, 0.32099999999999995, 0.3375, 0.3395, 0.3665, 0.3365, 0.3375, 0.32200000000000006, 0.31050000000000005, 0.342, 0.3345000000000001, 0.37399999999999994, 0.362, 0.36600000000000005, 0.33649999999999997, 0.3535, 0.35350000000000004, 0.34900000000000003, 0.3385, 0.35649999999999993, 0.366, 0.36699999999999994, 0.33499999999999996, 0.334, 0.344, 0.34800000000000003, 0.37150000000000005, 0.37200000000000005, 0.35999999999999993, 0.37349999999999994, 0.32599999999999996, 0.382, 0.35500000000000004, 0.36749999999999994, 0.3815, 0.355, 0.32999999999999996, 0.2915, 0.30399999999999994, 0.3065, 0.3235, 0.309, 0.33899999999999997, 0.32549999999999996, 0.30749999999999994, 0.30599999999999994, 0.31499999999999995, 0.30650000000000005, 0.2835, 0.3245, 0.31450000000000006, 0.34400000000000003, 0.2730000000000001, 0.331, 0.33099999999999996, 0.3320000000000001, 0.2985, 0.3305, 0.343, 0.30599999999999994, 0.31649999999999995, 0.34, 0.31050000000000005, 0.31300000000000006, 0.3265, 0.3645, 0.3375, 0.3605, 0.36450000000000005, 0.29700000000000004, 0.27899999999999997, 0.31550000000000006, 0.3065, 0.30700000000000005, 0.3425, 0.38250000000000006, 0.32950000000000007, 0.3415, 0.386, 0.32899999999999996, 0.33549999999999996, 0.36600000000000005, 0.3515, 0.3605, 0.382, 0.3915, 0.34, 0.31449999999999995, 0.329, 0.30050000000000004, 0.3935, 0.3825, 0.34850000000000003, 0.36000000000000004, 0.3549999999999999, 0.3165, 0.3475, 0.36449999999999994, 0.37449999999999994, 0.359, 0.3615, 0.34349999999999997, 0.413, 0.33449999999999996, 0.351, 0.36649999999999994, 0.358, 0.339, 0.4005000000000001, 0.395, 0.362, 0.393, 0.355, 0.3305, 0.37699999999999995, 0.17999999999999994, 0.20500000000000007, 0.24150000000000005, 0.23049999999999993, 0.23149999999999993, 0.249, 0.22949999999999993, 0.263, 0.266, 0.29200000000000004, 0.328, 0.32599999999999996, 0.3225]
         strength_diffs.sort()
         #my_cards = [eval7.Card(card) for card in my_cards]
-        print('street: '+str(street))
-        print(str(hand_arr) + hand_type)
+
+        if not self.guaranteed_win:
+            if 1.5*(1000-round_num+1) + 1 < my_bankroll:
+                self.guaranteed_win = True
+                print('guaranteed win')
+        if self.guaranteed_win:
+            #keep check/folding if we have enough already to win
+            if FoldAction in legal_actions:
+                return FoldAction()
+            if BidAction in legal_actions:
+                return BidAction(0)
+            if CheckAction in legal_actions:
+                return CheckAction()
+
+        print('\nour cards: ' + str(my_cards) + ' board: ' + str(board_cards) + ' ' + hand_type)
+
+        if CallAction in legal_actions and my_contribution > 1: # update number of bets if opponent has bet
+            self.num_bets[street] += 1
+            print('pot odds: ' + str(pot_odds))
+        print('street: '+str(street)+', '+'previous bets: '+str(self.num_bets[street]))
 
         if RaiseAction in legal_actions:
            min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
@@ -343,23 +360,12 @@ class Player(Bot):
         rank = self.hand_rank([eval7.Card(card) for card in my_cards], board)
         if street > 0:
             print('rank: '+str(rank))
-
-        if 1.5*(1000-round_num+1) + 1 < my_bankroll:
-            guaranteed_win = True
-        if guaranteed_win:
-            #keep check/folding if we have enough already to win
-            if FoldAction in legal_actions:
-                return FoldAction()
-            if BidAction in legal_actions:
-                return BidAction(0)
-            if CheckAction in legal_actions:
-                return CheckAction()
         
         strength_diff = self.strength_w_auction - self.strength_wo_auction
         #print(self.strength_w_auction)
-        if BidAction in legal_actions and self.strength_w_auction > 0.9:
+        #if BidAction in legal_actions and self.strength_w_auction > 0.9:
             #all in on bid if hole is strong enough
-            return BidAction(my_stack) 
+            #return BidAction(my_stack) 
         if BidAction in legal_actions:
             #bid
             if len(self.opp_bids) > 50:
@@ -392,8 +398,8 @@ class Player(Bot):
             bid = min(bid, my_stack)
             return BidAction(bid)
             
-        if street == 0 or len(board_cards) == 0:
-            print('preflop')
+        if street == 0:
+            #print('preflop')
             print('strength: '+ str(strength) + ', average: '+ str(avg_strength))
             action = 0 #fold=0, open=1, call 3bet = 2, 3bet=3, 4bet=4
             if avg_strength > 0.47:
@@ -406,38 +412,71 @@ class Player(Bot):
                 action = 4
 
             if action == 0:
-                print('fold')
+                print('want to fold')
             if action == 1:
-                print('open, fold to 3bet')
+                print('want to open, fold to 3bet')
             if action == 2:
-                print('call 3bet')
+                print('want to call 3bet')
             if action == 3:
-                print('3bet')
+                print('want to 3bet')
             if action == 4:
-                print('4bet')
+                print('want to 4bet')
 
             if action == 0:
                 self.preflop_fold = True
                 if FoldAction in legal_actions:
+                    print('Fold')
                     return FoldAction()
+                print('Check')
                 return CheckAction()
             if my_contribution == 1:
-                return RaiseAction(10)
+                self.num_bets[street] += 1
+                print('Raise to 6')
+                return RaiseAction(6)
             if my_contribution == 2:
                 if CallAction in legal_actions:
                     #opponent bet
                     if action == 1 or action == 2:
+                        print('Call ' + str(continue_cost))
                         return CallAction()
-                    return RaiseAction(int(0.9*min_raise + 0.1*max_raise))
+                    self.num_bets[street] += 1
+                    print('Raise to ' + str(int(0.9*min_raise + 0.1*max_raise)))
+                    return RaiseAction(int(0.9*min_raise + 0.1*max_raise)) # raise if action in 3bet or higher
                 if CheckAction in legal_actions:
                     #opponent limped
+                    self.num_bets[street] += 1
+                    print('Raise to 20')
                     return RaiseAction(20)
             if CallAction in legal_actions and action == 2:
-                return CallAction()
-            if FoldAction in legal_actions and action == 1:
+                if self.num_bets[0] <= 3:
+                    print('Call ' + str(continue_cost))
+                    return CallAction()
+                print('Fold')
                 return FoldAction()
-            if RaiseAction in legal_actions and action >= 3:
-                return RaiseAction(int(0.9*min_raise + 0.1*max_raise))
+            if CallAction in legal_actions and action == 3:
+                if self.num_bets[0] <= 2:
+                    self.num_bets[street] += 1
+                    print('Raise to '+str(int(0.9*min_raise + 0.1*max_raise)))
+                    return RaiseAction(int(0.9*min_raise + 0.1*max_raise))
+                if self.num_bets[0] == 3:
+                    print('Call ' + str(continue_cost))
+                    return CallAction()
+                print('Fold')
+                return FoldAction()
+            if FoldAction in legal_actions and action == 1:
+                print('Fold')
+                return FoldAction()
+            if RaiseAction in legal_actions and action == 4:
+                if self.num_bets[0] <= 2:
+                    self.num_bets[street] += 1
+                    print('Raise to ' + str(int(0.9*min_raise + 0.1*max_raise)))
+                    return RaiseAction(int(0.9*min_raise + 0.1*max_raise))
+                if self.num_bets[0] == 3:
+                    self.num_bets[street] += 1
+                    print('Raise to ' + str(int(0.7*min_raise + 0.3*max_raise)))
+                    return RaiseAction(int(0.7*min_raise + 0.3*max_raise))
+                print('Call ' + str(continue_cost))
+                return CallAction()
         
         flush_draws = self.flush_draws(my_cards, board)
         straight_draws = self.straight_draws(my_cards, board)
@@ -450,21 +489,31 @@ class Player(Bot):
         if RaiseAction in legal_actions:
             if opp_pip == 0:
                 if rank > 0.95:
+                    self.num_bets[street] += 1
+                    print('Max Raise')
                     return RaiseAction(max_raise)
                 if rank > 0.80:
                     raise_amt = pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
+                    self.num_bets[street] += 1
+                    print('Raise to pot')
                     return RaiseAction(int(raise_amt))
                 if rank > 0.75:
                     raise_amt = 0.5*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
+                    self.num_bets[street] += 1
+                    print('Raise to 1/2 pot')
                     return RaiseAction(int(raise_amt))
                 if rank > 0.70:
                     raise_amt = 0.33*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
+                    self.num_bets[street] += 1
+                    print('Raise to 1/3 pot')
                     return RaiseAction(int(raise_amt))
             if opp_pip > 0:
                 if rank > 0.97:
+                    self.num_bets[street] += 1
+                    print('Max Raise')
                     return RaiseAction(max_raise)
 
         #draws 
@@ -487,47 +536,63 @@ class Player(Bot):
 
         if CallAction in legal_actions:
             if prob_improve > pot_odds:
+                print('Call '+str(continue_cost))
                 return CallAction()
 
         #<0.5 fold, >0.9 call pot-2*pot, 1/2pot to pot 0.72, 1/3 to 1/2 0.66
         if float(rank) <= 0.53:
             if pot_odds < 0.1:
                 if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
                     return CallAction()
             if FoldAction in legal_actions:
+                print('Fold')
                 return FoldAction()
+            print('Check')
             return CheckAction()
         elif rank > 0.9:
             if pot_odds < 0.4:
                 if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
                     return CallAction()
             else:
                 if FoldAction in legal_actions:
+                    print('Fold')
                     return FoldAction()
+                print('Check')
                 return CheckAction()
         elif rank > 0.72:
             if pot_odds < 0.33:
                 if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
                     return CallAction()
             else:
                 if FoldAction in legal_actions:
+                    print('Fold')
                     return FoldAction()
+                print('Check')
                 return CheckAction()
         elif rank > 0.66:
             if pot_odds < 0.25:
                 if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
                     return CallAction()
             else:
                 if FoldAction in legal_actions:
+                    print('Fold')
                     return FoldAction()
+                print('Check')
                 return CheckAction()
         elif rank > 0.53:
             if pot_odds < 0.2:
                 if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
                     return CallAction()
             else:
                 if FoldAction in legal_actions:
+                    print('Fold')
                     return FoldAction()
+                print('Check')
                 return CheckAction()
         
         '''if FoldAction in legal_actions and self.strength_wo_auction<0.3 and street==0:
@@ -584,6 +649,7 @@ class Player(Bot):
                 return RaiseAction(max_raise)'''
             
         if CheckAction in legal_actions:
+            print('Check')
             return CheckAction()
         return CallAction()
 
