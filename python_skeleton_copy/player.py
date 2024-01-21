@@ -492,19 +492,19 @@ class Player(Bot):
                     self.num_bets[street] += 1
                     print('Max Raise')
                     return RaiseAction(max_raise)
-                if rank > 0.80:
+                if rank > 0.85:
                     raise_amt = pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
                     self.num_bets[street] += 1
                     print('Raise to pot')
                     return RaiseAction(int(raise_amt))
-                if rank > 0.75:
+                if rank > 0.77:
                     raise_amt = 0.5*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
                     self.num_bets[street] += 1
                     print('Raise to 1/2 pot')
                     return RaiseAction(int(raise_amt))
-                if rank > 0.70:
+                if rank > 0.74:
                     raise_amt = 0.33*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
                     self.num_bets[street] += 1
@@ -539,7 +539,7 @@ class Player(Bot):
                 print('Call '+str(continue_cost))
                 return CallAction()
 
-        #<0.5 fold, >0.9 call pot-2*pot, 1/2pot to pot 0.72, 1/3 to 1/2 0.66
+        #<0.53 fold, >0.9 call pot-2*pot, 1/2pot to pot 0.72, 1/3 to 1/2 0.66
         if float(rank) <= 0.53:
             if pot_odds < 0.1:
                 if CallAction in legal_actions:
@@ -561,7 +561,7 @@ class Player(Bot):
                     return FoldAction()
                 print('Check')
                 return CheckAction()
-        elif rank > 0.72:
+        elif rank > 0.74:
             if pot_odds < 0.33:
                 if CallAction in legal_actions:
                     print('Call ' + str(continue_cost))
@@ -572,7 +572,7 @@ class Player(Bot):
                     return FoldAction()
                 print('Check')
                 return CheckAction()
-        elif rank > 0.66:
+        elif rank > 0.69:
             if pot_odds < 0.25:
                 if CallAction in legal_actions:
                     print('Call ' + str(continue_cost))
