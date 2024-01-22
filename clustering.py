@@ -8,10 +8,10 @@ import pickle
 def turn_hists(finish_groups): # turn to river
     rd4_hists = {} # maps 4th round state to histogram
     deck = []
-    for i in range(2, 15):
-        for j in range(0, 4):
+    for i in range(14, 1, -1):
+        for j in range(3, -1,-1):
             deck.append((i, j))
-    deck.sort(reverse = True)
+    #deck.sort(reverse = True)
     #print(deck)
 
     # 2-card holes
@@ -88,10 +88,10 @@ def turn_hists(finish_groups): # turn to river
 def auction_hists(rd4_groups): # post-auction to turn
     rd3_hists = {}
     deck = []
-    for i in range(2, 15):
-        for j in range(0, 4):
+    for i in range(14, 1, -1):
+        for j in range(3, -1,-1):
             deck.append((i, j))
-    deck.sort(reverse = True)
+    #deck.sort(reverse = True)
 
     # 2-card holes
     for i in range(len(deck)):
@@ -163,10 +163,9 @@ def auction_hists(rd4_groups): # post-auction to turn
 def flop_hists(rd3_groups): # flop to auction
     rd2_hists = {}
     deck = []
-    for i in range(2, 15):
-        for j in range(0, 4):
+    for i in range(14, 1, -1):
+        for j in range(3, -1,-1):
             deck.append((i, j))
-    deck.sort(reverse = True)
 
     # 2-card holes
     for i in range(len(deck)):
@@ -209,10 +208,9 @@ def flop_hists(rd3_groups): # flop to auction
 def preflop_hists(rd2_groups): # preflop to flop
     rd1_hists = {}
     deck = []
-    for i in range(2, 15):
-        for j in range(0, 4):
+    for i in range(14, 1, -1):
+        for j in range(3, -1,-1):
             deck.append((i, j))
-    deck.sort(reverse = True)
 
     # 2-card holes
     for i in range(len(deck)):
@@ -253,4 +251,4 @@ rd2_groups = {}
 
 rd1_hists = preflop_hists(rd2_groups)
 # rd1_groups = cluster(rd1_hists)
-rd1_groups = {}
+rd1_groups = {} # should end up with 20 preflop clusters
