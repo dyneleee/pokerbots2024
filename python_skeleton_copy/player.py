@@ -10,6 +10,7 @@ import random
 import eval7
 import time
 import pickle
+import numpy as np
 
 
 class Player(Bot):
@@ -67,6 +68,8 @@ class Player(Bot):
         print('Round '+str(round_num))
         card1 = my_cards[0]
         card2 = my_cards[1]
+
+        self.pot_at_auction = 1
 
         rank1 = card1[0]
         rank2 = card2[0]
@@ -224,7 +227,8 @@ class Player(Bot):
         opp_bid = previous_state.bids[1-active]
 
         if opp_bid != None:
-            self.opp_bids.append(opp_bid)
+            #print('pot at auction: ' + str(self.pot_at_auction))
+            self.opp_bids.append(opp_bid/self.pot_at_auction)
         #print('opponent bids: ' + str(self.opp_bids))
         self.opp_bids.sort()
         
@@ -288,6 +292,8 @@ class Player(Bot):
 
         return draws
 
+    
+
     def get_action(self, game_state, round_state, active):
         '''
         Where the magic happens - your code should implement this function.
@@ -331,7 +337,6 @@ class Player(Bot):
         strength_diffs = [0.2885000000000001, 0.26949999999999996, 0.26200000000000007, 0.3, 0.34650000000000003, 0.302, 0.33649999999999997, 0.336, 0.303, 0.28700000000000003, 0.29949999999999993, 0.327, 0.30849999999999994, 0.319, 0.2915, 0.2965, 0.3335, 0.30999999999999994, 0.31749999999999995, 0.32399999999999995, 0.32849999999999996, 0.33249999999999996, 0.2975, 0.31700000000000006, 0.3065, 0.32999999999999996, 0.355, 0.3555, 0.348, 0.347, 0.328, 0.31250000000000006, 0.30649999999999994, 0.32400000000000007, 0.2965, 0.3465, 0.32599999999999996, 0.32299999999999995, 0.33399999999999996, 0.37500000000000006, 0.355, 0.336, 0.32099999999999995, 0.3375, 0.3395, 0.3665, 0.3365, 0.3375, 0.32200000000000006, 0.31050000000000005, 0.342, 0.3345000000000001, 0.37399999999999994, 0.362, 0.36600000000000005, 0.33649999999999997, 0.3535, 0.35350000000000004, 0.34900000000000003, 0.3385, 0.35649999999999993, 0.366, 0.36699999999999994, 0.33499999999999996, 0.334, 0.344, 0.34800000000000003, 0.37150000000000005, 0.37200000000000005, 0.35999999999999993, 0.37349999999999994, 0.32599999999999996, 0.382, 0.35500000000000004, 0.36749999999999994, 0.3815, 0.355, 0.32999999999999996, 0.2915, 0.30399999999999994, 0.3065, 0.3235, 0.309, 0.33899999999999997, 0.32549999999999996, 0.30749999999999994, 0.30599999999999994, 0.31499999999999995, 0.30650000000000005, 0.2835, 0.3245, 0.31450000000000006, 0.34400000000000003, 0.2730000000000001, 0.331, 0.33099999999999996, 0.3320000000000001, 0.2985, 0.3305, 0.343, 0.30599999999999994, 0.31649999999999995, 0.34, 0.31050000000000005, 0.31300000000000006, 0.3265, 0.3645, 0.3375, 0.3605, 0.36450000000000005, 0.29700000000000004, 0.27899999999999997, 0.31550000000000006, 0.3065, 0.30700000000000005, 0.3425, 0.38250000000000006, 0.32950000000000007, 0.3415, 0.386, 0.32899999999999996, 0.33549999999999996, 0.36600000000000005, 0.3515, 0.3605, 0.382, 0.3915, 0.34, 0.31449999999999995, 0.329, 0.30050000000000004, 0.3935, 0.3825, 0.34850000000000003, 0.36000000000000004, 0.3549999999999999, 0.3165, 0.3475, 0.36449999999999994, 0.37449999999999994, 0.359, 0.3615, 0.34349999999999997, 0.413, 0.33449999999999996, 0.351, 0.36649999999999994, 0.358, 0.339, 0.4005000000000001, 0.395, 0.362, 0.393, 0.355, 0.3305, 0.37699999999999995, 0.17999999999999994, 0.20500000000000007, 0.24150000000000005, 0.23049999999999993, 0.23149999999999993, 0.249, 0.22949999999999993, 0.263, 0.266, 0.29200000000000004, 0.328, 0.32599999999999996, 0.3225]
         strength_diffs.sort()
         #my_cards = [eval7.Card(card) for card in my_cards]
-
         if not self.guaranteed_win:
             if 1.5*(1000-round_num+1) + 1 < my_bankroll:
                 self.guaranteed_win = True
@@ -368,6 +373,8 @@ class Player(Bot):
             #return BidAction(my_stack) 
         if BidAction in legal_actions:
             #bid
+            self.pot_at_auction = pot
+            #print('pot at auction: ' + str(pot))
             if len(self.opp_bids) > 50:
                 opp_min_bid = self.opp_bids[0]
                 for bid in self.opp_bids:
@@ -376,7 +383,7 @@ class Player(Bot):
                         break
                 opp_max_bid = self.opp_bids[len(self.opp_bids)-1]
                 if self.preflop_fold == True and rank < 0.47:
-                    return BidAction(min(opp_min_bid, my_stack))
+                    return BidAction(min(int(pot*opp_min_bid), my_stack))
                 diff_ind = 0
                 for i in range(0, len(strength_diffs)):
                     if i == len(strength_diffs) - 1:
@@ -387,7 +394,9 @@ class Player(Bot):
                         break
                 print('using opponent bids; diff_ind: ' + str(diff_ind))
                 bid_amt = self.opp_bids[int(diff_ind * len(self.opp_bids))]
-                bid_amt = int(2.5 * bid_amt)
+                print('opp bids: ' + str(self.opp_bids))
+                #print('bid_amt: ' + str(bid_amt))
+                bid_amt = int(2.5 * bid_amt*pot)
                 return BidAction(min(bid_amt, my_stack))
 
             max_bid = 0.50
@@ -490,21 +499,21 @@ class Player(Bot):
             if opp_pip == 0:
                 if rank > 0.95:
                     self.num_bets[street] += 1
-                    print('Max Raise')
-                    return RaiseAction(max_raise)
-                if rank > 0.85:
+                    print('Raise by a lot')
+                    return RaiseAction(int(0.5*max_raise+0.5*min_raise))
+                if rank > 0.9:
                     raise_amt = pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
                     self.num_bets[street] += 1
                     print('Raise to pot')
                     return RaiseAction(int(raise_amt))
-                if rank > 0.77:
+                if rank > 0.84:
                     raise_amt = 0.5*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
                     self.num_bets[street] += 1
                     print('Raise to 1/2 pot')
                     return RaiseAction(int(raise_amt))
-                if rank > 0.74:
+                if rank > 0.80:
                     raise_amt = 0.33*pot
                     raise_amt = min(max(min_raise, raise_amt), max_raise)
                     self.num_bets[street] += 1
@@ -513,8 +522,8 @@ class Player(Bot):
             if opp_pip > 0:
                 if rank > 0.97:
                     self.num_bets[street] += 1
-                    print('Max Raise')
-                    return RaiseAction(max_raise)
+                    print('Raise a lot')
+                    return RaiseAction(int(0.5*max_raise+0.5*min_raise))
 
         #draws 
         prob_improve = 0
@@ -550,8 +559,15 @@ class Player(Bot):
                 return FoldAction()
             print('Check')
             return CheckAction()
+        elif rank > 0.98:
+            if CallAction in legal_actions:
+                return CallAction()
         elif rank > 0.9:
-            if pot_odds < 0.4:
+            if pot_odds < 0.36 and self.num_bets == 1:
+                if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
+                    return CallAction()
+            elif pot_odds < 0.3 and self.num_bets == 2:
                 if CallAction in legal_actions:
                     print('Call ' + str(continue_cost))
                     return CallAction()
@@ -561,8 +577,12 @@ class Player(Bot):
                     return FoldAction()
                 print('Check')
                 return CheckAction()
-        elif rank > 0.74:
-            if pot_odds < 0.33:
+        elif rank > 0.77:
+            if pot_odds < 0.31 and self.num_bets == 1:
+                if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
+                    return CallAction()
+            elif pot_odds < 0.19 and self.num_bets == 2:
                 if CallAction in legal_actions:
                     print('Call ' + str(continue_cost))
                     return CallAction()
@@ -573,7 +593,11 @@ class Player(Bot):
                 print('Check')
                 return CheckAction()
         elif rank > 0.69:
-            if pot_odds < 0.25:
+            if pot_odds < 0.24 and self.num_bets == 1:
+                if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
+                    return CallAction()
+            elif pot_odds < 0.15 and self.num_bets == 2:
                 if CallAction in legal_actions:
                     print('Call ' + str(continue_cost))
                     return CallAction()
@@ -584,7 +608,11 @@ class Player(Bot):
                 print('Check')
                 return CheckAction()
         elif rank > 0.53:
-            if pot_odds < 0.2:
+            if pot_odds < 0.15 and self.num_bets == 1:
+                if CallAction in legal_actions:
+                    print('Call ' + str(continue_cost))
+                    return CallAction()
+            elif pot_odds < 0.1 and self.num_bets == 2:
                 if CallAction in legal_actions:
                     print('Call ' + str(continue_cost))
                     return CallAction()
