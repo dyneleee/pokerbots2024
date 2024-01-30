@@ -1,3 +1,4 @@
+package javabot;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
@@ -6,16 +7,16 @@ import java.util.*;
 
 
 /** Utility methods for evaluating or creating a hand of cards. */
-public abstract class Hand {
+public class Hand {
     /**
      * Private constructor to disable instantiation of an abstract class.
      */
-    private Hand() {
+    public Hand() {
 
     }
 
-    public static int minEval1 = 999999;
-    public static int minEval2 = 999999;
+    public int minEval1 = 999999;
+    public int minEval2 = 999999;
 
     /**
      * Evaluates the given hand and returns its value as an integer.
@@ -23,19 +24,23 @@ public abstract class Hand {
      * @param cards a hand of cards to evaluate
      * @return the value of the hand as an integer between 1 and 7462
      */
-    public static int evaluate(Card[] cards) {
+    public int evaluate(Card[] cards) {
         // Only 5-card hands are supported
         if (cards == null || cards.length != 5) {
             throw new IllegalArgumentException("Exactly 5 cards are required.");
         }
 
         // Binary representations of each card
-        final int c1 = cards[0].getValue();
-        final int c2 = cards[1].getValue();
-        final int c3 = cards[2].getValue();
-        final int c4 = cards[3].getValue();
-        final int c5 = cards[4].getValue();
-
+        final int c1 = cards[0].giveMeValue();
+        final int c2 = cards[1].giveMeValue();
+        final int c3 = cards[2].giveMeValue();
+        final int c4 = cards[3].giveMeValue();
+        final int c5 = cards[4].giveMeValue();
+        /*final int c1 = cards[0].getRank();
+        final int c2 = cards[1].getRank();
+        final int c3 = cards[2].getRank();
+        final int c4 = cards[3].getRank();
+        final int c5 = cards[4].getRank();*/
         // No duplicate cards allowed
         if (hasDuplicates(new int[]{c1, c2, c3, c4, c5})) {
             throw new IllegalArgumentException("Illegal hand.");
@@ -63,7 +68,7 @@ public abstract class Hand {
 
 
     //combinations start
-    static int combinationUtil(Card arr[], Card data[], int start,
+    int combinationUtil(Card arr[], Card data[], int start,
     int end, int index, int r, int indicator) {
     // Current combination is ready to be printed, print it
     Card[] cardArr = new Card[5];
@@ -72,7 +77,7 @@ public abstract class Hand {
     if (index == r) {
         for (int j=0; j<r; j++)
             cardArr[j]=data[j];
-            System.out.println("here");
+            //System.out.println("here");
         
         int val = evaluate(cardArr);
         if (indicator == 1){
@@ -84,14 +89,14 @@ public abstract class Hand {
                 minEval2 = val;
             } 
         }
-        System.out.println("evaluation for hand "+indicator+" is "+val);
-        System.out.println("min Eval 1 is now "+minEval1);
-        System.out.println("min Eval 2 is now "+minEval2);
-        System.out.println("hand was");
+        //System.out.println("evaluation for hand "+indicator+" is "+val);
+        //System.out.println("min Eval 1 is now "+minEval1);
+        //System.out.println("min Eval 2 is now "+minEval2);
+        //System.out.println("hand was");
         for (int i = 0; i < cardArr.length; i++){
-            System.out.print(cardArr[i] + " ");
+            //System.out.print(cardArr[i] + " ");
         }
-        System.out.println();
+        //System.out.println();
 
         return val;
     }
@@ -109,7 +114,7 @@ public abstract class Hand {
 
     // The main function that prints all combinations of size r
     // in arr[] of size n. This function mainly uses combinationUtil()
-    static void printCombination(Card[] arr, int n, int r, int indicator)
+    void printCombination(Card[] arr, int n, int r, int indicator)
     {
         // A temporary array to store all combination one by one
         Card data[]=new Card[r];
@@ -119,8 +124,9 @@ public abstract class Hand {
     }
 
     /*Driver function to check for above function*/
-    public static int battleHands(Card[] cards1, Card[] cards2) {
-
+    public int battleHands(Card[] cards1, Card[] cards2) {
+        minEval1 = 999999;
+        minEval2 = 999999;
         int r = 5;
         int n1 = cards1.length;
         int n2 = cards2.length;
@@ -129,13 +135,13 @@ public abstract class Hand {
         
 
         if (minEval1<minEval2){
-            System.out.println("1 wins, minEval1: "+minEval1+" minEval2: "+minEval2);
+            //System.out.println("1 wins, minEval1: "+minEval1+" minEval2: "+minEval2);
             return 1;
         } else if (minEval2<minEval1){
-            System.out.println("2 wins, minEval1: "+minEval1+" minEval2: "+minEval2);
+            //System.out.println("2 wins, minEval1: "+minEval1+" minEval2: "+minEval2);
             return 2;
         } else { //tie
-            System.out.println("tie, minEval1: "+minEval1+" minEval2: "+minEval2);
+            //System.out.println("tie, minEval1: "+minEval1+" minEval2: "+minEval2);
             return 0;
         }
     }
@@ -200,27 +206,27 @@ public abstract class Hand {
         key ^= key >>> 4;
         return ((key + (key << 2)) >>> 19) ^ Tables.Hash.Adjust.TABLE[(key >>> 8) & 0x1FF];
     }
-    public static void main (String[] args) {
+    public void main (String[] args) {
         Card[] hand1 = {
              
             new Card(Card.KING, Card.CLUBS),
             new Card(Card.QUEEN, Card.HEARTS),
             
-            new Card(Card.JACK, Card.CLUBS),
-            new Card(Card.TEN, Card.CLUBS),
-            new Card(Card.NINE, Card.CLUBS),
-            new Card(Card.TREY, Card.CLUBS),
+            new Card(Card.KING, Card.DIAMONDS),
+            new Card(Card.TEN, Card.HEARTS),
+            new Card(Card.NINE, Card.SPADES),
+            new Card(Card.TREY, Card.DIAMONDS),
             new Card(Card.FOUR, Card.CLUBS),
         };
         Card[] hand2 = {
             
             new Card(Card.KING, Card.CLUBS),
-            new Card(Card.KING, Card.HEARTS),
+            new Card(Card.ACE, Card.HEARTS),
             
-            new Card(Card.JACK, Card.DIAMONDS),
-            new Card(Card.JACK, Card.SPADES),
-            new Card(Card.JACK, Card.CLUBS),
-            new Card(Card.TREY, Card.SPADES),
+            new Card(Card.KING, Card.DIAMONDS),
+            new Card(Card.TEN, Card.HEARTS),
+            new Card(Card.NINE, Card.SPADES),
+            new Card(Card.TREY, Card.DIAMONDS),
             new Card(Card.FOUR, Card.CLUBS),
         };
 

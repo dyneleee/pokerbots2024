@@ -1,8 +1,9 @@
+package javabot;
 /**
  * An immutable class representing a card from a normal 52-card deck.
  */
 public class Card {
-    private final int value;  // Format: xxxAKQJT 98765432 CDHSrrrr xxPPPPPP
+    public final int value;  // Format: xxxAKQJT 98765432 CDHSrrrr xxPPPPPP
 
     // Ranks
     public static final int DEUCE = 0;
@@ -87,6 +88,13 @@ public class Card {
     }
 
     /**
+     * @return value of the card
+     */
+    public int giveMeValue(){
+        return value;
+    }
+
+    /**
      * Returns the suit of the card.
      * @return Suit of the card as an integer.
      * @see Card#SPADES
@@ -117,7 +125,7 @@ public class Card {
      * suit, and <code>PPPPPP</code> is the prime number of the card.
      * @return the value of the card.
      */
-    int getValue() {
+    public int getValue() {
         return value;
     }
 

@@ -216,22 +216,22 @@ public class Player implements Bot {
     public int rankNumeric(char rank){
         int num = 0;
         if(rank == 'A'){
-            num = 14;
-        }
-        else if(rank == 'K'){
-            num = 13;
-        }
-        else if(rank == 'Q'){
             num = 12;
         }
-        else if(rank == 'J'){
+        else if(rank == 'K'){
             num = 11;
         }
-        else if(rank == 'T'){
+        else if(rank == 'Q'){
             num = 10;
         }
+        else if(rank == 'J'){
+            num = 9;
+        }
+        else if(rank == 'T'){
+            num = 8;
+        }
         else{
-            num = rank - 48;
+            num = rank - 50;
         }
         return num;
     }
@@ -263,10 +263,80 @@ public class Player implements Bot {
         return strength;
     }    
 
+    public Card toCard(String card){
+        int rank = this.rankNumeric(card.charAt(0));
+        char suit = card.charAt(1);
+        int numSuit = 0;
+        if(suit == 's'){
+            numSuit = Card.SPADES;
+        }
+        if(suit == 'c'){
+            numSuit = Card.CLUBS;
+        }
+        if(suit == 'h'){
+            numSuit = Card.HEARTS;
+        }
+        if(suit == 'd'){
+            numSuit = Card.DIAMONDS;
+        }
+        return new Card(rank, numSuit);
+    }
+
     public double handRank(List<String> myCards, List<String> boardCards){
-        double rank = 0;
+        int wins = 0;
+        int totalHands = 0;
+        Hand hand = new Hand();
+        Card[] newMyCards = new Card[myCards.size()];
+        Card[] newBoardCards = new Card[boardCards.size()];
+        Card[] myHand = new Card[myCards.size()+boardCards.size()];
+        for(int i = 0; i<newMyCards.length; i++){
+            Card newCard = toCard(myCards.get(i));
+            newMyCards[i] = newCard;
+            myHand[i] = newCard;
+        }
+        for(int i = 0; i<newBoardCards.length; i++){
+            Card newCard = toCard(boardCards.get(i));
+            newBoardCards[i] = newCard;
+            myHand[myCards.size()+i] = newCard;
+        }
+        //System.out.println("myHand: "+Arrays.toString(myHand));
+        List<String> deck = new ArrayList<String>();
+        String ranks = "AKQJT98765432";
+        for(int i = 0; i < ranks.length(); i++){
+            deck.add(ranks.charAt(i)+"s");
+            deck.add(ranks.charAt(i)+"c");
+            deck.add(ranks.charAt(i)+"h");
+            deck.add(ranks.charAt(i)+"d");
+        }
+        for(int i = 0; i < myCards.size(); i++){
+            deck.remove(myCards.get(i));
+        }
+        for(int i = 0; i < boardCards.size(); i++){
+            deck.remove(boardCards.get(i));
+        }
+        for(int i = 0; i < deck.size(); i++){
+            for(int j = i+1; j<deck.size(); j++){
+                totalHands++;
+                Card[] oppCards = {toCard(deck.get(i)), toCard(deck.get(j))};
+                Card[] oppHand = new Card[2 + boardCards.size()];
+                oppHand[0] = oppCards[0];
+                oppHand[1] = oppCards[1];
+                for(int k = 0; k < boardCards.size(); k++){
+                    oppHand[2+k] = newBoardCards[k];
+                }
+                int val = hand.battleHands(myHand, oppHand);
+                //System.out.println(Arrays.toString(oppHand)+" val: "+val);
+                if(val == 1){
+                    wins += 1;
+                }
+                else if(val == 0){
+                    wins += 0.5;
+                }
+            }
+        }
         //jeval7
-        return rank;
+        //System.out.println("wins: "+wins);
+        return (double)wins/totalHands;
     }
      
     public void handleNewRound(GameState gameState, RoundState roundState, int active) {
@@ -277,6 +347,10 @@ public class Player implements Bot {
         boolean bigBlind = (active == 1);  // true if you are the big blind
         this.auctionPot = 4;
         this.preflopStrength = handStrength(myCards);
+        this.numBets[0] = 1;
+        this.numBets[3] = 0;
+        this.numBets[4] = 0;
+        this.numBets[5] = 0;
 
         System.out.println("Round "+roundNum);
         if(roundNum == 1000){
@@ -516,7 +590,7 @@ public class Player implements Bot {
         if(!this.guaranteedWin){
             if(1.5*(1000-roundNum+1) + 1 < myBankroll){
                 this.guaranteedWin = true;
-                System.out.println("guaranteed win");
+                System.out.println("    guaranteed win");
             }
         }
         if(this.guaranteedWin){
@@ -534,11 +608,12 @@ public class Player implements Bot {
 
         System.out.println("Our cards: " + myCards.toString() + "Board: " + boardCards.toString() + " " + handType);
 
+        System.out.println("Street: "+street+", previous bets: "+this.numBets[street]);
+
         if(legalActions.contains(ActionType.CALL_ACTION_TYPE) && myContribution>1){
             this.numBets[street] += 1;
-            System.out.println("Pot Odds: " + potOdds);
+            System.out.println("    Pot Odds: " + potOdds);
         }
-        System.out.println("Street: "+street+", previous bets: "+this.numBets[street]);
 
         if (legalActions.contains(ActionType.RAISE_ACTION_TYPE)) {
             List<Integer> raiseBounds = roundState.raiseBounds(); // the smallest and largest numbers of chips for a legal bet/raise
@@ -546,9 +621,10 @@ public class Player implements Bot {
             maxCost = raiseBounds.get(1) - myPip; // the cost of a maximum bet/raise
         }
 
-        double rank = this.handRank(myCards, boardCards);
+        double rank = 0;
         if(street > 0){
-            System.out.println("Rank: " + rank);
+            rank = this.handRank(myCards, boardCards);
+            System.out.println("    Rank: " + rank);
         }
 
         double strengthDiff = 0; //change?
@@ -588,88 +664,88 @@ public class Player implements Bot {
             }
 
             if(action == 0){
-                System.out.println("Want to fold");
+                System.out.println("    Want to fold");
                 this.preflopFold = true;
             }
             else if(action == 1){
-                System.out.println("Want to open but fold to 3bet");
+                System.out.println("    Want to open but fold to 3bet");
             }
             else if(action == 2){
-                System.out.println("Want to open and call 3bet");
+                System.out.println("    Want to open and call 3bet");
             }
             else if(action == 3){
-                System.out.println("Want to 3bet and call 4bet");
+                System.out.println("    Want to 3bet and call 4bet");
             }
             else if(action == 4){
-                System.out.println("Want to 4bet");
+                System.out.println("    Want to 4bet");
             }
 
             if(action == 0){
                 if(legalActions.contains(ActionType.FOLD_ACTION_TYPE)){
-                    System.out.println("Fold");
+                    System.out.println("    Fold");
                     return new Action(ActionType.FOLD_ACTION_TYPE);
                 }
-                System.out.println("Check");
+                System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
             }
             if(myContribution == 1){
                 this.numBets[street] += 1;
-                System.out.println("Open to 6");
+                System.out.println("    Open to 6");
                 return new Action(ActionType.RAISE_ACTION_TYPE, 6);
             }
             if(myContribution == 2){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
                     if(action <= 2){
-                        System.out.println("Call");
+                        System.out.println("    Call");
                         return new Action(ActionType.CALL_ACTION_TYPE);
                     }
                     this.numBets[street] += 1;
-                    System.out.println("Raise");
+                    System.out.println("    Raise");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.9*minCost + 0.1*maxCost));
                 }
                 if(legalActions.contains(ActionType.CHECK_ACTION_TYPE)){
                     this.numBets[street] += 1;
-                    System.out.println("Raise to 20");
+                    System.out.println("    Raise to 20");
                     return new Action(ActionType.RAISE_ACTION_TYPE, 20);
                 }
             }
             if(legalActions.contains(ActionType.CALL_ACTION_TYPE) && action == 2){
                 if(this.numBets[0] <= 3){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
             if(legalActions.contains(ActionType.CALL_ACTION_TYPE) && action == 3){
                 if(this.numBets[0] <= 2){
                     this.numBets[street] += 1;
-                    System.out.println("Raise");
+                    System.out.println("    Raise");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.9*minCost+0.1*maxCost));
                 }
                 if(this.numBets[0] == 3){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
             if(legalActions.contains(ActionType.FOLD_ACTION_TYPE) && action == 1){
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
             if(legalActions.contains(ActionType.RAISE_ACTION_TYPE) && action == 4){
                 if(this.numBets[0] <= 2){
                     this.numBets[street] += 1;
-                    System.out.println("Raise");
+                    System.out.println("    Raise");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.9*minCost + 0.1*maxCost));
                 }
                 if(this.numBets[0] == 3){
                     this.numBets[street] += 1;
-                    System.out.println("Raise");
+                    System.out.println("    Raise");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.7*minCost + 0.3*maxCost));
                 }
-                System.out.println("Call");
+                System.out.println("    Call");
                 return new Action(ActionType.CALL_ACTION_TYPE);
             }
         }
@@ -678,10 +754,10 @@ public class Player implements Bot {
         List<Character> straightDraws = this.straightDraws(myCards, boardCards);
         if(street < 5){
             if(flushDraws.size() > 0){
-                System.out.println("Flush Draws: " + flushDraws.toString());
+                System.out.println("    Flush Draws: " + flushDraws.toString());
             }
             if(straightDraws.size() > 0){
-                System.out.println("Straight Draws: " + straightDraws.toString());
+                System.out.println("    Straight Draws: " + straightDraws.toString());
             }
         }
         
@@ -689,35 +765,35 @@ public class Player implements Bot {
             if(oppPip == 0){
                 if(rank > 0.95){
                     this.numBets[street] += 1;
-                    System.out.println("Raise by a lot");
+                    System.out.println("    Raise by a lot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.5*minCost + 0.5*maxCost));
                 }
                 if(rank > 0.9){
                     double raiseAmt = pot;
                     raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
                     this.numBets[street] += 1;
-                    System.out.println("Raise to pot");
+                    System.out.println("    Raise to pot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
                 }
                 if(rank > 0.84){
                     double raiseAmt = 0.5*pot;
                     raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
                     this.numBets[street] += 1;
-                    System.out.println("Raise to 1/2 pot");
+                    System.out.println("    Raise to 1/2 pot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
                 }
                 if(rank > 0.80){
                     double raiseAmt = (double)pot/3;
                     raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
                     this.numBets[street] += 1;
-                    System.out.println("Raise to 1/3 pot");
+                    System.out.println("    Raise to 1/3 pot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
                 }
             }
             else{
                 if(rank > 0.97){
                     this.numBets[street] += 1;
-                    System.out.println("Raise by a lot");
+                    System.out.println("    Raise by a lot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.5*minCost + 0.5*maxCost));
                 }
             }
@@ -751,7 +827,7 @@ public class Player implements Bot {
 
         if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
             if(probImprove > potOdds){
-                System.out.println("Call");
+                System.out.println("    Call");
                 return new Action(ActionType.CALL_ACTION_TYPE);
             }
         }
@@ -759,111 +835,111 @@ public class Player implements Bot {
         if(rank <= 0.53){
             if(potOdds < 0.08){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             if(legalActions.contains(ActionType.FOLD_ACTION_TYPE)){
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
-            System.out.println("Check");
+            System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
         else if(rank > 0.98){
             if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                System.out.println("Call");
+                System.out.println("    Call");
                 return new Action(ActionType.CALL_ACTION_TYPE);
             }
         }
         else if(rank > 0.9){
             if(potOdds < 0.36 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             else if(potOdds < 0.3 && this.numBets[street] == 2){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             if(legalActions.contains(ActionType.FOLD_ACTION_TYPE)){
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
-            System.out.println("Check");
+            System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
         else if(rank > 0.77){
             if(potOdds < 0.31 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             else if(potOdds < 0.19 && this.numBets[street] == 2){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             if(legalActions.contains(ActionType.FOLD_ACTION_TYPE)){
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
-            System.out.println("Check");
+            System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
         else if(rank > 0.69){
             if(potOdds < 0.24 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             else if(potOdds < 0.13 && this.numBets[street] == 2){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             if(legalActions.contains(ActionType.FOLD_ACTION_TYPE)){
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
-            System.out.println("Check");
+            System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
         else if(rank > 0.53){
             if(potOdds < 0.15 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             else if(potOdds < 0.10 && this.numBets[street] == 2){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
-                    System.out.println("Call");
+                    System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
                 }
             }
             if(legalActions.contains(ActionType.FOLD_ACTION_TYPE)){
-                System.out.println("Fold");
+                System.out.println("    Fold");
                 return new Action(ActionType.FOLD_ACTION_TYPE);
             }
-            System.out.println("Check");
+            System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
 
 
 
         if(legalActions.contains(ActionType.CHECK_ACTION_TYPE)){
-            System.out.println("Check");
+            System.out.println("    Check");
             return new Action(ActionType.CHECK_ACTION_TYPE);
         }
-        System.out.println("Call");
+        System.out.println("    Call");
         return new Action(ActionType.CALL_ACTION_TYPE);
 
     }

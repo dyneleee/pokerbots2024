@@ -1,3 +1,4 @@
+package javabot;
 /** Lookup tables for making calculations faster. */
 public class Tables {
     private static final int CARDS_IN_DECK = 52;
