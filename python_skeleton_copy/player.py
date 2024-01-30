@@ -543,6 +543,7 @@ class Player(Bot):
         if len(straight_draws) >= 2 and street == 4:
             prob_improve += 0.173
 
+        #here
         if CallAction in legal_actions:
             if prob_improve > pot_odds:
                 print('Call '+str(continue_cost))
