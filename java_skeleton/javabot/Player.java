@@ -958,11 +958,11 @@ public class Player implements Bot {
         
         if(legalActions.contains(ActionType.RAISE_ACTION_TYPE)){
             if(oppPip == 0){
-                if(rank > 0.95){
+                /*if(rank > 0.95){
                     this.numBets[street] += 1;
                     System.out.println("    Raise by a lot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.5*minCost + 0.5*maxCost));
-                }
+                }*/
                 if(rank > 0.9){
                     double raiseAmt = pot;
                     raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
@@ -989,7 +989,7 @@ public class Player implements Bot {
                 if(rank > 0.97){
                     this.numBets[street] += 1;
                     System.out.println("    Raise by a lot");
-                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.5*minCost + 0.5*maxCost));
+                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.8*minCost + 0.2*maxCost));
                 }
             }
         }
