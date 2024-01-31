@@ -29,6 +29,7 @@ public class Player implements Bot {
     public HashMap<String, Double> avgStrengths = new HashMap<String, Double>();
     public double preflopStrength = 0;
     public boolean preflopFold = false;
+    public boolean oppPreflopRaise = false;
 
     /**
      * Called when a new game starts. Called exactly once.
@@ -236,6 +237,161 @@ public class Player implements Bot {
         return num;
     }
 
+    public int amount_bet(int pot,int[][] hand,int[][] center, boolean average_defined,double player_avg,boolean player_raise) //Takes in hand 
+    //and center as num array from 2-14 and suits from 1-3, returns amount_to_bet
+    //average_defined: whether or not a running averagae exists (100 hands is good benchmark)
+    //player_avg: average of other player bid/pot ratio
+    //player_raise:whether or not the other player has raised
+    {
+        double bet_benchmark=(3.0/2)*pot;
+        if (average_defined)
+            bet_benchmark=(bet_benchmark+player_avg)/2;
+        int[] map=convert_to_map(hand,center);
+        int[] handmap=convert_sing_map(hand);
+        int[] centermap=convert_sing_map(center);
+        if (straight_instance(map)||flush_instance(hand,center))
+            return final_value(bet_benchmark*1.5,pot);
+        int straight_type=straight_chance(map);
+        int other_type=other_poss(map,handmap,centermap);
+        double[] chance_poss = {3.5,3,3,2.75,2.5,2.25,2.25,2.5};
+        if (straight_type==2||flush_chance(hand,center))
+            return final_value(chance_poss[other_type]*bet_benchmark,pot);
+        if (straight_type==1)
+            return final_value((chance_poss[other_type]-0.5)*bet_benchmark,pot);
+        if (centermap[0]<handmap[1]){
+            if (player_raise)
+                return final_value(bet_benchmark*1.5,pot);
+            return final_value(bet_benchmark*2,pot);}
+        if (other_type==7){
+            if (player_raise)
+                return final_value(bet_benchmark*.25,pot);
+            return final_value(bet_benchmark*.5,pot);}
+        if (other_type==6){
+            if (player_raise)
+                return final_value(bet_benchmark*1,pot);
+            return final_value(bet_benchmark*1.5,pot);
+        }
+        if (player_raise)
+            return final_value(.75*bet_benchmark,pot);
+        return final_value(bet_benchmark,pot);
+    }
+    public int final_value(double bet,int pot)
+    {
+        int intvalue= (int) Math.round(bet);
+        if (400<intvalue+(pot/2))
+            return 400-(pot/2);
+        return intvalue;
+    }
+    public int[] convert_to_map(int[][] hand,int[][] center)
+    {
+        int[] map=new int[13];
+        for (int i=0;i<2;i++)
+            map[hand[i][0]]++;
+        for (int j=0;j<3;j++)
+            map[center[j][0]]++;
+        return map;
+    }
+    public int[] convert_sing_map(int[][] thing)
+    {
+        int[] map=new int[13];
+        for (int i=0;i<thing.length;i++)
+            map[thing[i][0]]++;
+        int[] add_map=new int[thing.length];
+        int counter=0;
+        for (int i=12;0<=i;i--)
+            for (int j=0;j<map[i];j++){
+                add_map[counter]=i;
+                counter++;}
+        return add_map;
+    }
+    public int other_poss(int[] map,int[] handmap,int[] centermap)
+    {
+        //0=trips,1=2 pair, 2=overpair, 3=top pair,4=mid pair, 5=low pair, 6=high card or underpair, 7=low card
+        int numpair=0;
+        int pairnum=0;
+        for (int i=0;i<13;i++)
+        {
+            if (map[i]==3)
+                return 0;
+            if (map[i]==2)
+                pairnum=map[i];
+                numpair++;
+        }
+        if (numpair==2)
+            return 1;
+        if (centermap[0]==centermap[1]||centermap[1]==centermap[2]||numpair==0){
+            if (handmap[0]<centermap[0])
+                return 6;
+            return 7;
+        }
+        if (handmap[0]==handmap[1]){
+            if (centermap[0]<handmap[0])
+                return 2;
+            if (centermap[1]<handmap[0])
+                return 4;
+            if (centermap[2]<handmap[0])
+                return 5;
+            return 6;
+        }
+        if (pairnum==centermap[0])
+            return 3;
+        if (pairnum==centermap[1])
+            return 4;
+        return 5;
+    }
+    public int straight_chance(int[] map)
+    {
+        int[] newmap=map.clone();
+        int counter=0;
+        for (int i=0;i<13;i++){
+             newmap[i]++;
+             if (straight_instance(newmap))
+                 counter++;}
+        return counter;
+    }
+    public boolean straight_instance(int[] map)
+    {
+        boolean done=true;
+        for (int i=0;i<9;i++){
+            done=true;
+            for (int j=0;j<5;j++){
+                if (map[j]==0){
+                    done=false;
+                    break;
+                }
+            }
+            if (done)
+                return true;
+        }
+        return false;
+    }
+    public boolean flush_chance(int[][] hand, int[][] center)
+    {
+        int[] num_per_suit=new int[4];
+        for (int i=0;i<2;i++)
+            num_per_suit[hand[i][1]]++;
+        for (int j=0;j<3;j++)
+            num_per_suit[center[j][1]]++;
+        for (int i=0;i<4;i++)
+            if (num_per_suit[i]==4)
+                return true;
+        return false;
+    }
+    public boolean flush_instance(int[][] hand,int[][] center)
+    {
+        int suit=hand[0][1];
+        if (hand[1][1]==suit)
+        {
+            for (int i=0;i<3;i++)
+            {
+                if (center[i][1]!=suit)
+                    return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
     public double handStrength(List<String> myCards){
         double strength = 0;
         char rank1 = myCards.get(0).charAt(0);
@@ -280,6 +436,28 @@ public class Player implements Bot {
             numSuit = Card.DIAMONDS;
         }
         return new Card(rank, numSuit);
+    }
+
+    public int[][] handToArray(List<String> hand){
+        int[][] arr = new int[hand.size()][2];
+        for(int i = 0; i < hand.size(); i++){
+            arr[i][0] = this.rankNumeric(hand.get(i).charAt(0));
+            char suit = hand.get(i).charAt(1);
+            if(suit == 'c'){
+                arr[i][1] = 0;
+            }
+            if(suit == 'd'){
+                arr[i][1] = 1;
+            }
+            if(suit == 'h'){
+                arr[i][1] = 2;
+            }
+            if(suit == 's'){
+                arr[i][1] = 3;
+            }
+        }
+
+        return arr;
     }
 
     public double handRank(List<String> myCards, List<String> boardCards){
@@ -343,6 +521,7 @@ public class Player implements Bot {
         int myBankroll = gameState.bankroll;  // the total number of chips you've gained or lost from the beginning of the game to the start of this round
         float gameClock = gameState.gameClock;  // the total number of seconds your bot has left to play this game
         int roundNum = gameState.roundNum;  // the round number from 1 to State.NUM_ROUNDS
+        System.out.println("Round "+roundNum);
         List<String> myCards = roundState.hands.get(active);  // your cards
         boolean bigBlind = (active == 1);  // true if you are the big blind
         this.auctionPot = 4;
@@ -351,8 +530,8 @@ public class Player implements Bot {
         this.numBets[3] = 0;
         this.numBets[4] = 0;
         this.numBets[5] = 0;
-
-        System.out.println("Round "+roundNum);
+        this.oppPreflopRaise = false;
+        
         if(roundNum == 1000){
             System.out.println("Clock: "+gameClock);
         }
@@ -606,7 +785,7 @@ public class Player implements Bot {
             }
         }
 
-        System.out.println("Our cards: " + myCards.toString() + "Board: " + boardCards.toString() + " " + handType);
+        System.out.println("Our cards: " + myCards.toString() + ", Board: " + boardCards.toString() + " " + handType);
 
         System.out.println("Street: "+street+", previous bets: "+this.numBets[street]);
 
@@ -631,7 +810,7 @@ public class Player implements Bot {
 
         if(legalActions.contains(ActionType.BID_ACTION_TYPE)){
             this.auctionPot = pot;
-            double minOppBid = 0;
+            /*double minOppBid = 0;
             if(this.oppBids.size() > 50){
                 minOppBid = this.oppBids.get(0);
                 for(int i = 0; i<this.oppBids.size(); i++){
@@ -643,11 +822,27 @@ public class Player implements Bot {
             }
             if(this.preflopFold && rank < 0.47){
                 return new Action(ActionType.BID_ACTION_TYPE, (int)Math.min(pot*minOppBid, myStack));
+            }*/
+            boolean avg_defined = false;
+            double avg_bid = 0;
+            if(this.oppBids.size() >= 50){
+                avg_defined = true;
+                double sum = 0;
+                for(int i = 0; i < this.oppBids.size(); i++){
+                    sum += this.oppBids.get(i);
+                }
+                avg_bid = sum/this.oppBids.size();
             }
+            int bid_amt = this.amount_bet(pot, this.handToArray(myCards), this.handToArray(boardCards), avg_defined, avg_bid, this.oppPreflopRaise);
+            return new Action(ActionType.BID_ACTION_TYPE, bid_amt);
             // use new function for bid amounts
         }
 
         if(street == 0){
+            if(oppContribution > 2){
+                this.oppPreflopRaise = true;
+            }
+
             int action = 0;
             double strength = this.preflopStrength;
             if(strength > 0.47){
