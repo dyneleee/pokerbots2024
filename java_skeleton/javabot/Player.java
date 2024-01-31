@@ -955,6 +955,39 @@ public class Player implements Bot {
                 System.out.println("    Straight Draws: " + straightDraws.toString());
             }
         }
+
+        double probImprove = 0;
+        double semibluffChance = 0;
+        for(int i = 0; i<flushDraws.size(); i++){
+            String draw = flushDraws.get(i);
+            if(draw.charAt(1) == '3' && street == 3){
+                probImprove += 0.04;
+            }
+            if(draw.charAt(1) == '4' && street == 3){
+                probImprove += 0.35;
+                semibluffChance += 0.25;
+            }
+            if(draw.charAt(1) == '4' && street == 4){
+                probImprove += 0.195;
+                semibluffChance += 0.15;
+            }
+        }
+        if(straightDraws.size()==1 && street == 3){
+            probImprove += 0.165;
+            semibluffChance += 0.1;
+        }
+        if(straightDraws.size()>=2 && street == 3){
+            probImprove += 0.315;
+            semibluffChance += 0.22;
+        }
+        if(straightDraws.size() == 1 && street == 4){
+            probImprove += 0.085;
+            semibluffChance += 0.05;
+        }
+        if(straightDraws.size() >= 2 && street == 4){
+            probImprove += 0.173;
+            semibluffChance += 0.1;
+        }
         
         if(legalActions.contains(ActionType.RAISE_ACTION_TYPE)){
             if(oppPip == 0){
@@ -963,6 +996,7 @@ public class Player implements Bot {
                     System.out.println("    Raise by a lot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.5*minCost + 0.5*maxCost));
                 }*/
+
                 if(rank > 0.9){
                     double raiseAmt = pot;
                     raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
@@ -984,6 +1018,17 @@ public class Player implements Bot {
                     System.out.println("    Raise to 1/3 pot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
                 }
+
+                if(semibluffChance > 0){
+                    double rand = Math.random();
+                    if(rand < semibluffChance){
+                        double raiseAmt = (double)pot/3;
+                        raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                        this.numBets[street] += 1;
+                        System.out.println("    Semibluff");
+                        return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
+                    }
+                }
             }
             else{
                 if(rank > 0.97){
@@ -994,31 +1039,7 @@ public class Player implements Bot {
             }
         }
 
-        double probImprove = 0;
-        for(int i = 0; i<flushDraws.size(); i++){
-            String draw = flushDraws.get(i);
-            if(draw.charAt(1) == '3' && street == 3){
-                probImprove += 0.04;
-            }
-            if(draw.charAt(1) == '4' && street == 3){
-                probImprove += 0.35;
-            }
-            if(draw.charAt(1) == '4' && street == 4){
-                probImprove += 0.195;
-            }
-        }
-        if(straightDraws.size()==1 && street == 3){
-            probImprove += 0.165;
-        }
-        if(straightDraws.size()>=2 && street == 3){
-            probImprove += 0.315;
-        }
-        if(straightDraws.size() == 1 && street == 4){
-            probImprove += 0.085;
-        }
-        if(straightDraws.size() >= 2 && street == 4){
-            probImprove += 0.173;
-        }
+        
 
         if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
             if(probImprove > potOdds){
