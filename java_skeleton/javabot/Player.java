@@ -23,6 +23,7 @@ public class Player implements Bot {
     public boolean guaranteedWin = false;
     public List<Double> oppBids = new ArrayList<Double>();
     public int auctionPot = 0;
+    public int finalPot = 0;
     public int[] numBets = {1, 0, 0, 0, 0, 0}; // counts big blind as a preflop bet
     public double auctionStrength = 0;
     public double noAuctionStrength = 0;
@@ -30,6 +31,11 @@ public class Player implements Bot {
     public double preflopStrength = 0;
     public boolean preflopFold = false;
     public boolean oppPreflopRaise = false;
+    //public boolean oppCheck = true;
+    public double showdownWinRate = 0;
+    public int showdowns = 0;
+    public int showdownWins = 0;
+    public double[] callThresholds = {0.98, 0.9, 0.77, 0.69, 0.53, 0.56, 0.65};
 
     /**
      * Called when a new game starts. Called exactly once.
@@ -243,9 +249,9 @@ public class Player implements Bot {
     //player_avg: average of other player bid/pot ratio
     //player_raise:whether or not the other player has raised
     {
-        double bet_benchmark=(3.0/2)*pot;
+        double bet_benchmark=(2.0)*pot;
         if (average_defined)
-            bet_benchmark=(bet_benchmark+player_avg)/2;
+            bet_benchmark=0.5*bet_benchmark+0.5*player_avg*pot;
         int[] map=convert_to_map(hand,center);
         int[] handmap=convert_sing_map(hand);
         int[] centermap=convert_sing_map(center);
@@ -264,8 +270,8 @@ public class Player implements Bot {
             return final_value(bet_benchmark*2,pot);}
         if (other_type==7){
             if (player_raise)
-                return final_value(bet_benchmark*.25,pot);
-            return final_value(bet_benchmark*.5,pot);}
+                return final_value(bet_benchmark*.5,pot);
+            return final_value(bet_benchmark*.75,pot);}
         if (other_type==6){
             if (player_raise)
                 return final_value(bet_benchmark*1,pot);
@@ -531,9 +537,12 @@ public class Player implements Bot {
         this.numBets[4] = 0;
         this.numBets[5] = 0;
         this.oppPreflopRaise = false;
+        //this.oppCheck = true;
         
         if(roundNum == 1000){
             System.out.println("Clock: "+gameClock);
+            System.out.println("Showdown Win Rate: "+this.showdownWinRate);
+            System.out.println("Thresholds: "+Arrays.toString(this.callThresholds));
         }
     }
 
@@ -551,10 +560,38 @@ public class Player implements Bot {
         List<String> myCards = previousState.hands.get(active);  // your cards
         List<String> oppCards = previousState.hands.get(1-active);  // opponent's cards or "" if not revealed
         Integer oppBid = previousState.bids.get(1-active);
+        Integer myBid = previousState.bids.get(active);
         if(oppBid != null && oppBid != -1){
             this.oppBids.add((double)oppBid/this.auctionPot);
         }
         Collections.sort(this.oppBids);
+        if(street == 5 && !oppCards.get(0).equals("")){
+            int flopPot = this.auctionPot + Math.min(myBid, oppBid);
+            if(myBid == oppBid){
+                flopPot -= myBid;
+            }
+            if(flopPot != finalPot){
+                this.showdowns++;
+                if(myDelta > 0){
+                    this.showdownWins++;
+                }
+            }
+            else{
+                System.out.println("Check down at end");
+            }
+            
+            if(this.showdowns > 5 && flopPot != finalPot){
+                this.showdownWinRate = (double)this.showdownWins/this.showdowns;
+                System.out.println("Showdown Win Rate: "+this.showdownWinRate);
+                for(int i = 1; i < this.callThresholds.length; i++){
+                    if(callThresholds[i]+0.12*(0.55-this.showdownWinRate) < 0.95){
+                        callThresholds[i] += 0.12*(0.55-this.showdownWinRate);
+                    }
+                }
+                System.out.println("Thresholds: "+Arrays.toString(this.callThresholds));
+                
+            }
+        }
 
         System.out.println("--------------");
     }
@@ -765,6 +802,7 @@ public class Player implements Bot {
         if(legalActions.contains(ActionType.BID_ACTION_TYPE)){
             this.auctionPot = pot;
         }
+        this.finalPot = pot;
 
         if(!this.guaranteedWin){
             if(1.5*(1000-roundNum+1) + 1 < myBankroll){
@@ -806,10 +844,11 @@ public class Player implements Bot {
             System.out.println("    Rank: " + rank);
         }
 
-        double strengthDiff = 0; //change?
+        //double strengthDiff = 0; //change?
 
         if(legalActions.contains(ActionType.BID_ACTION_TYPE)){
             this.auctionPot = pot;
+            
             /*double minOppBid = 0;
             if(this.oppBids.size() > 50){
                 minOppBid = this.oppBids.get(0);
@@ -834,6 +873,7 @@ public class Player implements Bot {
                 avg_bid = sum/this.oppBids.size();
             }
             int bid_amt = this.amount_bet(pot, this.handToArray(myCards), this.handToArray(boardCards), avg_defined, avg_bid, this.oppPreflopRaise);
+            //return new Action(ActionType.BID_ACTION_TYPE, myStack);
             return new Action(ActionType.BID_ACTION_TYPE, bid_amt);
             // use new function for bid amounts
         }
@@ -1029,6 +1069,31 @@ public class Player implements Bot {
                         return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
                     }
                 }
+                int flopPot = this.auctionPot + Math.min(myBid, oppBid);
+                if(street == 5){
+                    
+                    if(myBid == oppBid){
+                        flopPot -= myBid;
+                    }
+                }
+                if(street == 5 && pot == flopPot){ //all checks on flop and turn
+                    if(rank > this.callThresholds[5]){
+                        double raiseAmt = (double)pot/3;
+                        raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                        this.numBets[street] += 1;
+                        System.out.println("    Check down raise, river");
+                        return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
+                    }
+                }
+                if(street == 4 && pot == flopPot){ //all checks on flop
+                    if(rank > this.callThresholds[6]){
+                        double raiseAmt = (double)pot/3;
+                        raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                        this.numBets[street] += 1;
+                        System.out.println("    Check down raise, turn");
+                        return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
+                    }
+                }
             }
             else{
                 if(rank > 0.97){
@@ -1046,10 +1111,25 @@ public class Player implements Bot {
                 System.out.println("    Call");
                 return new Action(ActionType.CALL_ACTION_TYPE);
             }
+
+            if(semibluffChance > 0){
+                double rand = Math.random();
+                if(rand < 0.75*semibluffChance){
+                    double raiseAmt = (double)pot/3;
+                    raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                    this.numBets[street] += 1;
+                    System.out.println("    Semibluff Call");
+                    return new Action(ActionType.CALL_ACTION_TYPE);
+                }
+            }
         }
 
-        if(rank <= 0.53){
-            if(potOdds < 0.08){
+        
+        
+
+        //System.out.println("Thresholds: "+Arrays.toString(this.callThresholds));
+        if(rank <= callThresholds[4]){
+            if(potOdds < 0.05){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
                     System.out.println("    Call");
                     return new Action(ActionType.CALL_ACTION_TYPE);
@@ -1062,13 +1142,13 @@ public class Player implements Bot {
             System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
-        else if(rank > 0.98){
+        else if(rank > callThresholds[0]){
             if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
                 System.out.println("    Call");
                 return new Action(ActionType.CALL_ACTION_TYPE);
             }
         }
-        else if(rank > 0.9){
+        else if(rank > callThresholds[1]){
             if(potOdds < 0.36 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
                     System.out.println("    Call");
@@ -1088,7 +1168,7 @@ public class Player implements Bot {
             System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
-        else if(rank > 0.77){
+        else if(rank > callThresholds[2]){
             if(potOdds < 0.31 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
                     System.out.println("    Call");
@@ -1108,7 +1188,7 @@ public class Player implements Bot {
             System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
-        else if(rank > 0.69){
+        else if(rank > callThresholds[3]){
             if(potOdds < 0.24 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
                     System.out.println("    Call");
@@ -1128,7 +1208,7 @@ public class Player implements Bot {
             System.out.println("    Check");
                 return new Action(ActionType.CHECK_ACTION_TYPE);
         }
-        else if(rank > 0.53){
+        else if(rank > callThresholds[4]){
             if(potOdds < 0.15 && this.numBets[street] == 1){
                 if(legalActions.contains(ActionType.CALL_ACTION_TYPE)){
                     System.out.println("    Call");
