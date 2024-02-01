@@ -36,6 +36,7 @@ public class Player implements Bot {
     public int showdowns = 0;
     public int showdownWins = 0;
     public double[] callThresholds = {0.98, 0.9, 0.77, 0.69, 0.53, 0.56, 0.65};
+    public double[] tempThresholds = {0.98, 0.9, 0.77, 0.69, 0.53, 0.56, 0.65};
 
     /**
      * Called when a new game starts. Called exactly once.
@@ -251,7 +252,8 @@ public class Player implements Bot {
     {
         double bet_benchmark=(2.0)*pot;
         if (average_defined)
-            bet_benchmark=0.5*bet_benchmark+0.5*player_avg*pot;
+            //bet_benchmark=0.25*bet_benchmark+0.75*player_avg*pot;
+            bet_benchmark = player_avg*pot;
         int[] map=convert_to_map(hand,center);
         int[] handmap=convert_sing_map(hand);
         int[] centermap=convert_sing_map(center);
@@ -537,6 +539,7 @@ public class Player implements Bot {
         this.numBets[4] = 0;
         this.numBets[5] = 0;
         this.oppPreflopRaise = false;
+        this.tempThresholds = this.callThresholds.clone();
         //this.oppCheck = true;
         
         if(roundNum == 1000){
@@ -834,8 +837,8 @@ public class Player implements Bot {
 
         if (legalActions.contains(ActionType.RAISE_ACTION_TYPE)) {
             List<Integer> raiseBounds = roundState.raiseBounds(); // the smallest and largest numbers of chips for a legal bet/raise
-            minCost = raiseBounds.get(0) - myPip; // the cost of a minimum bet/raise
-            maxCost = raiseBounds.get(1) - myPip; // the cost of a maximum bet/raise
+            minCost = raiseBounds.get(0); // the cost of a minimum bet/raise
+            maxCost = raiseBounds.get(1); // the cost of a maximum bet/raise
         }
 
         double rank = 0;
@@ -936,11 +939,16 @@ public class Player implements Bot {
                     }
                     this.numBets[street] += 1;
                     System.out.println("    Raise");
-                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.9*minCost + 0.1*maxCost));
+                    double raiseAmt = 3*oppPip;
+                    raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(raiseAmt));
                 }
                 if(legalActions.contains(ActionType.CHECK_ACTION_TYPE)){
                     this.numBets[street] += 1;
-                    System.out.println("    Raise to 20");
+                    for(int i = 0; i < this.tempThresholds.length; i++){
+                        this.tempThresholds[i] -= 0.05;
+                    }
+                    System.out.println("    Raise to 10");
                     return new Action(ActionType.RAISE_ACTION_TYPE, 20);
                 }
             }
@@ -956,7 +964,9 @@ public class Player implements Bot {
                 if(this.numBets[0] <= 2){
                     this.numBets[street] += 1;
                     System.out.println("    Raise");
-                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.9*minCost+0.1*maxCost));
+                    double raiseAmt = 3*oppPip;
+                    raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(raiseAmt));
                 }
                 if(this.numBets[0] == 3){
                     System.out.println("    Call");
@@ -973,12 +983,16 @@ public class Player implements Bot {
                 if(this.numBets[0] <= 2){
                     this.numBets[street] += 1;
                     System.out.println("    Raise");
-                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.9*minCost + 0.1*maxCost));
+                    double raiseAmt = 3*oppPip;
+                    raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(raiseAmt));
                 }
                 if(this.numBets[0] == 3){
                     this.numBets[street] += 1;
                     System.out.println("    Raise");
-                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.7*minCost + 0.3*maxCost));
+                    double raiseAmt = 3*oppPip;
+                    raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(raiseAmt));
                 }
                 System.out.println("    Call");
                 return new Action(ActionType.CALL_ACTION_TYPE);
@@ -1036,6 +1050,13 @@ public class Player implements Bot {
                     System.out.println("    Raise by a lot");
                     return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.5*minCost + 0.5*maxCost));
                 }*/
+                if(rank > 0.95){
+                    double raiseAmt = 0.5*pot;
+                    raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                    this.numBets[street] += 1;
+                    System.out.println("    Slowplay");
+                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
+                }
 
                 if(rank > 0.9){
                     double raiseAmt = pot;
@@ -1098,8 +1119,17 @@ public class Player implements Bot {
             else{
                 if(rank > 0.97){
                     this.numBets[street] += 1;
-                    System.out.println("    Raise by a lot");
-                    return new Action(ActionType.RAISE_ACTION_TYPE, (int)(0.8*minCost + 0.2*maxCost));
+                    if(potOdds >= 0.25){
+                        System.out.println("    Reraise, pot");
+                        double raiseAmt = pot;
+                        raiseAmt = Math.min(Math.max(minCost, raiseAmt), maxCost);
+                        this.numBets[street] += 1;
+                        return new Action(ActionType.RAISE_ACTION_TYPE, (int)raiseAmt);
+                        
+                    }
+                    else{
+                        return new Action(ActionType.CALL_ACTION_TYPE);
+                    }
                 }
             }
         }
